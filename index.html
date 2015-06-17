@@ -85,27 +85,27 @@
     <div class="grid">
         <div class="col-6-12">
             <pre><code>
-    p {
-        color: red;
-    }
+                p {
+                color: red;
+                }
 
-    p {
-        font-size: 12px;
-    }
+                p {
+                font-size: 12px;
+                }
 
-    p {
-        line-height: 15px;
-    }
-    </code></pre>
+                p {
+                line-height: 15px;
+                }
+            </code></pre>
         </div>
         <div class="col-6-12">
             <pre><code>
-    p {
-        color: red;
-        font-size: 12px;
-        line-height: 15px;
-    }
-    </code></pre>
+                p {
+                color: red;
+                font-size: 12px;
+                line-height: 15px;
+                }
+            </code></pre>
         </div>
     </div>
 
@@ -118,29 +118,29 @@
     <div class="grid">
         <div class="col-6-12">
     <pre><code>
-    h1 {
+        h1 {
         color: red;
         font-weight: bold;
-    }
+        }
 
-    h2 {
+        h2 {
         color: red;
         font-weight: bold;
-    }
+        }
 
-    h3 {
+        h3 {
         color: red;
         font-weight: bold;
-    }
+        }
     </code></pre>
         </div>
         <div class="col-6-12">
      <pre><code>
-    h1, h2, h3 {
-        color: red;
-        font-weight: bold;
-    }
-    </code></pre>
+         h1, h2, h3 {
+         color: red;
+         font-weight: bold;
+         }
+     </code></pre>
         </div>
     </div>
 </section>
@@ -159,22 +159,22 @@
             <th>Level</th>
         </tr>
         <tr>
-            <td>*</td>
+            <td><span class="highlighted-text">*</span></td>
             <td>any element</td>
             <td>2</td>
         </tr>
         <tr>
-            <td>E</td>
+            <td><span class="highlighted-text">E</span></td>
             <td>an element of type E</td>
             <td>1</td>
         </tr>
         <tr>
-            <td>E.warning</td>
+            <td><span class="highlighted-text">E.warning</span></td>
             <td>an E element whose class is "warning"</td>
             <td>1</td>
         </tr>
         <tr>
-            <td>E#myid</td>
+            <td><span class="highlighted-text">E#myid</span></td>
             <td>an E element with ID equal to "myid"</td>
             <td>1</td>
         </tr>
@@ -209,24 +209,24 @@
                 <th>Level</th>
             </tr>
             <tr>
-                <td>E[foo]</td>
+                <td><span class="highlighted-text">E[foo]</span></td>
                 <td>an E element with a "foo" attribute</td>
                 <td>2</td>
             </tr>
             <tr>
-                <td>E[foo="bar"]</td>
+                <td><span class="highlighted-text">E[foo="bar"]</span></td>
                 <td>an E element whose "foo" attribute value is exactly equal to "bar"</td>
                 <td>2</td>
             </tr>
             <tr>
-                <td>E[foo~="bar"]</td>
+                <td><span class="highlighted-text">E[foo~="bar"]</span></td>
                 <td>an E element whose "foo" attribute value is a list of whitespace-separated values, one of which is
                     exactly equal to "bar"
                 </td>
                 <td>2</td>
             </tr>
             <tr>
-                <td>E[foo|="en"]</td>
+                <td><span class="highlighted-text">E[foo|="en"]</span></td>
                 <td>an E element whose "foo" attribute has a hyphen-separated list of values beginning (from the left)
                     with
                     "en"
@@ -245,17 +245,17 @@
                 <th>Level</th>
             </tr>
             <tr>
-                <td>E[foo^="bar"]</td>
+                <td><span class="highlighted-text">E[foo^="bar"]</span></td>
                 <td>an E element whose "foo" attribute value begins exactly with the string "bar"</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E[foo$="bar"]</td>
+                <td><span class="highlighted-text">E[foo$="bar"]</span></td>
                 <td>an E element whose "foo" attribute value ends exactly with the string "bar"</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E[foo*="bar"]</td>
+                <td><span class="highlighted-text">E[foo*="bar"]</span></td>
                 <td>an E element whose "foo" attribute value contains the substring "bar"</td>
                 <td>3</td>
             </tr>
@@ -274,19 +274,19 @@
                 <th>Level</th>
             </tr>
             <tr>
-                <td>E:link<br/>E:visited</td>
+                <td><span class="highlighted-text">E:link<br/>E:visited</span></td>
                 <td>an E element being the source anchor of a hyperlink of which the target is not yet visited (:link)
                     or already visited (:visited)
                 </td>
                 <td>1</td>
             </tr>
             <tr>
-                <td>E:active<br/>E:hover<br/>E:focus</td>
+                <td><span class="highlighted-text">E:active<br/>E:hover<br/>E:focus</span></td>
                 <td>an E element during certain user actions</td>
                 <td>1 and 2</td>
             </tr>
             <tr>
-                <td>E:target</td>
+                <td><span class="highlighted-text">E:target</span></td>
                 <td>an E element being the target of the referring URI</td>
                 <td>3</td>
             </tr>
@@ -305,23 +305,23 @@
             </tr>
 
             <tr>
-                <td>E:lang(fr)</td>
+                <td><span class="highlighted-text">E:lang(fr)</span></td>
                 <td>an element of type E in language "fr" (the document language specifies how language is determined)
                 </td>
                 <td>2</td>
             </tr>
             <tr>
-                <td>E:enabled<br/>E:disabled</td>
+                <td><span class="highlighted-text">E:enabled<br/>E:disabled</span></td>
                 <td>a user interface element E which is enabled or disabled</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E:checked</td>
+                <td><span class="highlighted-text">E:checked</span></td>
                 <td>a user interface element E which is checked (for instance a radio-button or checkbox)</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E:not(s)</td>
+                <td><span class="highlighted-text">E:not(s)</span></td>
                 <td>an E element that does not match simple selector s</td>
                 <td>3</td>
             </tr>
@@ -339,22 +339,22 @@
                 <th>Level</th>
             </tr>
             <tr>
-                <td>E:root</td>
+                <td><span class="highlighted-text">E:root</span></td>
                 <td>an E element, root of the document</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E:nth-child(n)</td>
+                <td><span class="highlighted-text">E:nth-child(n)</span></td>
                 <td>an E element, the n-th child of its parent</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E:nth-last-child(n)</td>
+                <td><span class="highlighted-text">E:nth-last-child(n)</span></td>
                 <td>an E element, the n-th child of its parent, counting from the last one</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E:nth-of-type(n)</td>
+                <td><span class="highlighted-text">E:nth-of-type(n)</span></td>
                 <td>an E element, the n-th sibling of its type</td>
                 <td>3</td>
             </tr>
@@ -373,22 +373,22 @@
             </tr>
 
             <tr>
-                <td>E:nth-last-of-type(n)</td>
+                <td><span class="highlighted-text">E:nth-last-of-type(n)</span></td>
                 <td>an E element, the n-th sibling of its type, counting from the last one</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E:first-child</td>
+                <td><span class="highlighted-text">E:first-child</span></td>
                 <td>an E element, first child of its parent</td>
                 <td>2</td>
             </tr>
             <tr>
-                <td>E:last-child</td>
+                <td><span class="highlighted-text">E:last-child</span></td>
                 <td>an E element, last child of its parent</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E:first-of-type</td>
+                <td><span class="highlighted-text">E:first-of-type</span></td>
                 <td>an E element, first sibling of its type</td>
                 <td>3</td>
             </tr>
@@ -407,22 +407,22 @@
                 <th>Level</th>
             </tr>
             <tr>
-                <td>E:last-of-type</td>
+                <td><span class="highlighted-text">E:last-of-type</span></td>
                 <td>an E element, last sibling of its type</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E:only-child</td>
+                <td><span class="highlighted-text">E:only-child</span></td>
                 <td>an E element, only child of its parent</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E:only-of-type</td>
+                <td><span class="highlighted-text">E:only-of-type</span></td>
                 <td>an E element, only sibling of its type</td>
                 <td>3</td>
             </tr>
             <tr>
-                <td>E:empty</td>
+                <td><span class="highlighted-text">E:empty</span></td>
                 <td>an E element that has no children (including text nodes)</td>
                 <td>3</td>
             </tr>
@@ -439,22 +439,22 @@
             <th>Level</th>
         </tr>
         <tr>
-            <td>E::first-line</td>
+            <td><span class="highlighted-text">E::first-line</span></td>
             <td>the first formatted line of an E element</td>
             <td>1</td>
         </tr>
         <tr>
-            <td>E::first-letter</td>
+            <td><span class="highlighted-text">E::first-letter</span></td>
             <td>the first formatted letter of an E element</td>
             <td>1</td>
         </tr>
         <tr>
-            <td>E::before</td>
+            <td><span class="highlighted-text">E::before</span></td>
             <td>generated content before an E element</td>
             <td>2</td>
         </tr>
         <tr>
-            <td>E::after</td>
+            <td><span class="highlighted-text">E::after</span></td>
             <td>generated content after an E element</td>
             <td>2</td>
         </tr>
@@ -470,22 +470,22 @@
             <th>Level</th>
         </tr>
         <tr>
-            <td>E F</td>
+            <td><span class="highlighted-text">E F</span></td>
             <td>an F element descendant of an E element</td>
             <td>1</td>
         </tr>
         <tr>
-            <td>E > F</td>
+            <td><span class="highlighted-text">E > F</span></td>
             <td>an F element child of an E element</td>
             <td>2</td>
         </tr>
         <tr>
-            <td>E + F</td>
+            <td><span class="highlighted-text">E + F</span></td>
             <td>an F element immediately preceded by an E element</td>
             <td>2</td>
         </tr>
         <tr>
-            <td>E ~ F</td>
+            <td><span class="highlighted-text">E ~ F</span></td>
             <td>an F element preceded by an E element</td>
             <td>3</td>
         </tr>
@@ -494,7 +494,7 @@
 
 </section>
 <section>
-    <h2>The <em>key</em> selector</h2>
+    <h2>The <em class="highlighted-text">key</em> selector</h2>
 
     <p>The key selector is the right-most part of a larger CSS selector. This is what the browser looks for first.</p>
 </section>
@@ -528,6 +528,862 @@
     </p>
     <img src="images/mozila-user-stylesheet.png">
 </section>
+<section>
+    <h2>Author Styles</h2>
+</section>
+<section>
+    <h2>Three ways to attach</h2>
+    <ul>
+        <li>Inline style</li>
+        <li>Embedded</li>
+        <li>Linked</li>
+    </ul>
+</section>
+<section>
+    <h2>Inline</h2>
+
+    <pre><code>
+        <h2 style="color: red;"></h2>
+    </code></pre>
+
+</section>
+<section>
+    <h2>Embedded</h2>
+
+    <pre><code>
+        <style>
+            h2 {
+                color: red;
+            }
+        </style>
+    </code></pre>
+
+</section>
+<section>
+    <h2>Linked</h2>
+
+    <pre><code>
+        <link rel="stylesheet" href="example.css" type="text/css">
+    </code></pre>
+
+</section>
+<section>
+    <h2>CSS Rule Overload</h2>
+</section>
+<section>
+    <h2>Which CSS rules “win”?</h2>
+
+    <p>
+        There are <span class="highlighted-text">four steps</span> to determine which CSS rules will “win”.
+    </p>
+</section>
+<section>
+    <h2>Step 1</h2>
+
+    <p>
+        Gather all the <span class="highlighted-text">declarations</span> that apply to an <span
+            class="highlighted-text">element and property</span> from browser, author and user style sheets.
+    </p>
+    <img src="images/browser-author-user.png"/>
+</section>
+<section>
+    <h2>Step 2</h2>
+
+    <p><span class="highlighted-text">Sort</span> the gathered declarations according to:</p>
+    <ul>
+        <li>origin
+            <ul>
+                <li>browser</li>
+                <li>author</li>
+                <li>user</li>
+            </ul>
+        </li>
+        <li>importance
+            <ul>
+                <li>normal</li>
+                <li>!important</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>From lowest to highest priority</h2>
+    <ul>
+        <li><span class="highlighted-text">Browser</span> styles
+        </li>
+        <li><span class="highlighted-text">Normal</span> declarations in <span class="highlighted-text">user</span>
+            style sheet
+        </li>
+        <li><span class="highlighted-text">Normal</span> declarations in <span class="highlighted-text">author</span>
+            style sheet
+        </li>
+        <li><span class="highlighted-text">!important</span> declarations in <span
+                class="highlighted-text">author</span> style sheet
+        </li>
+        <li><span class="highlighted-text">!important</span> declaration in <span class="highlighted-text">user</span>
+            style sheet
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Step 3</h2>
+
+    <p>
+        If declarations have the same origin or importance then the <span class="highlighted-text">declaration’s selectors</span>
+        need to be scored, to see which declaration will “win”
+    </p>
+</section>
+<section>
+    <h2>Selectors Specificity</h2>
+
+    <div class="grid">
+        <div class="col-6-12">
+            <ol>
+                <li>Inline style
+                </li>
+                <li>Count the number of IDs
+                </li>
+                <li>Count the number of classes, attributes and pseudo-classes
+                </li>
+                <li>Count the number of element names or pseudo-elements
+                </li>
+            </ol>
+        </div>
+        <div class="col-6-12">
+            <img src="images/selectors-specificity.jpg"/>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>A note on concatenation</h2>
+
+    <p>
+        “<span class="highlighted-text">A</span>” will always beat “<span class="highlighted-text">B</span>”, which will
+        always beat “<span class="highlighted-text">C</span>”, which will always
+        beat “<span class="highlighted-text">D</span>”.
+    </p>
+</section>
+<section>
+    <h2>Step 4</h2>
+
+    <p>
+        If two declarations have the same importance, origin and specify, the <span class="highlighted-text">later specified</span>
+        declaration wins
+    </p>
+</section>
+<section>
+    <h2>Box Model</h2>
+</section>
+<section>
+    <h2>Box Model</h2>
+
+    <p>The CSS box model describes the <span class="highlighted-text">rectangular boxes</span> that are generated for
+        elements in the document tree and laid out according to the <span class="highlighted-text">visual formatting model</span>.
+    </p>
+</section>
+<section>
+    <h2>Box Dimensions</h2>
+
+    <img style="background-color: white;" src="images/box-dimensions.png"/>
+</section>
+<section>
+    <h2>Box Edges</h2>
+
+    <ul>
+        <li><span class="highlighted-text">content edge</span> or inner edge
+        </li>
+        <li><span class="highlighted-text">padding edge</span>
+        </li>
+        <li><span class="highlighted-text">border edge</span>
+        </li>
+        <li><span class="highlighted-text">margin edge</span> or outer edge
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>box-sizing</h2>
+
+    <ul>
+        <li> content-box
+        </li>
+        <li>padding-box
+        </li>
+        <li>border-box
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Collapsing Margins</h2>
+
+    <p>In CSS, the adjoining margins of two or more boxes can combine to form a single margin. </p>
+
+    <p>Margins that combine this way are said to <span class="highlighted-text">collapse</span>, and the resulting
+        combined margin is called a <span class="highlighted-text">collapsed margin</span>.
+    </p>
+</section>
+<section>
+    <h2>Vertical margins collapse</h2>
+    <h4>(basic cases)</h4>
+
+    <ul>
+        <li> Adjacent siblings
+        </li>
+        <li>Parent and first/last child
+        </li>
+        <li>Empty blocks
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Horizontal margins collapse</h2>
+
+    <p>Do not collapse in most cases...</p>
+</section>
+<section>
+    <h2>Visual formatting model</h2>
+</section>
+<section>
+    <h2>Visual formatting model</h2>
+
+    <p>The CSS <span class="highlighted-text">visual formatting model</span> is the algorithm used to process a document
+        and display it on a visual media. 
+    </p>
+</section>
+<section>
+    <h2>Defining boxes</h2>
+
+    <ul>
+        <li>box dimensions</li>
+        <li>box type</li>
+        <li>the positioning scheme</li>
+        <li>the other elements in the tree</li>
+        <li>the viewport size and position</li>
+        <li>intrinsic dimensions of contained images</li>
+        <li>other external information</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Box Generation</h2>
+
+    <p>
+        the part of the CSS visual formatting model
+    </p>
+
+    <p>
+        creates boxes from the document's elements
+    </p>
+</section>
+<section>
+    <h2>Box Types</h2>
+
+    <p>
+        affects how the visual formatting is done
+    </p>
+
+    <p>
+        depends of the value of the display CSS property
+    </p>
+</section>
+<section>
+    <h2>Block-level elements and block boxes</h2>
+
+    <p>
+        visually formatted as a block
+
+    </p>
+
+    <p>
+        intended to be vertically stacked
+    </p>
+
+    <p>
+        display: <span class="highlighted-text">block</span>, <span class="highlighted-text">list-item</span>, <span
+            class="highlighted-text">table</span>
+    </p>
+</section>
+<section>
+    <h2>Block-level elements</h2>
+
+    <p>participates in a <span class="highlighted-text">block formatting context</span>
+    </p>
+
+    <p>generates at least one block-level box (<span class="highlighted-text">principal block-level box</span>)
+    </p>
+</section>
+<section>
+    <h2>Block container box</h2>
+
+    <p>is a box that contains only other <span class="highlighted-text">block-level boxes</span>, or creates an <span
+            class="highlighted-text">inline
+        formatting context</span></p>
+
+    <p>A block-level box may also be a block container box.</p>
+</section>
+<section>
+    <h2>block-level box vs block container</h2>
+
+    <div class="grid">
+        <div class="col-6-12">
+            <h5>
+                block-level box
+            </h5>
+
+            <p>describes how the box will behave with its parents and sibling
+            </p>
+        </div>
+        <div class="col-6-12">
+            <h5>
+                block container
+            </h5>
+
+            <p>
+                how the box will interact with its descendants
+            </p>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Block Boxes</h2>
+    <img src="images/block-boxes.png"/>
+
+    <p>Block-level boxes that also are block container boxes are called block boxes.
+    </p>
+</section>
+<section>
+    <h2>
+        Anonymous block boxes
+    </h2>
+
+    <p>
+        supplementary boxes
+    </p>
+
+    <p>
+        cannot be styled using CSS selectors
+    </p>
+
+    <p>
+        use the inherit value or the initial value of css properties
+    </p>
+</section>
+<section>
+    <h2>Anonymous block boxes</h2>
+    <pre><code data-trim class="html" style="font-size: 17px;">
+        <div>Some inline text <p>followed by a paragraph</p> followed by more inline text.</div>
+    </code></pre>
+    <img src="images/anonymous-block-boxes.png"/>
+</section>
+<section>
+    <h2>Inline-level elements and inline boxes</h2>
+
+    <p>display: inline, inline-block, inline-table</p>
+
+    <p>distributed in lines with other inline-level content</p>
+</section>
+<section>
+    <h2>Inline-level elements</h2>
+
+    <p>generate inline-level boxes</p>
+</section>
+<section>
+    <h2>inline boxes</h2>
+    <img src="images/inline-boxes.png"/>
+
+    <p>Inline boxes are both inline-level boxes and boxes that participate in their container's inline formatting
+        context</p>
+</section>
+<section>
+    <h2>atomic inline-level boxes</h2>
+
+    <p>Inline-level boxes that do not participate in an inline formatting context
+    </p>
+
+    <p>are never split in several boxes
+    </p>
+
+    <p>generated by: replaced inline-level elements, by elements with a calculated display value
+        (inline-block or inline-table)
+    </p>
+</section>
+<section>
+    <h2>atomic inline-level boxes</h2>
+
+    <div class="grid">
+        <div class="col-6-12">
+            <pre>
+                <code data-trim class="html" style="font-size: 14px">
+                    <style>
+                        span {
+                            display: inline; /* default value*/
+                        }
+                    </style>
+                    <div>
+                        The text in the span <span>can be split
+                        in several lines as it</span> is an inline box.
+                    </div>
+                </code>
+            </pre>
+            <div> The text in the span <span>can be split in several lines as it</span> is
+                an inline box.
+            </div>
+        </div>
+        <div class="col-6-12">
+            <pre>
+                <code data-trim class="html" style="font-size: 14px">
+                    <style>
+                        span {
+                            display: inline-block;
+                        }
+                    </style>
+                    <div>
+                        The text in the span <span>cannot be split
+                        in several lines as it</span> is an inline-block box.
+                    </div>
+                </code>
+            </pre>
+            <div> The text in the span <span
+                    style="display: inline-block;">cannot be split in several lines as it</span>
+                is an inline-block box.
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>
+        Anonymous inline boxes
+    </h2>
+
+    <p>supplementary boxes
+    </p>
+
+    <p>cannot be styled using CSS selectors
+    </p>
+
+    <p>use the inherit value or the initial value of css properties
+    </p>
+</section>
+<section>
+    <h2>Anonymous inline boxes</h2>
+
+    <p>
+        TODO: Add an example
+    </p>
+</section>
+<section>
+    <h2>Other types of boxes</h2>
+    <ul>
+        <li>Line boxes
+        </li>
+        <li>
+            Run-in boxes
+        </li>
+        <li>
+            Model-induced boxes
+            <ul>
+                <li>
+                    The table content model may create a table wrapper box and a table box, but also specific boxes
+                    like caption boxes.
+                </li>
+                <li>
+                    The multi-column content model may create column boxes between the container box and the content.
+                </li>
+                <li>
+                    The grid or flex-box content models also create additional types of boxes.
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>
+        Positioning schemes
+    </h2>
+    <ul>
+        <li>normal flow
+        </li>
+        <li>floats</li>
+        <li>absolute positioning</li>
+    </ul>
+</section>
+<section>
+    <h2>normal flow</h2>
+
+    <p>
+        boxes are laid out one after the other (vertically or horizontally)
+    </p>
+</section>
+<section>
+    <h2>
+        normal flow
+    </h2>
+    <ul>
+        <li>position
+            <ul>
+                <li>static</li>
+                <li>relative</li>
+            </ul>
+        </li>
+        <li>float
+            <ul>
+                <li>none</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>
+        normal flow
+    </h2>
+
+    <div class="grid">
+        <div class="col-6-12">
+            <h5>static positioning
+            </h5>
+
+            <p>
+                the boxes are drawn at the exact position defined by the normal flow layout.
+            </p>
+        </div>
+        <div class="col-6-12">
+            <h5>relative positioning
+            </h5>
+
+            <p>
+                the boxes are drawn with an offset defined by the top, bottom, left and right CSS properties.
+            </p>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Floats</h2>
+
+    <p>floating boxes are positioned at the beginning or end of the current line
+    </p>
+
+    <p>
+        anything within the normal flow flows along the edge of the floating boxes
+    </p>
+</section>
+<section>
+    <h2>
+        Floats
+    </h2>
+    <ul>
+        <li>position
+            <ul>
+                <li>static</li>
+                <li>relative</li>
+            </ul>
+        </li>
+        <li>float
+            <ul>
+                <li>left</li>
+                <li>right</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>The clear CSS property</h2>
+
+    <p>
+        specifies whether an element can be next to floating elements that precede it or must be moved down (cleared)
+        below them
+    </p>
+
+    <p>
+        applies to both floating and non-floating elements
+    </p>
+</section>
+<section>
+    <h2>Block formatting context</h2>
+    <ul>
+        <li>the region in which
+
+            <ul>
+                <li>the layout of block boxes occurs
+                </li>
+                <li>floats interact with each other
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Block formatting context</h2>
+    <ul>
+        <li>created by:
+            <ul>
+                <li>the root element
+                </li>
+                <li>floats
+                </li>
+                <li>absolutely positioned elements
+                </li>
+                <li>inline-blocks
+                </li>
+                <li>table cells and table captions
+                </li>
+                <li>elements where overflow has a value other than visible
+                </li>
+                <li>flex boxes
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>
+        Absolute positioning
+    </h2>
+    <ul>
+        <li>boxes are entirely removed from the flow
+
+        </li>
+        <li>boxes don't interact with the flow at all
+
+        </li>
+        <li>boxes positioned relative to their containing block
+
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Containing Block</h2>
+
+    <p>
+        Element boxes are positioned within a formatting context, which, by default, is provided by the box generated by
+        a parent element.
+    </p>
+</section>
+<section>
+    <h2>containing block</h2>
+    <h4>position: static or relative</h4>
+    <ul>
+        <li>the containing block is formed by the edge of the content box of the
+            nearest ancestor element whose display property value is one of:
+            <ul>
+                <li>block</li>
+                <li>inline-block
+                </li>
+                <li>list-item
+                </li>
+                <li>run-in
+                </li>
+                <li>table</li>
+                <li>table-cell
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>containing block</h2>
+    <h4>position: absolute</h4>
+    <ul>
+        <li>the containing block is the nearest positioned ancestor (the nearest ancestor whose position property has
+            one of the values absolute, fixed, or relative)
+
+
+        </li>
+        <li>
+            the containing block is formed by the padding edge of that ancestor
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>containing block</h2>
+    <h4>position: fixed</h4>
+    <ul>
+        <li>the containing block is the viewport (for continuous media) or the page box (for paged media).
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>CSS At-rules</h2>
+</section>
+<section>
+    <h2>CSS At-rules</h2>
+
+    <p>At-rules are instructions or directives to the CSS parser.
+    </p>
+</section>
+<section>
+    <h2>
+        CSS At-rules
+    </h2>
+    <ul>
+        <li>@charset
+        </li>
+        <li>@import
+        </li>
+        <li>@media
+        </li>
+        <li>@page
+        </li>
+        <li>@font-face
+        </li>
+        <li>@namespace
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>CSS Properties</h2>
+</section>
+<section>
+    <h2>CSS Properties</h2>
+    <ul>
+        <li>Box Properties</li>
+        <li>Layout Properties
+        </li>
+        <li>List Properties</li>
+        <li>Table Properties</li>
+        <li>Color and Backgrounds
+        </li>
+        <li>Typographical Properties
+        </li>
+        <li>Generated Content
+        </li>
+        <li>User Interface Properties
+        </li>
+        <li>Paged Media Properties
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Vendor-specific Properties</h2>
+
+    <p>'-' + vendor specific identifier + '-' + meaningful name</p>
+
+    <div class="grid">
+        <div class="col-6-12">
+            <table class="table-middle">
+                <tr>
+                    <th>Prefix</th>
+                    <th>Organisation</th>
+                </tr>
+                <tr>
+                    <td>-ms-</td>
+                    <td>Microsoft</td>
+                </tr>
+                <tr>
+                    <td>-moz-</td>
+                    <td>Mozilla Foundation (Gecko-based browsers)</td>
+                </tr>
+                <tr>
+                    <td>-o-</td>
+                    <td>Opera Software</td>
+                </tr>
+                <tr>
+                    <td style="white-space: nowrap;">-webkit-</td>
+                    <td>Safari (and other WebKit-based browsers)</td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-6-12">
+            <pre><code data-trim class="css">
+                div {
+                -webkit-border-radius: 3px;
+                -moz-border-radius: 3px;
+                border-radius: 3px;
+                }
+            </code></pre>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>CSS Units</h2>
+</section>
+<section>
+    <section>
+        <h2>Units</h2>
+        <table class="table-middle">
+            <tr>
+                <th>Unit</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>percentage</td>
+            </tr>
+            <tr>
+                <td>em</td>
+                <td>1em is equal to the current font size. 2em means 2 times the size of the current font.</td>
+            </tr>
+            <tr>
+                <td>ex</td>
+                <td>one ex is the x-height of a font (x-height is usually about half the font-size)</td>
+            </tr>
+            <tr>
+                <td>px</td>
+                <td>pixels (a dot on the computer screen)</td>
+            </tr>
+        </table>
+    </section>
+    <section>
+        <h2>Units</h2>
+        <table class="table-middle">
+            <tr>
+                <th>Unit</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>pt</td>
+                <td>point (1 pt is the same as 1/72 inch)</td>
+            </tr>
+            <tr>
+                <td>pc</td>
+                <td>pica (1 pc is the same as 12 points)</td>
+            </tr>
+            <tr>
+                <td>in</td>
+                <td>inch</td>
+            </tr>
+            <tr>
+                <td>cm</td>
+                <td>centimeter</td>
+            </tr>
+            <tr>
+                <td>mm</td>
+                <td>millimeter</td>
+            </tr>
+        </table>
+    </section>
+</section>
+<section>
+    <h2>Units recommendations</h2>
+    <table class="table-middle">
+        <tr>
+            <td>&nbsp;</td>
+            <td class="highlighted-table-cell">Rec­om­mended</td>
+            <th>Oc­ca­sional use</th>
+            <th>Not rec­om­mended</th>
+        </tr>
+        <tr>
+            <td>Screen</td>
+            <td class="highlighted-table-cell">em, px, %</td>
+            <td>ex</td>
+            <td>pt, cm, mm, in, pc</td>
+        </tr>
+        <tr>
+            <td>Print</td>
+            <td class="highlighted-table-cell">em, cm, mm, in, pt, pc, %</td>
+            <td>px, ex</td>
+            <td></td>
+        </tr>
+    </table>
+</section>
+<section>
+    <h2>MORE UNITS IN CSS</h2>
+    <table class="tableizer-table">
+        <tr class="tableizer-firstrow"><th>Unit</th><th>Description</th></tr>
+        <tr><td>rem</td><td>is the font size of the root element of the document</td></tr>
+        <tr><td>vw</td><td>1/100th of the window's width</td></tr>
+        <tr><td>vh</td><td>1/100th of the window's height</td></tr>
+    </table>
+
+</section>
 </div>
 </div>
 
@@ -548,18 +1404,18 @@
 
         // Optional reveal.js plugins
         dependencies: [
-            { src: 'lib/js/classList.js', condition: function() {
+            { src: 'lib/js/classList.js', condition: function () {
                 return !document.body.classList;
             } },
-            { src: 'plugin/markdown/marked.js', condition: function() {
+            { src: 'plugin/markdown/marked.js', condition: function () {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src: 'plugin/markdown/markdown.js', condition: function() {
+            { src: 'plugin/markdown/markdown.js', condition: function () {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src: 'plugin/highlight/highlight.js', async: true, condition: function() {
+            { src: 'plugin/highlight/highlight.js', async: true, condition: function () {
                 return !!document.querySelector('pre code');
-            }, callback: function() {
+            }, callback: function () {
                 hljs.initHighlightingOnLoad();
             } },
             { src: 'plugin/zoom-js/zoom.js', async: true },
