@@ -2,6 +2,10 @@
     font-size: 0.8em !important;
 }
 
+.table-small{
+    font-size: 0.6em !important;
+}
+
 .highlighted-text {
     color: #8dcffc;
 }

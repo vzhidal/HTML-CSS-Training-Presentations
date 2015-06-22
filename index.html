@@ -55,8 +55,12 @@
     <h2>What?</h2>
 
     <ul>
-        <li>CSS is an acronym for Cascading Style Sheets.</li>
-        <li>CSS is a style language that defines visual styles of HTML documents.</li>
+        <li><span class="highlighted-text">CSS</span> is an acronym for <span class="highlighted-text">C</span>ascading <span
+                class="highlighted-text">S</span>tyle <span class="highlighted-text">S</span>heets.
+        </li>
+        <li>CSS is a style <span class="highlighted-text">language</span> that defines <span class="highlighted-text">visual styles</span>
+            of HTML documents.
+        </li>
     </ul>
 </section>
 
@@ -64,14 +68,14 @@
     <h2>Why?</h2>
 
     <ul>
-        <li>Separation of presentation from markup.</li>
-        <li>Cleaner code.</li>
-        <li>Easier to manage style changes.</li>
+        <li><span class="highlighted-text">Separation</span> of presentation from markup.</li>
+        <li><span class="highlighted-text">Cleaner</span> code.</li>
+        <li><span class="highlighted-text">Easier</span> to manage style changes.</li>
     </ul>
 </section>
 
 <section>
-    <h2>Syntax</h2>
+    <h1>Syntax</h1>
 </section>
 
 <section>
@@ -84,27 +88,27 @@
 
     <div class="grid">
         <div class="col-6-12">
-            <pre><code>
-                p {
-                color: red;
-                }
+            <pre><code data-trim>
+p {
+    color: red;
+}
 
-                p {
-                font-size: 12px;
-                }
+p {
+    font-size: 12px;
+}
 
-                p {
-                line-height: 15px;
-                }
+p {
+    line-height: 15px;
+}
             </code></pre>
         </div>
         <div class="col-6-12">
-            <pre><code>
-                p {
-                color: red;
-                font-size: 12px;
-                line-height: 15px;
-                }
+            <pre><code data-trim>
+p {
+    color: red;
+    font-size: 12px;
+    line-height: 15px;
+}
             </code></pre>
         </div>
     </div>
@@ -117,39 +121,58 @@
 
     <div class="grid">
         <div class="col-6-12">
-    <pre><code>
-        h1 {
-        color: red;
-        font-weight: bold;
-        }
+    <pre><code data-trim>
+h1 {
+    color: red;
+    font-weight: bold;
+}
 
-        h2 {
-        color: red;
-        font-weight: bold;
-        }
+h2 {
+    color: red;
+    font-weight: bold;
+}
 
-        h3 {
-        color: red;
-        font-weight: bold;
-        }
+h3 {
+    color: red;
+    font-weight: bold;
+}
     </code></pre>
         </div>
         <div class="col-6-12">
-     <pre><code>
-         h1, h2, h3 {
-         color: red;
-         font-weight: bold;
-         }
+     <pre><code data-trim>
+ h1, h2, h3 {
+     color: red;
+     font-weight: bold;
+ }
      </code></pre>
         </div>
     </div>
 </section>
-
-
 <section>
-    <h2>Selectors</h2>
+    <h2>Comments</h2>
+    <pre><code data-trim>
+/* Comment here */
+p {
+         margin: 1em; /* Comment here */
+         padding: 2em; 
+         /* color: white; */
+         background-color: blue;
+ }
+ /*multi-line
+ comment here*/
+
+     </code></pre>
 </section>
 
+<section>
+    <h1>Selectors</h1>
+</section>
+<section>
+    <h2>Selectors</h2>
+
+    <p>A CSS selector is the part of a CSS rule set that actually selects the content.
+    </p>
+</section>
 <section>
     <h2>Simple Selectors</h2>
     <table class="table-middle">
@@ -195,7 +218,10 @@
             </ul>
         </div>
     </div>
-    <p>Use CSS classes where it’s possible, to make your styles reusable on the page.</p>
+    <br/>
+
+    <p><span class="highlighted-text">Use</span> CSS <span class="highlighted-text">classes</span> where it’s possible,
+        to make your styles reusable on the page.</p>
 </section>
 
 <section>
@@ -499,13 +525,139 @@
     <p>The key selector is the right-most part of a larger CSS selector. This is what the browser looks for first.</p>
 </section>
 <section>
-    <h2>Assigning property values, Cascading and Inheritance</h2>
+    <h2>Selector Matching</h2>
+    <img src="images/selector-matching.jpg"/>
 </section>
 <section>
-    <h2>Assigning property values</h2>
+    <h1>Value Processing</h1>
 </section>
 <section>
-    <h2>Style sheets origins</h2>
+    <h2>Value Processing</h2>
+
+    <p>Once a user agent has parsed a document and constructed a document tree, it must assign, to every element in the
+        tree, and correspondingly to every box in the formatting structure, a value to every property that applies to
+        the target media type.
+    </p>
+</section>
+
+<section>
+    <h2>Calculation</h2>
+
+    <ul>
+        <li>Collecting all the <span class="highlighted-text">declared values</span> applied to an element.</li>
+        <li>Cascading yields the <span class="highlighted-text">cascaded value</span>.</li>
+        <li>Defaulting yields the <span class="highlighted-text">specified value</span>.</li>
+        <li>Resolving value dependencies yields the <span class="highlighted-text">computed value</span>.</li>
+        <li>Formatting the document yields the <span class="highlighted-text">used value</span>.</li>
+        <li>Transforming to the <span class="highlighted-text">actual value</span> based on constraints of the display
+            environment.
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>calculation examples</h2>
+    <table class="table-small">
+        <tr>
+            <th>Property</th>
+            <th>Winning declaration</th>
+            <th>Cascaded value</th>
+            <th>Specified value</th>
+            <th>Computed value</th>
+            <th>Used value</th>
+            <th>Actual value</th>
+        </tr>
+        <tr>
+            <td>font-size</td>
+            <td>font-size: 1.2em</td>
+            <td>1.2em</td>
+            <td>1.2em</td>
+            <td>14.1px</td>
+            <td>14.1px</td>
+            <td>14px</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>width: 80%</td>
+            <td>80%</td>
+            <td>80%</td>
+            <td>80%</td>
+            <td>354.2px</td>
+            <td>354px</td>
+        </tr>
+        <tr>
+            <td>width</td>
+            <td>width: auto</td>
+            <td>auto</td>
+            <td>auto</td>
+            <td>auto</td>
+            <td>134px</td>
+            <td>134px</td>
+        </tr>
+        <tr>
+            <td>height</td>
+            <td>height: auto</td>
+            <td>auto</td>
+            <td>auto</td>
+            <td>auto</td>
+            <td>176px</td>
+            <td>176px</td>
+        </tr>
+        <tr>
+            <td>page-break-after</td>
+            <td>(none)</td>
+            <td>(none)</td>
+            <td>auto (initial value)</td>
+            <td>auto</td>
+            <td>auto</td>
+            <td>auto</td>
+        </tr>
+    </table>
+
+</section>
+
+<section>
+    <h1>Defaulting</h1>
+</section>
+<section>
+    <h2>Defaulting</h2>
+    <ul>
+        <li>
+            <p>When the cascade does not result in a value, the specified value must be found some other way: 
+            </p>
+            <ul>
+                <li>
+                    <span class="highlighted-text">Inherited</span> properties draw their defaults from their <span
+                        class="highlighted-text">parent</span> element through <span class="highlighted-text">inheritance</span>.
+                </li>
+                <li>
+                    <span class="highlighted-text">Other</span> properties take their <span class="highlighted-text">initial</span>
+                    value.
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Inheritance</h2>
+    <img src="images/inheritance.png">
+</section>
+<section>
+    <h2>Explicit Defaulting</h2>
+    <ul>
+        <li>
+            Resetting a Property: the <span class="highlighted-text">initial</span> keyword
+        </li>
+        <li>
+            Explicit Inheritance: the <span class="highlighted-text">inherit</span> keyword
+        </li>
+        <li>
+            Erasing All Declarations: the <span class="highlighted-text">unset</span> keyword
+        </li>
+    </ul>
+</section>
+<section>
+    <h1>Style sheets origins</h1>
 </section>
 <section>
     <h2>Style sheet origins</h2>
@@ -529,7 +681,15 @@
     <img src="images/mozila-user-stylesheet.png">
 </section>
 <section>
-    <h2>Author Styles</h2>
+    <h2>Author Styles Sheets</h2>
+
+    <p>
+        Web authors can apply one or more style sheets to an HTML document
+    </p>
+    <img src="images/author-style-sheets.png">
+</section>
+<section>
+    <h1>Author Styles</h1>
 </section>
 <section>
     <h2>Three ways to attach</h2>
@@ -543,7 +703,7 @@
     <h2>Inline</h2>
 
     <pre><code>
-        <h2 style="color: red;"></h2>
+<h2 style="color: red;"></h2>
     </code></pre>
 
 </section>
@@ -551,11 +711,11 @@
     <h2>Embedded</h2>
 
     <pre><code>
-        <style>
-            h2 {
-                color: red;
-            }
-        </style>
+<style>
+    h2 {
+        color: red;
+    }
+</style>
     </code></pre>
 
 </section>
@@ -563,12 +723,13 @@
     <h2>Linked</h2>
 
     <pre><code>
-        <link rel="stylesheet" href="example.css" type="text/css">
+<link rel="stylesheet" href="example.css" type="text/css">
     </code></pre>
 
 </section>
 <section>
-    <h2>CSS Rule Overload</h2>
+    <h1>CSS Rule Overload</h1>
+    <h5>(Cascading order)</h5>
 </section>
 <section>
     <h2>Which CSS rules “win”?</h2>
@@ -589,22 +750,26 @@
 <section>
     <h2>Step 2</h2>
 
-    <p><span class="highlighted-text">Sort</span> the gathered declarations according to:</p>
     <ul>
-        <li>origin
+        <li><p><span class="highlighted-text">Sort</span> the gathered declarations according to:</p>
             <ul>
-                <li>browser</li>
-                <li>author</li>
-                <li>user</li>
-            </ul>
-        </li>
-        <li>importance
-            <ul>
-                <li>normal</li>
-                <li>!important</li>
+                <li>origin
+                    <ul>
+                        <li>browser</li>
+                        <li>author</li>
+                        <li>user</li>
+                    </ul>
+                </li>
+                <li>importance
+                    <ul>
+                        <li>normal</li>
+                        <li>!important</li>
+                    </ul>
+                </li>
             </ul>
         </li>
     </ul>
+
 </section>
 <section>
     <h2>From lowest to highest priority</h2>
@@ -672,7 +837,7 @@
     </p>
 </section>
 <section>
-    <h2>Box Model</h2>
+    <h1>Box Model</h1>
 </section>
 <section>
     <h2>Box Model</h2>
@@ -715,32 +880,39 @@
 <section>
     <h2>Collapsing Margins</h2>
 
-    <p>In CSS, the adjoining margins of two or more boxes can combine to form a single margin. </p>
-
-    <p>Margins that combine this way are said to <span class="highlighted-text">collapse</span>, and the resulting
-        combined margin is called a <span class="highlighted-text">collapsed margin</span>.
-    </p>
+    <ul>
+        <li>
+            <p>In CSS, the adjoining margins of two or more boxes can <span class="highlighted-text">combine</span> to
+                form a single margin. </p>
+        </li>
+        <li>
+            <p>Margins that combine this way are said to <span class="highlighted-text">collapse</span>, and the
+                resulting
+                combined margin is called a <span class="highlighted-text">collapsed margin</span>.
+            </p>
+        </li>
+    </ul>
 </section>
 <section>
     <h2>Vertical margins collapse</h2>
     <h4>(basic cases)</h4>
 
     <ul>
-        <li> Adjacent siblings
+        <li> Adjacent <span class="highlighted-text">siblings</span>
         </li>
-        <li>Parent and first/last child
+        <li><span class="highlighted-text">Parent</span> and first/last <span class="highlighted-text">child</span>
         </li>
-        <li>Empty blocks
+        <li><span class="highlighted-text">Empty</span> blocks
         </li>
     </ul>
 </section>
 <section>
     <h2>Horizontal margins collapse</h2>
 
-    <p>Do not collapse in most cases...</p>
+    <p>Do <span class="highlighted-text">not</span> collapse in <span class="highlighted-text">most cases</span>...</p>
 </section>
 <section>
-    <h2>Visual formatting model</h2>
+    <h1>Visual formatting model</h1>
 </section>
 <section>
     <h2>Visual formatting model</h2>
@@ -1377,10 +1549,22 @@
 <section>
     <h2>MORE UNITS IN CSS</h2>
     <table class="tableizer-table">
-        <tr class="tableizer-firstrow"><th>Unit</th><th>Description</th></tr>
-        <tr><td>rem</td><td>is the font size of the root element of the document</td></tr>
-        <tr><td>vw</td><td>1/100th of the window's width</td></tr>
-        <tr><td>vh</td><td>1/100th of the window's height</td></tr>
+        <tr class="tableizer-firstrow">
+            <th>Unit</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>rem</td>
+            <td>is the font size of the root element of the document</td>
+        </tr>
+        <tr>
+            <td>vw</td>
+            <td>1/100th of the window's width</td>
+        </tr>
+        <tr>
+            <td>vh</td>
+            <td>1/100th of the window's height</td>
+        </tr>
     </table>
 
 </section>
@@ -1399,6 +1583,7 @@
         progress: true,
         history: true,
         center: true,
+        slideNumber: true,
 
         transition: 'slide', // none/fade/slide/convex/concave/zoom
 
