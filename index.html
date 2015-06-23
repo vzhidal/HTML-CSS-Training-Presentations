@@ -938,59 +938,49 @@ p {
 <section>
     <h2>Box Generation</h2>
 
-    <p>
-        the part of the CSS visual formatting model
-    </p>
-
-    <p>
-        creates boxes from the document's elements
-    </p>
+    <ul>
+        <li>the part of the CSS visual formatting model</li>
+        <li>creates boxes from the document's elements</li>
+    </ul>
 </section>
 <section>
     <h2>Box Types</h2>
 
-    <p>
-        affects how the visual formatting is done
-    </p>
-
-    <p>
-        depends of the value of the display CSS property
-    </p>
+    <ul>
+        <li>affects how the visual formatting is done</li>
+        <li>depends of the value of the display CSS property</li>
+    </ul>
 </section>
 <section>
     <h2>Block-level elements and block boxes</h2>
 
-    <p>
-        visually formatted as a block
+    <ul>
+        <li>visually formatted as a block</li>
+        <li>intended to be vertically stacked</li>
+        <li>display: <span class="highlighted-text">block</span>, <span class="highlighted-text">list-item</span>, <span
+                class="highlighted-text">table</span></li>
+    </ul>
 
-    </p>
-
-    <p>
-        intended to be vertically stacked
-    </p>
-
-    <p>
-        display: <span class="highlighted-text">block</span>, <span class="highlighted-text">list-item</span>, <span
-            class="highlighted-text">table</span>
-    </p>
 </section>
 <section>
     <h2>Block-level elements</h2>
-
-    <p>participates in a <span class="highlighted-text">block formatting context</span>
-    </p>
-
-    <p>generates at least one block-level box (<span class="highlighted-text">principal block-level box</span>)
-    </p>
+    <ul>
+        <li>participates in a <span class="highlighted-text">block formatting context</span></li>
+        <li>generates at least one block-level box (<span class="highlighted-text">principal block-level box</span>)
+        </li>
+    </ul>
 </section>
 <section>
     <h2>Block container box</h2>
 
-    <p>is a box that contains only other <span class="highlighted-text">block-level boxes</span>, or creates an <span
-            class="highlighted-text">inline
-        formatting context</span></p>
+    <ul>
+        <li><p>is a box that contains only other <span class="highlighted-text">block-level boxes</span>, or creates an <span
+                class="highlighted-text">inline
+        formatting context</span></p></li>
+        <li><p>A block-level box may also be a block container box.</p></li>
+    </ul>
 
-    <p>A block-level box may also be a block container box.</p>
+
 </section>
 <section>
     <h2>block-level box vs block container</h2>
@@ -1001,7 +991,7 @@ p {
                 block-level box
             </h5>
 
-            <p>describes how the box will behave with its parents and sibling
+            <p>describes how the box will <span class="highlighted-text">behave</span> with its parents and sibling
             </p>
         </div>
         <div class="col-6-12">
@@ -1010,7 +1000,7 @@ p {
             </h5>
 
             <p>
-                how the box will interact with its descendants
+                how the box will <span class="highlighted-text">interact</span> with its descendants
             </p>
         </div>
     </div>
@@ -1026,18 +1016,24 @@ p {
     <h2>
         Anonymous block boxes
     </h2>
-
-    <p>
-        supplementary boxes
-    </p>
-
-    <p>
-        cannot be styled using CSS selectors
-    </p>
-
-    <p>
-        use the inherit value or the initial value of css properties
-    </p>
+    <ul>
+        <li>
+            <p>
+                supplementary boxes
+            </p>
+        </li>
+        <li>
+            <p>
+                cannot be styled using CSS selectors
+            </p>
+        </li>
+        <li>
+            <p>
+                use the <span class="highlighted-text">inherit value</span> or the <span class="highlighted-text">initial value</span>
+                of css properties
+            </p>
+        </li>
+    </ul>
 </section>
 <section>
     <h2>Anonymous block boxes</h2>
@@ -1048,15 +1044,18 @@ p {
 </section>
 <section>
     <h2>Inline-level elements and inline boxes</h2>
-
-    <p>display: inline, inline-block, inline-table</p>
-
-    <p>distributed in lines with other inline-level content</p>
+    <ul>
+        <li><p>distributed in lines with other inline-level content</p></li>
+        <li><p>display: <span class="highlighted-text">inline</span>, <span class="highlighted-text">inline-block</span>,
+            <span class="highlighted-text">inline-table</span></p></li>
+    </ul>
 </section>
 <section>
     <h2>Inline-level elements</h2>
+    <ul>
+        <li><p>generate inline-level boxes</p></li>
+    </ul>
 
-    <p>generate inline-level boxes</p>
 </section>
 <section>
     <h2>inline boxes</h2>
@@ -1068,15 +1067,17 @@ p {
 <section>
     <h2>atomic inline-level boxes</h2>
 
-    <p>Inline-level boxes that do not participate in an inline formatting context
-    </p>
+    <ul>
+        <li><p>Inline-level boxes that do not participate in an inline formatting context
+        </p></li>
+        <li><p>are never split in several boxes
+        </p></li>
+        <li><p>generated by: replaced inline-level elements, by elements with a calculated display value
+            (inline-block or inline-table)
+        </p></li>
+    </ul>
 
-    <p>are never split in several boxes
-    </p>
 
-    <p>generated by: replaced inline-level elements, by elements with a calculated display value
-        (inline-block or inline-table)
-    </p>
 </section>
 <section>
     <h2>atomic inline-level boxes</h2>
@@ -1084,16 +1085,16 @@ p {
     <div class="grid">
         <div class="col-6-12">
             <pre>
-                <code data-trim class="html" style="font-size: 14px">
-                    <style>
-                        span {
-                            display: inline; /* default value*/
-                        }
-                    </style>
-                    <div>
-                        The text in the span <span>can be split
-                        in several lines as it</span> is an inline box.
-                    </div>
+                <code data-trim class="html" style="font-size: 13px">
+<style>
+    span {
+        display: inline; /* default value*/
+    }
+</style>
+<div>
+    The text in the span <span>can be split
+    in several lines as it</span> is an inline box.
+</div>
                 </code>
             </pre>
             <div> The text in the span <span>can be split in several lines as it</span> is
@@ -1102,16 +1103,16 @@ p {
         </div>
         <div class="col-6-12">
             <pre>
-                <code data-trim class="html" style="font-size: 14px">
-                    <style>
-                        span {
-                            display: inline-block;
-                        }
-                    </style>
-                    <div>
-                        The text in the span <span>cannot be split
-                        in several lines as it</span> is an inline-block box.
-                    </div>
+                <code data-trim class="html" style="font-size: 13px">
+<style>
+    span {
+        display: inline-block;
+    }
+</style>
+<div>
+    The text in the span <span>cannot be split
+    in several lines as it</span> is an inline-block box.
+</div>
                 </code>
             </pre>
             <div> The text in the span <span
@@ -1126,20 +1127,21 @@ p {
         Anonymous inline boxes
     </h2>
 
-    <p>supplementary boxes
-    </p>
-
-    <p>cannot be styled using CSS selectors
-    </p>
-
-    <p>use the inherit value or the initial value of css properties
-    </p>
+    <ul>
+        <li><p>supplementary boxes
+        </p></li>
+        <li><p>cannot be styled using CSS selectors
+        </p></li>
+        <li><p>use the <span class="highlighted-text">inherit value</span> or the <span class="highlighted-text">initial value</span>
+            of css properties
+        </p></li>
+    </ul>
 </section>
 <section>
     <h2>Anonymous inline boxes</h2>
 
     <p>
-        TODO: Add an example
+        //TODO: Add an example
     </p>
 </section>
 <section>
@@ -1182,7 +1184,7 @@ p {
     <h2>normal flow</h2>
 
     <p>
-        boxes are laid out one after the other (vertically or horizontally)
+        boxes are laid out one after the other <br/>(vertically or horizontally)
     </p>
 </section>
 <section>
@@ -1230,12 +1232,13 @@ p {
 <section>
     <h2>Floats</h2>
 
-    <p>floating boxes are positioned at the beginning or end of the current line
-    </p>
-
-    <p>
-        anything within the normal flow flows along the edge of the floating boxes
-    </p>
+    <ul>
+        <li><p>floating boxes are positioned at the beginning or end of the current line
+        </p></li>
+        <li><p>
+            anything within the normal flow flows along the edge of the floating boxes
+        </p></li>
+    </ul>
 </section>
 <section>
     <h2>
@@ -1259,14 +1262,22 @@ p {
 <section>
     <h2>The clear CSS property</h2>
 
-    <p>
-        specifies whether an element can be next to floating elements that precede it or must be moved down (cleared)
-        below them
-    </p>
+    <ul>
+        <li>
+            <p>
+                specifies whether an element can be next to floating elements that precede it or must be moved down
+                (cleared)
+                below them
+            </p>
+        </li>
+        <li>
+            <p>
+                applies to both floating and non-floating elements
+            </p>
+        </li>
+    </ul>
 
-    <p>
-        applies to both floating and non-floating elements
-    </p>
+
 </section>
 <section>
     <h2>Block formatting context</h2>
@@ -1372,8 +1383,97 @@ p {
         </li>
     </ul>
 </section>
+
 <section>
-    <h2>CSS At-rules</h2>
+    <h2>The stacking context</h2>
+    <ul>
+        <li>Boxes are positioned in three dimensions.
+        </li>
+        <li>The third dimension is the z axis, which is perpendicular to the screen.
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>'z-index' property</h2>
+    <ul>
+        <li><p>For a positioned box, the 'z-index' property specifies:
+        </p>
+            <ul>
+                <li>The stack level of the box in the current stacking context.
+                </li>
+                <li>Whether the box establishes a local stacking context.
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Forming of a stacking context</h2>
+    <ul>
+        <li>the root element (HTML)</li>
+        <li>positioned (absolutely or relatively) with a z-index value other than "auto"</li>
+        <li>a flex item with a z-index value other than "auto"</li>
+        <li>elements with an opacity value less than 1</li>
+        <li>elements with a transform value other than "none"</li>
+        <li>elements with a mix-blend-mode value other than "normal"</li>
+        <li>elements with a filter value other than "none"</li>
+        <li>elements with isolation set to "isolate"</li>
+    </ul>
+</section>
+<section>
+    <h2>Stacking context layers</h2>
+    <ul>
+        <li>the background and borders of the element that establishes the stacking context
+        </li>
+        <li>the stacking contexts of descendants with negative stack levels</li>
+        <li>block-level descendants in the normal flow
+        </li>
+        <li>floated descendants and their contents
+        </li>
+        <li>inline-level descendants in the normal flow
+        </li>
+        <li>positioned descendants whose z-index is auto or 0
+        </li>
+        <li>the stacking contexts of descendants with positive stack levels
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>stacking context</h2>
+    <h5>(summary)</h5>
+    <ul>
+        <li>
+            <p>
+                Positioning and assigning a z-index value to an HTML element creates a stacking context, (as does assigning non-full opacity).
+
+            </p>
+        </li>
+        <li>
+            <p>
+                Stacking contexts can be contained in other stacking contexts, and together create a hierarchy of stacking contexts.
+
+            </p>
+        </li>
+        <li>
+            <p>
+                Each stacking context is completely independent from its siblings: only descendant elements are considered when stacking is processed.
+
+            </p>
+        </li>
+        <li>
+            <p>
+                Each stacking context is self-contained: after the element's contents are stacked, the whole element is considered in the stacking order of the parent stacking context.
+
+            </p>
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>The Golden rule of z-index</h2>
+    <p>“If you are using 3 digits z-index values, you are doing it wrong.”</p>
+</section>
+<section>
+    <h1>CSS At-rules</h1>
 </section>
 <section>
     <h2>CSS At-rules</h2>
@@ -1401,7 +1501,7 @@ p {
     </ul>
 </section>
 <section>
-    <h2>CSS Properties</h2>
+    <h1>CSS Properties</h1>
 </section>
 <section>
     <h2>CSS Properties</h2>
@@ -1455,17 +1555,22 @@ p {
         </div>
         <div class="col-6-12">
             <pre><code data-trim class="css">
-                div {
-                -webkit-border-radius: 3px;
-                -moz-border-radius: 3px;
-                border-radius: 3px;
-                }
+div {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
             </code></pre>
         </div>
     </div>
 </section>
 <section>
-    <h2>CSS Units</h2>
+    <h2>Shorthand Properties</h2>
+    <p>CSS properties that let you set the values of several other CSS properties simultaneously.</p>
+    //TODO: https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
+</section>
+<section>
+    <h1>CSS Units</h1>
 </section>
 <section>
     <section>
@@ -1547,7 +1652,7 @@ p {
     </table>
 </section>
 <section>
-    <h2>MORE UNITS IN CSS</h2>
+    <h2>More Units in CSS</h2>
     <table class="tableizer-table">
         <tr class="tableizer-firstrow">
             <th>Unit</th>
