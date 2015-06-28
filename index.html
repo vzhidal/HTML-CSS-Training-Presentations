@@ -72,7 +72,33 @@
         <li><span class="highlighted-text">Cleaner</span> code.</li>
         <li><span class="highlighted-text">Easier</span> to manage style changes.</li>
     </ul>
+
 </section>
+
+<section>
+    <h2>History</h2>
+    <dl>
+        <dt class="highlighted-text">1994</dt>
+        <dd>CSS was first proposed by Håkon Wium Lie</dd>
+        <dt class="highlighted-text">1996</dt>
+        <dd>CSS level 1 was published as a W3C Recommendation</dd>
+        <dt class="highlighted-text">1998</dt>
+        <dd>CSS level 2 was published as a W3C Recommendation</dd>
+    </dl>
+    <aside class="notes">
+        https://en.wikipedia.org/wiki/Cascading_Style_Sheets
+    </aside>
+</section>
+
+<section>
+    <h2>The Great Renaming</h2>
+    //TODO
+    <aside class="notes">
+        https://wiki.csswg.org/spec/levels
+        http://css-live.ru/articles-css/zhizn-posle-css3-chto-novogo-v-css-1.html
+    </aside>
+</section>
+
 
 <section>
     <h1>Syntax</h1>
@@ -170,39 +196,45 @@ p {
 <section>
     <h2>Selectors</h2>
 
-    <p>A CSS selector is the part of a CSS rule set that actually selects the content.
+    <p>A <span class="highlighted-text">CSS selector</span> is the part of a CSS rule set that actually selects the
+        content.
     </p>
 </section>
 <section>
-    <h2>Simple Selectors</h2>
-    <table class="table-middle">
-        <tr>
-            <th>Pattern</th>
-            <th>Meaning</th>
-            <th>Level</th>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">*</span></td>
-            <td>any element</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">E</span></td>
-            <td>an element of type E</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">E.warning</span></td>
-            <td>an E element whose class is "warning"</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">E#myid</span></td>
-            <td>an E element with ID equal to "myid"</td>
-            <td>1</td>
-        </tr>
-    </table>
+    <section>
+        <h2>Simple Selectors</h2>
+        <table class="table-middle">
+            <tr>
+                <th>Pattern</th>
+                <th>Meaning</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">*</span></td>
+                <td>any element</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">E</span></td>
+                <td>an element of type E</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">E.warning</span></td>
+                <td>an E element whose class is "warning"</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">E#myid</span></td>
+                <td>an E element with ID equal to "myid"</td>
+                <td>1</td>
+            </tr>
+        </table>
+    </section>
+    <section data-background-iframe="http://jsbin.com/vudaq/embed?html,css,output">
+    </section>
 </section>
+
 <section>
     <h2>Class vs. Id</h2>
 
@@ -287,6 +319,7 @@ p {
             </tr>
         </table>
     </section>
+    <section data-background-iframe="http://jsbin.com/hemuye/embed?html,css,output"></section>
 </section>
 
 <section>
@@ -352,12 +385,14 @@ p {
                 <td>3</td>
             </tr>
         </table>
-
     </section>
+    <section data-background-iframe="http://jsbin.com/rocahi/embed?html,css,output"></section>
+</section>
+<section>
     <section>
         <h2>Pseudo Classes</h2>
 
-        <h4>Structural</h4>
+        <h4>(Structural)</h4>
         <table class="table-middle">
             <tr>
                 <th>Pattern</th>
@@ -390,7 +425,7 @@ p {
     <section>
         <h2>Pseudo Classes</h2>
 
-        <h4>Structural</h4>
+        <h4>(Structural)</h4>
         <table class="table-middle">
             <tr>
                 <th>Pattern</th>
@@ -425,7 +460,7 @@ p {
     <section>
         <h2>Pseudo Classes</h2>
 
-        <h4>Structural</h4>
+        <h4>(Structural)</h4>
         <table class="table-middle">
             <tr>
                 <th>Pattern</th>
@@ -453,71 +488,74 @@ p {
                 <td>3</td>
             </tr>
         </table>
-
     </section>
+    <section data-background-iframe="http://jsbin.com/geworus/embed?html,css,output"></section>
 </section>
 <section>
-    <h2>Pseudo Elements</h2>
-    <table class="table-middle">
-        <tr>
-            <th>Pattern</th>
-            <th>Meaning</th>
-            <th>Level</th>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">E::first-line</span></td>
-            <td>the first formatted line of an E element</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">E::first-letter</span></td>
-            <td>the first formatted letter of an E element</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">E::before</span></td>
-            <td>generated content before an E element</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">E::after</span></td>
-            <td>generated content after an E element</td>
-            <td>2</td>
-        </tr>
-    </table>
-
+    <section>
+        <h2>Pseudo Elements</h2>
+        <table class="table-middle">
+            <tr>
+                <th>Pattern</th>
+                <th>Meaning</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">E::first-line</span></td>
+                <td>the first formatted line of an E element</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">E::first-letter</span></td>
+                <td>the first formatted letter of an E element</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">E::before</span></td>
+                <td>generated content before an E element</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">E::after</span></td>
+                <td>generated content after an E element</td>
+                <td>2</td>
+            </tr>
+        </table>
+    </section>
+    <section data-background-iframe="http://jsbin.com/jecice/embed?html,css,output"></section>
 </section>
 <section>
-    <h2>Combinators</h2>
-    <table class="table-middle">
-        <tr>
-            <th>Pattern</th>
-            <th>Meaning</th>
-            <th>Level</th>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">E F</span></td>
-            <td>an F element descendant of an E element</td>
-            <td>1</td>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">E > F</span></td>
-            <td>an F element child of an E element</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">E + F</span></td>
-            <td>an F element immediately preceded by an E element</td>
-            <td>2</td>
-        </tr>
-        <tr>
-            <td><span class="highlighted-text">E ~ F</span></td>
-            <td>an F element preceded by an E element</td>
-            <td>3</td>
-        </tr>
-    </table>
-
-
+    <section>
+        <h2>Combinators</h2>
+        <table class="table-middle">
+            <tr>
+                <th>Pattern</th>
+                <th>Meaning</th>
+                <th>Level</th>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">E F</span></td>
+                <td>an F element descendant of an E element</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">E > F</span></td>
+                <td>an F element child of an E element</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">E + F</span></td>
+                <td>an F element immediately preceded by an E element</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td><span class="highlighted-text">E ~ F</span></td>
+                <td>an F element preceded by an E element</td>
+                <td>3</td>
+            </tr>
+        </table>
+    </section>
+    <section data-background-iframe="http://jsbin.com/lurido/embed?html,css,output"></section>
 </section>
 <section>
     <h2>The <em class="highlighted-text">key</em> selector</h2>
@@ -847,9 +885,14 @@ p {
     </p>
 </section>
 <section>
-    <h2>Box Dimensions</h2>
+    <section>
+        <h2>Box Dimensions</h2>
 
-    <img style="background-color: white;" src="images/box-dimensions.png"/>
+        <img style="background-color: white;" src="images/box-dimensions.png"/>
+    </section>
+    <section data-background-iframe="http://jsbin.com/domaga/embed?html,css,output">
+
+    </section>
 </section>
 <section>
     <h2>Box Edges</h2>
@@ -866,16 +909,19 @@ p {
     </ul>
 </section>
 <section>
-    <h2>box-sizing</h2>
+    <section>
+        <h2>box-sizing</h2>
 
-    <ul>
-        <li> content-box
-        </li>
-        <li>padding-box
-        </li>
-        <li>border-box
-        </li>
-    </ul>
+        <ul>
+            <li>content-box
+            </li>
+            <li>padding-box
+            </li>
+            <li>border-box
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/warevu/embed?html,css,output"></section>
 </section>
 <section>
     <h2>Collapsing Margins</h2>
@@ -894,17 +940,20 @@ p {
     </ul>
 </section>
 <section>
-    <h2>Vertical margins collapse</h2>
-    <h4>(basic cases)</h4>
+    <section>
+        <h2>Vertical margins collapse</h2>
+        <h4>(basic cases)</h4>
 
-    <ul>
-        <li> Adjacent <span class="highlighted-text">siblings</span>
-        </li>
-        <li><span class="highlighted-text">Parent</span> and first/last <span class="highlighted-text">child</span>
-        </li>
-        <li><span class="highlighted-text">Empty</span> blocks
-        </li>
-    </ul>
+        <ul>
+            <li> Adjacent <span class="highlighted-text">siblings</span>
+            </li>
+            <li><span class="highlighted-text">Parent</span> and first/last <span class="highlighted-text">child</span>
+            </li>
+            <li><span class="highlighted-text">Empty</span> blocks
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/wuxavu/embed?html,css,output"></section>
 </section>
 <section>
     <h2>Horizontal margins collapse</h2>
@@ -983,7 +1032,7 @@ p {
 
 </section>
 <section>
-    <h2>block-level box vs block container</h2>
+    <h2>block-level box <br/>vs. <br/>block container</h2>
 
     <div class="grid">
         <div class="col-6-12">
@@ -1065,6 +1114,23 @@ p {
         context</p>
 </section>
 <section>
+    <section>
+        <h2>Inline Boxes</h2>
+        <h4>Dimensions Calculation</h4>
+        <dl>
+            <dt class="highlighted-text">width</dt>
+            <dd>doesn't apply</dd>
+            <dt class="highlighted-text">height</dt>
+            <dd>doesn't apply, but the height of the box is given by the ‘line-height’ property</dd>
+            <dt class="highlighted-text">padding</dt>
+            <dd>only left and right padding will have an effect</dd>
+            <dt class="highlighted-text">margin</dt>
+            <dd>only left and right margin will have an effect</dd>
+        </dl>
+    </section>
+    <section data-background-iframe="http://jsbin.com/fumaju/embed?html,css,output"></section>
+</section>
+<section>
     <h2>atomic inline-level boxes</h2>
 
     <ul>
@@ -1084,8 +1150,7 @@ p {
 
     <div class="grid">
         <div class="col-6-12">
-            <pre>
-                <code data-trim class="html" style="font-size: 13px">
+            <pre><code data-trim class="html" style="font-size: 13px">
 <style>
     span {
         display: inline; /* default value*/
@@ -1095,15 +1160,13 @@ p {
     The text in the span <span>can be split
     in several lines as it</span> is an inline box.
 </div>
-                </code>
-            </pre>
+                </code></pre>
             <div> The text in the span <span>can be split in several lines as it</span> is
                 an inline box.
             </div>
         </div>
         <div class="col-6-12">
-            <pre>
-                <code data-trim class="html" style="font-size: 13px">
+            <pre><code data-trim class="html" style="font-size: 13px">
 <style>
     span {
         display: inline-block;
@@ -1113,8 +1176,7 @@ p {
     The text in the span <span>cannot be split
     in several lines as it</span> is an inline-block box.
 </div>
-                </code>
-            </pre>
+                </code></pre>
             <div> The text in the span <span
                     style="display: inline-block;">cannot be split in several lines as it</span>
                 is an inline-block box.
@@ -1206,28 +1268,31 @@ p {
     </ul>
 </section>
 <section>
-    <h2>
-        normal flow
-    </h2>
+    <section>
+        <h2>
+            normal flow
+        </h2>
 
-    <div class="grid">
-        <div class="col-6-12">
-            <h5>static positioning
-            </h5>
+        <div class="grid">
+            <div class="col-6-12">
+                <h5><span class="highlighted-text">static</span> positioning
+                </h5>
 
-            <p>
-                the boxes are drawn at the exact position defined by the normal flow layout.
-            </p>
+                <p>
+                    the boxes are drawn at the exact position defined by the normal flow layout.
+                </p>
+            </div>
+            <div class="col-6-12">
+                <h5><span class="highlighted-text">relative</span> positioning
+                </h5>
+
+                <p>
+                    the boxes are drawn with an offset defined by the top, bottom, left and right CSS properties.
+                </p>
+            </div>
         </div>
-        <div class="col-6-12">
-            <h5>relative positioning
-            </h5>
-
-            <p>
-                the boxes are drawn with an offset defined by the top, bottom, left and right CSS properties.
-            </p>
-        </div>
-    </div>
+    </section>
+    <section data-background-iframe="http://jsbin.com/lanare/embed?html,css,output"></section>
 </section>
 <section>
     <h2>Floats</h2>
@@ -1241,49 +1306,52 @@ p {
     </ul>
 </section>
 <section>
-    <h2>
-        Floats
-    </h2>
-    <ul>
-        <li>position
-            <ul>
-                <li>static</li>
-                <li>relative</li>
-            </ul>
-        </li>
-        <li>float
-            <ul>
-                <li>left</li>
-                <li>right</li>
-            </ul>
-        </li>
-    </ul>
+    <section>
+        <h2>
+            Floats
+        </h2>
+        <ul>
+            <li>position
+                <ul>
+                    <li>static</li>
+                    <li>relative</li>
+                </ul>
+            </li>
+            <li>float
+                <ul>
+                    <li>left</li>
+                    <li>right</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/locuri/embed?html,css,output"></section>
+    <section data-background-iframe="http://jsbin.com/hevebu/embed?html,css,output"></section>
 </section>
 <section>
-    <h2>The clear CSS property</h2>
-
-    <ul>
-        <li>
-            <p>
-                specifies whether an element can be next to floating elements that precede it or must be moved down
-                (cleared)
-                below them
-            </p>
-        </li>
-        <li>
-            <p>
-                applies to both floating and non-floating elements
-            </p>
-        </li>
-    </ul>
-
-
+    <section>
+        <h2>The clear CSS property</h2>
+        <ul>
+            <li>
+                <p>
+                    specifies whether an element can be next to floating elements that precede it or must be moved down
+                    (cleared)
+                    below them
+                </p>
+            </li>
+            <li>
+                <p>
+                    applies to both floating and non-floating elements
+                </p>
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/ciyigu/embed?html,css,output"></section>
 </section>
 <section>
     <h2>Block formatting context</h2>
     <ul>
         <li>the region in which
-
             <ul>
                 <li>the layout of block boxes occurs
                 </li>
@@ -1294,27 +1362,30 @@ p {
     </ul>
 </section>
 <section>
-    <h2>Block formatting context</h2>
-    <ul>
-        <li>created by:
-            <ul>
-                <li>the root element
-                </li>
-                <li>floats
-                </li>
-                <li>absolutely positioned elements
-                </li>
-                <li>inline-blocks
-                </li>
-                <li>table cells and table captions
-                </li>
-                <li>elements where overflow has a value other than visible
-                </li>
-                <li>flex boxes
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <section>
+        <h2>Block formatting context</h2>
+        <ul>
+            <li>created by:
+                <ul>
+                    <li>the root element
+                    </li>
+                    <li>floats
+                    </li>
+                    <li>absolutely positioned elements
+                    </li>
+                    <li>inline-blocks
+                    </li>
+                    <li>table cells and table captions
+                    </li>
+                    <li>elements where overflow has a value other than visible
+                    </li>
+                    <li>flex boxes
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/macajo/embed?html,css,output"></section>
 </section>
 <section>
     <h2>
@@ -1444,25 +1515,29 @@ p {
     <ul>
         <li>
             <p>
-                Positioning and assigning a z-index value to an HTML element creates a stacking context, (as does assigning non-full opacity).
+                Positioning and assigning a z-index value to an HTML element creates a stacking context, (as does
+                assigning non-full opacity).
 
             </p>
         </li>
         <li>
             <p>
-                Stacking contexts can be contained in other stacking contexts, and together create a hierarchy of stacking contexts.
+                Stacking contexts can be contained in other stacking contexts, and together create a hierarchy of
+                stacking contexts.
 
             </p>
         </li>
         <li>
             <p>
-                Each stacking context is completely independent from its siblings: only descendant elements are considered when stacking is processed.
+                Each stacking context is completely independent from its siblings: only descendant elements are
+                considered when stacking is processed.
 
             </p>
         </li>
         <li>
             <p>
-                Each stacking context is self-contained: after the element's contents are stacked, the whole element is considered in the stacking order of the parent stacking context.
+                Each stacking context is self-contained: after the element's contents are stacked, the whole element is
+                considered in the stacking order of the parent stacking context.
 
             </p>
         </li>
@@ -1470,6 +1545,7 @@ p {
 </section>
 <section>
     <h2>The Golden rule of z-index</h2>
+
     <p>“If you are using 3 digits z-index values, you are doing it wrong.”</p>
 </section>
 <section>
@@ -1566,6 +1642,7 @@ div {
 </section>
 <section>
     <h2>Shorthand Properties</h2>
+
     <p>CSS properties that let you set the values of several other CSS properties simultaneously.</p>
     //TODO: https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
 </section>
@@ -1694,18 +1771,18 @@ div {
 
         // Optional reveal.js plugins
         dependencies: [
-            { src: 'lib/js/classList.js', condition: function () {
+            { src: 'lib/js/classList.js', condition: function() {
                 return !document.body.classList;
             } },
-            { src: 'plugin/markdown/marked.js', condition: function () {
+            { src: 'plugin/markdown/marked.js', condition: function() {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src: 'plugin/markdown/markdown.js', condition: function () {
+            { src: 'plugin/markdown/markdown.js', condition: function() {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+            { src: 'plugin/highlight/highlight.js', async: true, condition: function() {
                 return !!document.querySelector('pre code');
-            }, callback: function () {
+            }, callback: function() {
                 hljs.initHighlightingOnLoad();
             } },
             { src: 'plugin/zoom-js/zoom.js', async: true },
