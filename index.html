@@ -96,6 +96,17 @@
     <aside class="notes">
         https://wiki.csswg.org/spec/levels
         http://css-live.ru/articles-css/zhizn-posle-css3-chto-novogo-v-css-1.html
+
+        CSS Level 3
+
+        This section is non-normative.
+        CSS Level 3 builds on CSS Level 2 module by module, using the CSS2.1 specification as its core. Each module adds
+        functionality and/or replaces part of the CSS2.1 specification. The CSS Working Group intends that the new CSS
+        modules will not contradict the CSS2.1 specification: only that they will add functionality and refine
+        definitions. As each module is completed, it will be plugged in to the existing system of CSS2.1 plus
+        previously-completed modules.
+        From this level on modules are levelled independently: for example Selectors Level 4 may well be defined before
+        CSS Line Module Level 3.
     </aside>
 </section>
 
@@ -236,20 +247,27 @@ p {
 </section>
 
 <section>
-    <h2>Class vs. Id</h2>
+    <h2 class="hidden">Class vs. Id</h2>
 
     <div class="grid">
         <div class="col-6-12">
-            <ul>
-                <li>class can be used several times</li>
-            </ul>
+            <h5>
+                class
+            </h5>
+
+            <p>can be used several times</p>
         </div>
         <div class="col-6-12">
-            <ul>
-                <li>ID can only be used once</li>
-            </ul>
+            <h5>
+                ID
+            </h5>
+
+            <p>
+                can only be used once
+            </p>
         </div>
     </div>
+
     <br/>
 
     <p><span class="highlighted-text">Use</span> CSS <span class="highlighted-text">classes</span> where it’s possible,
@@ -1032,7 +1050,7 @@ p {
 
 </section>
 <section>
-    <h2>block-level box <br/>vs. <br/>block container</h2>
+    <h2 class="hidden">block-level box <br/>vs. <br/>block container</h2>
 
     <div class="grid">
         <div class="col-6-12">
@@ -1412,102 +1430,137 @@ p {
     </p>
 </section>
 <section>
-    <h2>containing block</h2>
-    <h4>position: static or relative</h4>
-    <ul>
-        <li>the containing block is formed by the edge of the content box of the
-            nearest ancestor element whose display property value is one of:
-            <ul>
-                <li>block</li>
-                <li>inline-block
-                </li>
-                <li>list-item
-                </li>
-                <li>run-in
-                </li>
-                <li>table</li>
-                <li>table-cell
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <section>
+        <h2>containing block</h2>
+        <h4>position: static or relative</h4>
+        <ul>
+            <li>The containing block is formed by the edge of the content box of the
+                nearest ancestor element whose display property value is one of:
+                <ul>
+                    <li>block</li>
+                    <li>inline-block
+                    </li>
+                    <li>list-item
+                    </li>
+                    <li>run-in
+                    </li>
+                    <li>table</li>
+                    <li>table-cell
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/recera/embed?html,css,output"></section>
 </section>
 <section>
-    <h2>containing block</h2>
-    <h4>position: absolute</h4>
-    <ul>
-        <li>the containing block is the nearest positioned ancestor (the nearest ancestor whose position property has
-            one of the values absolute, fixed, or relative)
+    <section>
+        <h2>containing block</h2>
+        <h4>position: absolute</h4>
+        <ul>
+            <li>the containing block is the nearest positioned ancestor (the nearest ancestor whose position property
+                has
+                one of the values absolute, fixed, or relative)
+            </li>
+            <li>
+                the containing block is formed by the padding edge of that ancestor
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/dajoho/embed?html,css,output"></section>
+</section>
+<section>
+    <section>
+        <h2>containing block</h2>
+        <h4>position: fixed</h4>
+        <ul>
+            <li>the containing block is the viewport (for continuous media) or the page box (for paged media).
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/nonota/embed?html,css,output"></section>
+</section>
 
-
-        </li>
-        <li>
-            the containing block is formed by the padding edge of that ancestor
-        </li>
-    </ul>
+<section>
+    <section>
+        <h2>The stacking context</h2>
+        <ul>
+            <li>Boxes are positioned in three dimensions.
+            </li>
+            <li>The third dimension is the z axis, which is perpendicular to the screen.
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/luzuxe/embed?html,css,output"></section>
 </section>
 <section>
-    <h2>containing block</h2>
-    <h4>position: fixed</h4>
-    <ul>
-        <li>the containing block is the viewport (for continuous media) or the page box (for paged media).
-        </li>
-    </ul>
-</section>
-
-<section>
-    <h2>The stacking context</h2>
-    <ul>
-        <li>Boxes are positioned in three dimensions.
-        </li>
-        <li>The third dimension is the z axis, which is perpendicular to the screen.
-        </li>
-    </ul>
-</section>
-<section>
-    <h2>'z-index' property</h2>
-    <ul>
-        <li><p>For a positioned box, the 'z-index' property specifies:
-        </p>
-            <ul>
-                <li>The stack level of the box in the current stacking context.
-                </li>
-                <li>Whether the box establishes a local stacking context.
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <section>
+        <h2>'z-index' property</h2>
+        <ul>
+            <li><p>For a positioned box, the 'z-index' property specifies:
+            </p>
+                <ul>
+                    <li>The stack level of the box in the current stacking context.
+                    </li>
+                    <li>Whether the box establishes a local stacking context.
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/zujaba/embed?html,css,output"></section>
 </section>
 <section>
-    <h2>Forming of a stacking context</h2>
-    <ul>
-        <li>the root element (HTML)</li>
-        <li>positioned (absolutely or relatively) with a z-index value other than "auto"</li>
-        <li>a flex item with a z-index value other than "auto"</li>
-        <li>elements with an opacity value less than 1</li>
-        <li>elements with a transform value other than "none"</li>
-        <li>elements with a mix-blend-mode value other than "normal"</li>
-        <li>elements with a filter value other than "none"</li>
-        <li>elements with isolation set to "isolate"</li>
-    </ul>
+    <section>
+        <h2>Forming of a stacking context</h2>
+        <ul>
+            <li>the <span class="highlighted-text">root</span> element (HTML)</li>
+            <li><span class="highlighted-text">positioned</span> (absolutely or relatively) with a <span
+                    class="highlighted-text">z-index</span> value other than "auto"
+            </li>
+            <li>a <span class="highlighted-text">flex</span> item with a <span class="highlighted-text">z-index</span>
+                value other than "auto"
+            </li>
+            <li>elements with an <span class="highlighted-text">opacity</span> value less than 1</li>
+            <li>elements with a <span class="highlighted-text">transform</span> value other than "none"</li>
+            <li>elements with a <span class="highlighted-text">mix-blend-mode</span> value other than "normal"</li>
+            <li>elements with a <span class="highlighted-text">filter</span> value other than "none"</li>
+            <li>elements with <span class="highlighted-text">isolation</span> set to "isolate"</li>
+        </ul>
+        <aside class="notes">
+            Browser specific and newest issues:
+            on mobile WebKit and Chrome 22+, position: fixed always creates a new stacking context, even when z-index is
+            "auto" (See this post)
+            specifing any attribute above in will-change even you don't write themselves directly (See this post)
+            elements with -webkit-overflow-scrolling set to "touch“
+        </aside>
+    </section>
+    <section data-background-iframe="http://jsbin.com/yoriri/embed?html,css,output"></section>
 </section>
 <section>
-    <h2>Stacking context layers</h2>
-    <ul>
-        <li>the background and borders of the element that establishes the stacking context
-        </li>
-        <li>the stacking contexts of descendants with negative stack levels</li>
-        <li>block-level descendants in the normal flow
-        </li>
-        <li>floated descendants and their contents
-        </li>
-        <li>inline-level descendants in the normal flow
-        </li>
-        <li>positioned descendants whose z-index is auto or 0
-        </li>
-        <li>the stacking contexts of descendants with positive stack levels
-        </li>
-    </ul>
+    <section>
+        <h2>Stacking context layers</h2>
+        <ul>
+            <li>the <span class="highlighted-text">background</span> and <span class="highlighted-text">borders</span>
+                of the element that establishes the stacking context
+            </li>
+            <li>the stacking contexts of descendants with <span class="highlighted-text">negative stack levels</span>
+            </li>
+            <li><span class="highlighted-text">block-level</span> descendants in the <span class="highlighted-text">normal flow</span>
+            </li>
+            <li><span class="highlighted-text">floated</span> descendants and their contents
+            </li>
+            <li><span class="highlighted-text">inline-level</span> descendants in the normal <span
+                    class="highlighted-text">flow</span>
+            </li>
+            <li><span class="highlighted-text">positioned</span> descendants whose z-index is <span
+                    class="highlighted-text">auto</span> or <span class="highlighted-text">0</span>
+            </li>
+            <li>the stacking contexts of descendants with <span class="highlighted-text">positive stack levels</span>
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/jehod/embed?html,css,output"></section>
 </section>
 <section>
     <h2>stacking context</h2>
@@ -1515,30 +1568,17 @@ p {
     <ul>
         <li>
             <p>
-                Positioning and assigning a z-index value to an HTML element creates a stacking context, (as does
-                assigning non-full opacity).
-
+                Positioning and a z-index value creates a stacking context.
             </p>
         </li>
         <li>
             <p>
-                Stacking contexts can be contained in other stacking contexts, and together create a hierarchy of
-                stacking contexts.
-
+                Stacking contexts are hierarchical.
             </p>
         </li>
         <li>
             <p>
-                Each stacking context is completely independent from its siblings: only descendant elements are
-                considered when stacking is processed.
-
-            </p>
-        </li>
-        <li>
-            <p>
-                Each stacking context is self-contained: after the element's contents are stacked, the whole element is
-                considered in the stacking order of the parent stacking context.
-
+                Each stacking context is completely independent from its siblings.
             </p>
         </li>
     </ul>
@@ -1644,7 +1684,140 @@ div {
     <h2>Shorthand Properties</h2>
 
     <p>CSS properties that let you set the values of several other CSS properties simultaneously.</p>
-    //TODO: https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties
+    <aside class="notes">https://developer.mozilla.org/en-US/docs/Web/CSS/Shorthand_properties</aside>
+</section>
+<section>
+    <h2>Shorthand Properties</h2>
+    <h5>(Edge Cases)</h5>
+
+    <p>A value which is not specified is set to its initial value. (it overrides previously set values)</p>
+    <pre><code data-trim class="css">
+div {
+    background-color: red;
+    background: url(images/bg.gif) no-repeat top right;
+}
+    </code></pre>
+</section>
+<section>
+    <h2>Shorthand Properties</h2>
+    <h5>(Edge Cases)</h5>
+
+    <p>Only the individual properties values can inherit. (The keyword <em>inherit</em> can be applied to a
+        property, but only as a whole, not as a keyword for one value or another.)</p>
+    <pre><code data-trim class="css">
+.parent {
+  background: red;
+}
+.child {
+  background: inherit;
+}
+    </code></pre>
+</section>
+<section>
+    <h2>Shorthand Properties</h2>
+    <h5>(Edge Cases)</h5>
+
+    <p>Shorthand properties try not to force a specific order for the values of the properties they replace.</p>
+    <pre><code data-trim class="xml" style="font-size: 16px">
+font: [font-style||font-variant||font-weight] font-size [/line-height] font-family | inherit
+    </code></pre>
+    <pre><code data-trim class="css">
+div {
+  font: italic bold 12pt/10pt serif
+}
+    </code></pre>
+</section>
+<section>
+    <h2>Shorthand Properties</h2>
+    <h5>(Properties related to edges of a box)</h5>
+    <table class="table-code-examples">
+        <tr>
+            <td><img src="images/shorthands-edges-1.png"/></td>
+            <td>
+               <pre><code data-trim class="css">
+div {
+  padding: 10px;
+}
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="images/shorthands-edges-2.png"/></td>
+            <td>
+               <pre><code data-trim class="css">
+div {
+  padding: 10px 20px;
+}
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="images/shorthands-edges-3.png"/></td>
+            <td>
+               <pre><code data-trim class="css">
+div {
+  padding: 10px 20px 30px;
+}
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="images/shorthands-edges-4.png"/></td>
+            <td>
+               <pre><code data-trim class="css">
+div {
+  padding: 10px 20px 30px 40px;
+}
+                </code></pre>
+            </td>
+        </tr>
+    </table>
+</section>
+<section>
+    <h2>Shorthand Properties</h2>
+    <h5>(Properties related to corners of a box)</h5>
+    <table class="table-code-examples">
+        <tr>
+            <td><img src="images/shorthands-corners-1.png"/></td>
+            <td>
+               <pre><code data-trim class="css">
+div {
+  border-radius: 10px;
+}
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="images/shorthands-corners-2.png"/></td>
+            <td>
+               <pre><code data-trim class="css">
+div {
+  border-radius: 10px 20px;
+}
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="images/shorthands-corners-3.png"/></td>
+            <td>
+               <pre><code data-trim class="css">
+div {
+  border-radius: 10px 20px 30px;
+}
+                </code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td><img src="images/shorthands-corners-4.png"/></td>
+            <td>
+               <pre><code data-trim class="css">
+div {
+  border-radius: 10px 20px 30px 40px;
+}
+                </code></pre>
+            </td>
+        </tr>
+    </table>
 </section>
 <section>
     <h1>CSS Units</h1>
@@ -1749,6 +1922,17 @@ div {
         </tr>
     </table>
 
+</section>
+<section>
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="http://www.w3.org/TR/CSS2/">http://www.w3.org/TR/CSS2/</a></li>
+        <li><a href="http://www.w3.org/Style/CSS/current-work">http://www.w3.org/Style/CSS/current-work</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/Guide/CSS">https://developer.mozilla.org/en-US/docs/Web/Guide/CSS</a>
+        </li>
+        <li><a href="https://css-tricks.com/almanac/">https://css-tricks.com/almanac/</a></li>
+        <li><a href="http://reference.sitepoint.com/css">http://reference.sitepoint.com/css</a></li>
+    </ul>
 </section>
 </div>
 </div>

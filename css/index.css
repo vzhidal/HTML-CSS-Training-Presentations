@@ -26,3 +26,15 @@
 .reveal .slide-background.present {
     z-index: 2;
 }
+
+.table-code-examples {
+    width: 70%;
+}
+
+.table-code-examples td {
+    vertical-align: top;
+}
+
+.hidden {
+    display: none;
+}
