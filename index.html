@@ -91,8 +91,13 @@
 </section>
 
 <section>
-    <h2>The Great Renaming</h2>
-    //TODO
+    <h2>CSS3</h2>
+
+    <p>Unlike CSS 2, which is a large single specification defining various features, CSS 3 is divided into several
+        separate documents called "modules".</p>
+
+    <p>Each module adds
+        functionality and/or replaces part of the CSS2.1 specification.</p>
     <aside class="notes">
         https://wiki.csswg.org/spec/levels
         http://css-live.ru/articles-css/zhizn-posle-css3-chto-novogo-v-css-1.html
@@ -109,7 +114,15 @@
         CSS Line Module Level 3.
     </aside>
 </section>
+<section>
+    <h2>CSS4</h2>
+    <h6>(The Great Renaming)</h6>
 
+    <p>There is no such thing as CSS4</p>
+    <aside class="notes">
+        http://www.xanthir.com/b4Ko0
+    </aside>
+</section>
 
 <section>
     <h1>Syntax</h1>
@@ -590,9 +603,9 @@ p {
 <section>
     <h2>Value Processing</h2>
 
-    <p>Once a user agent has parsed a document and constructed a document tree, it must assign, to every element in the
-        tree, and correspondingly to every box in the formatting structure, a value to every property that applies to
-        the target media type.
+    <p>A user agent must assign a <span class="highlighted-text">value</span> to <span class="highlighted-text">every property</span>
+        that applies to the target media type to <span class="highlighted-text">every box</span> in the formatting
+        structure.
     </p>
 </section>
 
@@ -695,22 +708,28 @@ p {
     </ul>
 </section>
 <section>
-    <h2>Inheritance</h2>
-    <img src="images/inheritance.png">
+    <section>
+        <h2>Inheritance</h2>
+        <img src="images/inheritance.png">
+    </section>
+    <section data-background-iframe="http://jsbin.com/yogidu/embed?html,css,output"></section>
 </section>
 <section>
-    <h2>Explicit Defaulting</h2>
-    <ul>
-        <li>
-            Resetting a Property: the <span class="highlighted-text">initial</span> keyword
-        </li>
-        <li>
-            Explicit Inheritance: the <span class="highlighted-text">inherit</span> keyword
-        </li>
-        <li>
-            Erasing All Declarations: the <span class="highlighted-text">unset</span> keyword
-        </li>
-    </ul>
+    <section>
+        <h2>Explicit Defaulting</h2>
+        <ul>
+            <li>
+                Resetting a Property: the <span class="highlighted-text">initial</span> keyword
+            </li>
+            <li>
+                Explicit Inheritance: the <span class="highlighted-text">inherit</span> keyword
+            </li>
+            <li>
+                Erasing All Declarations: the <span class="highlighted-text">unset</span> keyword
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/lugufa/2/embed?html,css,output"></section>
 </section>
 <section>
     <h1>Style sheets origins</h1>
@@ -860,13 +879,15 @@ p {
     <div class="grid">
         <div class="col-6-12">
             <ol>
-                <li>Inline style
+                <li><span class="highlighted-text">Inline</span> style
                 </li>
-                <li>Count the number of IDs
+                <li>Count the number of <span class="highlighted-text">IDs</span>
                 </li>
-                <li>Count the number of classes, attributes and pseudo-classes
+                <li>Count the number of <span class="highlighted-text">classes</span>, <span class="highlighted-text">attributes</span>
+                    and <span class="highlighted-text">pseudo-classes</span>
                 </li>
-                <li>Count the number of element names or pseudo-elements
+                <li>Count the number of <span class="highlighted-text">element names</span> or <span
+                        class="highlighted-text">pseudo-elements</span>
                 </li>
             </ol>
         </div>
@@ -974,9 +995,31 @@ p {
     <section data-background-iframe="http://jsbin.com/wuxavu/embed?html,css,output"></section>
 </section>
 <section>
-    <h2>Horizontal margins collapse</h2>
+    <section>
+        <h2>Horizontal margins collapse</h2>
 
-    <p>Do <span class="highlighted-text">not</span> collapse in <span class="highlighted-text">most cases</span>...</p>
+        <p>Do <span class="highlighted-text">not</span> collapse in <span class="highlighted-text">most cases</span>...
+        </p>
+    </section>
+    <section data-background-iframe="http://jsbin.com/nodici/embed?html,css,output"></section>
+    <aside class="notes">
+        http://www.w3.org/TR/css3-box/#collapsing-margins
+        https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode
+    </aside>
+</section>
+<section>
+    <h2>Collapsing restrictions</h2>
+    <ul>
+        <li>Only margins of <span class="highlighted-text">block-level boxes</span> can collapse.</li>
+        <li>Margins of a <span class="highlighted-text">floated box</span> do not collapse with any other margins.</li>
+        <li>Margins of a box with ‘<span class="highlighted-text">overflow</span>’ other than ‘visible’ do not collapse
+            with its children's margins.
+        </li>
+        <li>Margins of an <span class="highlighted-text">absolutely positioned box</span> do not collapse with any other
+            margins.
+        </li>
+        <li>Margins of the <span class="highlighted-text">root</span> element's box do not collapse.</li>
+    </ul>
 </section>
 <section>
     <h1>Visual formatting model</h1>
@@ -1156,8 +1199,9 @@ p {
         </p></li>
         <li><p>are never split in several boxes
         </p></li>
-        <li><p>generated by: replaced inline-level elements, by elements with a calculated display value
-            (inline-block or inline-table)
+        <li><p>generated by: <span class="highlighted-text">replaced</span> inline-level elements, by elements with a
+            calculated display value
+            (<span class="highlighted-text">inline-block</span> or <span class="highlighted-text">inline-table</span>)
         </p></li>
     </ul>
 
@@ -1234,20 +1278,22 @@ p {
         </li>
         <li>
             Model-induced boxes
-            <ul>
-                <li>
-                    The table content model may create a table wrapper box and a table box, but also specific boxes
-                    like caption boxes.
-                </li>
-                <li>
-                    The multi-column content model may create column boxes between the container box and the content.
-                </li>
-                <li>
-                    The grid or flex-box content models also create additional types of boxes.
-                </li>
-            </ul>
         </li>
     </ul>
+    <aside class="notes">
+        <ul>
+            <li>
+                The table content model may create a table wrapper box and a table box, but also specific boxes
+                like caption boxes.
+            </li>
+            <li>
+                The multi-column content model may create column boxes between the container box and the content.
+            </li>
+            <li>
+                The grid or flex-box content models also create additional types of boxes.
+            </li>
+        </ul>
+    </aside>
 </section>
 <section>
     <h2>
@@ -1305,7 +1351,9 @@ p {
                 </h5>
 
                 <p>
-                    the boxes are drawn with an offset defined by the top, bottom, left and right CSS properties.
+                    the boxes are drawn with an offset defined by the <span class="highlighted-text">top</span>, <span
+                        class="highlighted-text">bottom</span>, <span class="highlighted-text">left</span> and <span
+                        class="highlighted-text">right</span> CSS properties.
                 </p>
             </div>
         </div>
@@ -1410,13 +1458,13 @@ p {
         Absolute positioning
     </h2>
     <ul>
-        <li>boxes are entirely removed from the flow
+        <li>boxes are entirely <span class="highlighted-text">removed</span> from the flow
 
         </li>
-        <li>boxes don't interact with the flow at all
+        <li>boxes <span class="highlighted-text">don't interact</span> with the flow at all
 
         </li>
-        <li>boxes positioned relative to their containing block
+        <li>boxes positioned <span class="highlighted-text">relative</span> to their containing block
 
         </li>
     </ul>
@@ -1434,7 +1482,8 @@ p {
         <h2>containing block</h2>
         <h4>position: static or relative</h4>
         <ul>
-            <li>The containing block is formed by the edge of the content box of the
+            <li>The containing block is formed by the <span class="highlighted-text">edge of the content box</span> of
+                the
                 nearest ancestor element whose display property value is one of:
                 <ul>
                     <li>block</li>
@@ -1460,10 +1509,12 @@ p {
         <ul>
             <li>the containing block is the nearest positioned ancestor (the nearest ancestor whose position property
                 has
-                one of the values absolute, fixed, or relative)
+                one of the values <span class="highlighted-text">absolute</span>, <span
+                        class="highlighted-text">fixed</span>, or <span class="highlighted-text">relative</span>)
             </li>
             <li>
-                the containing block is formed by the padding edge of that ancestor
+                the containing block is formed by the <span class="highlighted-text">padding edge</span> of that
+                ancestor
             </li>
         </ul>
     </section>
@@ -1474,7 +1525,8 @@ p {
         <h2>containing block</h2>
         <h4>position: fixed</h4>
         <ul>
-            <li>the containing block is the viewport (for continuous media) or the page box (for paged media).
+            <li>the containing block is the <span class="highlighted-text">viewport</span> (for continuous media) or the
+                <span class="highlighted-text">page box</span> (for paged media).
             </li>
         </ul>
     </section>
