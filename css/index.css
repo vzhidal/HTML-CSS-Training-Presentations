@@ -38,3 +38,51 @@
 .hidden {
     display: none;
 }
+
+.workshop-example-transition {
+    padding: 20px;
+    border: none;
+    background: green;
+
+    transition-property: background;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+    transition-delay: 0;
+}
+
+.workshop-example-transition:focus {
+    background: red;
+}
+
+.reveal .workshop-example-border-radius {
+    width: 390px;
+    margin: 30px auto;
+    border-color: red;
+    border: solid 5px red;
+    padding: 20px 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.reveal .workshop-example-text-shadow {
+    font-size: 60px;
+    margin-bottom: 100px;
+    font-weight: bold;
+}
+
+.workshop-example-text-shadow-neon {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+
+.workshop-example-text-shadow-fire {
+    text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+}
+
+.reveal .workshop-example-columns {
+    font-size: 18px;
+    -webkit-column-count: 3;
+    column-count: 3;
+    -webkit-column-gap: 40px;
+    column-gap: 40px;
+}
