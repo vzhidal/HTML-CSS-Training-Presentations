@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>CSS in iterations</title>
+
+    <!--<meta name="description" content="A framework for easily creating beautiful presentations using HTML">-->
+    <!--<meta name="author" content="Hakim El Hattab">-->
+
+    <!--<meta name="apple-mobile-web-app-capable" content="yes" />-->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />-->
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="dependencies/icomoon/style.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+        <section>
+            <h1>CSS in iterations</h1>
+
+            <p>
+                <small>Created by <a href="#">Vladimir Zhydal</a></small>
+            </p>
+        </section>
+        <section>
+            <h2>Level 1</h2>
+
+            <p>“Html/Css are for html coders only”</p>
+        </section>
+        <section>
+            <h2>Inline Styles</h2>
+
+            <pre><code>
+<div style="background: red; margin: 10px; padding: 10px;"></div>
+<div style="background: green; margin: 10px; padding: 10px;"></div>
+<div style="background: blue; margin: 10px; padding: 10px;"></div>
+            </code></pre>
+        </section>
+        <section>
+            <h2>Results</h2>
+            <ul>
+                <li>Impossible to maintain</li>
+                <li>Impossible to make themes</li>
+                <li>Widespread duplication of code</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Impulse</h2>
+
+            <p>I can avoid duplication.</p>
+        </section>
+        <section>
+            <h2>&lt;style&gt;</h2>
+            <pre><code>
+<style>
+    div {
+        margin: 10px;
+        padding: 10px;
+    }
+</style>
+<div style="background: red;"></div>
+<div style="background: green;"></div>
+<div style="background: blue;"></div>
+            </code></pre>
+
+        </section>
+        <section>
+            <h2>Results</h2>
+            <ul>
+                <li>There is no so many copy-paste</li>
+                <li>Impossible to maintain</li>
+                <li>Impossible to make themes</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Impulse</h2>
+
+            <p>I can separate content and styles.</p>
+        </section>
+        <section>
+            <h1>Level Up</h1>
+        </section>
+        <section>
+            <h2>Level 2</h2>
+
+            <p>“Let’s see how html coders do that”</p>
+        </section>
+        <section>
+            <h2>First steps of separation</h2>
+            <ul>
+                <li>Let’s use separate files for styles and html</li>
+                <li>Let’s use ids (just because they are fast)</li>
+            </ul>
+        </section>
+        <section>
+            <h2>&lt;link&gt;</h2>
+
+            <div class="grid">
+                <div class="col-6-12">
+                   <pre><code class="html">
+<link href="index.html" rel="stylesheet"
+      type="text/css"/>
+<div id="red-container"></div>
+<div id="green-container"></div>
+<div id="blue-container"></div>
+            </code></pre>
+                </div>
+                <div class="col-6-12">
+                                <pre><code class="css">
+div {
+    margin: 10px;
+    padding: 10px;
+}
+#red-container{
+    background: red;
+}
+#red-container{
+    background: red;
+}
+#red-container{
+    background: red;
+}
+            </code></pre>
+
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Results</h2>
+            <ul>
+                <li>Possible to make themes</li>
+                <li>Still hard to maintain
+                </li>
+                <li>Strong connectivity
+                </li>
+                <li>A lot of side effects
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Impulse</h2>
+
+            <ul>
+                <li>Id => class (because ids cannot be reused through the html code)
+                </li>
+                <li>
+                    Think about structuration
+                </li>
+                <li>
+                    Think about symantic in naming
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Comments for defining structure</h2>
+                <pre><code class="css">
+.container {
+    margin: 10px;
+    padding: 10px;
+}
+/****** HEADER *******/
+.header {
+    background: red;
+}
+/****** END HEADER *******/
+
+/****** BODY *******/
+.content {
+    background: red;
+}
+/****** END HEADER *******/
+
+/****** FOOTER *******/
+.footer {
+    background: red;
+}
+/****** END FOOTER *******/
+            </code></pre>
+        </section>
+        <section>
+            <h2>Results</h2>
+            <ul>
+                <li>A bit easier to maintain, just because it’s easier to find some logical parts
+                </li>
+                <li>
+                    There is a big chance to place a style to a wrong group.
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Impulse</h2>
+
+            <ul>
+                <li>Place logical parts of your styles in a separate files
+                </li>
+                <li>
+                    Performance optimizations shouldn’t affect a project structure
+                </li>
+                <li>
+                    It’s possible to use automatic build tools instead of developing in one file
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Deep nesting for avoiding side effects</h2>
+            <h5>(One line styles)</h5>
+                <pre><code class="css">
+.container div {margin: 10px;}
+.container div .container ul {margin: 25px; padding: 10px;}
+.container div .container ul li a span {margin: 20px; padding: 10px;}
+            </code></pre>
+        </section>
+        <section>
+            <h2>Results</h2>
+            <ul>
+                <li>Big problems with VCS</li>
+                <li>Hard to maintain</li>
+            </ul>
+        </section>
+    <section>
+        <h2>Impulse</h2>
+        <ul>
+            <li>I can make my project more structural and maintainable with some modules.</li>
+            <li>Naming and semantic is really important.</li>
+        </ul>
+    </section>
+    <section>
+        <h1>Level Up</h1>
+    </section>
+    <section>
+        <h2>Level 3</h2>
+        <p>“I’m not an html coder, but I’m a programmer. I can do better!”
+        </p>
+    </section>
+    <section>
+        <h2>Think about scalable and modular css</h2>
+        <ul>
+            <li><a href="http://smacss.com/">Scalable and Modular Architecture for CSS</a></li>
+            <li><a href="https://github.com/stubbornella/oocss/wiki">Object Oriented CSS</a></li>
+            <li><a href="https://vimeo.com/38063798">Don’t Repeat Yourself CSS</a></li>
+            <li><a href="https://bem.info/">Block, Element, Modifier</a></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Think in modules</h2>
+        <ul>
+            <li>After getting a mockup try to split it to modules.</li>
+            <li>Make it possible to reuse your modules.</li>
+            <li>Write container independent CSS.</li>
+            <li>Use strong naming conventions.</li>
+        </ul>
+    </section>
+    </div>
+</div>
+
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    //    var secondLevelSections = document.getElementsByClassName('second-level-section');
+    //    var slidesContainer = document.getElementsByClassName('slides')[0];
+    //
+    //    if(secondLevelSections && slidesContainer) {
+    //        while(secondLevelSections.length){
+    //            slidesContainer.removeChild(secondLevelSections[0]);
+    //        }
+    //    }
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/marked.js', condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, condition: function() {
+                return !!document.querySelector('pre code');
+            }, callback: function() {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+
+
+    //    var revealContainer = document.getElementsByClassName('reveal')[0];
+    //    var slidesContainer = document.getElementsByClassName('slides')[0];
+    //    revealContainer.appendChild(slidesContainer);
+
+</script>
+
+</body>
+</html>
