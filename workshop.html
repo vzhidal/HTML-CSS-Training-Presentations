@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Css Basics</title>
+    <title>Workshop</title>
 
     <!--<meta name="description" content="A framework for easily creating beautiful presentations using HTML">-->
     <!--<meta name="author" content="Hakim El Hattab">-->
@@ -49,76 +49,6 @@
     <p>
         <small>Created by <a href="#">Vladimir Zhydal</a></small>
     </p>
-</section>
-
-<section>
-    <h1>HTML Basics</h1>
-</section>
-<section>
-    <h2>HTML Page Structure</h2>
-            <pre><code data-trim>
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en">
-    &lt;head&gt;
-        &lt;meta charset="utf-8"&gt;
-        &lt;title&gt;Hello World&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;Hello World&lt;/h1&gt;
-        &lt;p&lt;This is a website.&lt;/p&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-            </code></pre>
-</section>
-<section>
-    <h2>DOCTYPE</h2>
-    <h5>HTML4.1</h5>
-    <pre><code style="font-size: 15px">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</code></pre>
-    <h5>HTML5</h5>
-    <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
-</section>
-<section>
-    <h2>Meta tags</h2>
-    <ul>
-        <li><p>Provide metadata about the HTML document.</p></li>
-        <li><p>Can be used by browsers, search engines, or other web services.</p></li>
-    </ul>
-</section>
-<section>
-    <h2>Meta tag attributes</h2>
-    <dl>
-        <dt>charset</dt>
-        <dd>declares the character encoding used of the page</dd>
-
-        <dt>content</dt>
-        <dd>gives the value associated with the http-equiv or name attribute, depending of the context</dd>
-
-        <dt>http-equiv</dt>
-        <dd>defines the pragma that can alter servers and user-agents behavior.</dd>
-
-        <dt>name</dt>
-        <dd>defines the name of a document-level metadata.</dd>
-    </dl>
-</section>
-<section>
-    <h2>Title</h2>
-    <pre><code>&lt;title&gt;HTML-CSS Workshop&lt;/title&gt;</code></pre>
-    <ul>
-        <li>defines a title in the browser toolbar
-
-        </li>
-        <li>provides a title for the page when it is added to favorites
-        </li>
-        <li>displays a title for the page in search-engine results</li>
-    </ul>
-</section>
-<section>
-    <h2>favicon</h2>
-            <pre><code data-trim class="html">
-<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
-<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
-            </code></pre>
 </section>
 <section>
     <h1>WORKING with mockups</h1>
@@ -252,7 +182,7 @@
     </div>
 </section>
 <section>
-    <h1>Css Basics</h1>
+    <h1>Creating a markup</h1>
 </section>
 <section>
     <h2>reset vs. normalize</h2>
@@ -315,150 +245,16 @@
     </ul>
 </section>
 <section>
-    <h1>Css properties</h1>
+    <h1>Guidelines and code style</h1>
 </section>
 <section>
-    <h2>font</h2>
+    <h2>Our Guidelines</h2>
+    <a href="https://wiki.itechart-group.com/pages/viewpage.action?pageId=12779733">https://wiki.itechart-group.com/pages/viewpage.action?pageId=12779733</a>
 </section>
 <section>
-    <h2>background</h2>
-</section>
-<section>
-    <h2>transition</h2>
-
-    <p>Allow you to change property values smoothly over a given duration.</p>
-
-    <div class="grid">
-        <div class="col-8-12">
-                        <pre><code data-trim style="font-size: 15px">
-<style>
-    .transition {
-        background: green;
-
-        transition-property: background;
-        transition-duration: 2s;
-        transition-timing-function: linear;
-        transition-delay: 0s;
-    }
-
-    .transition:focus {
-        background: red;
-    }
-</style>
-<button class="transition">Change background</button>
-        </code></pre>
-        </div>
-        <div class="col-4-12">
-            <p>
-                <button class="workshop-example-transition">Change background</button>
-            </p>
-        </div>
-    </div>
-
-</section>
-<section>
-    <h2>animation</h2>
-</section>
-<section>
-    <h2>gradient</h2>
-</section>
-<section>
-    <h2>box-shadow</h2>
-</section>
-<section>
-    <h2>text-shadow</h2>
-
-    <div class="grid">
-        <div class="col-8-12">
-            <pre><code data-trim>
-<style>
-    .neon {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
-    }
-
-    .fire {
-        text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
-    }
-</style>
-<p class="text-shadow">Text Shadow</p>
-            </code></pre>
-        </div>
-        <div class="col-4-12">
-            <p class="workshop-example-text-shadow workshop-example-text-shadow-neon">Neon</p>
-
-            <p class="workshop-example-text-shadow workshop-example-text-shadow-fire">Fire</p>
-        </div>
-    </div>
-
-
-</section>
-<section>
-    <h2>border-radius</h2>
-
-    <div style="color: white;">
-        <div style="border-radius: 50px 0 0 50px;/* height: 100px; *//* width: 100px; *//* border-color: red; *//* border: solid 1px red; */"
-             class="workshop-example-border-radius">
-            border-radius: 50px 0 0 50px;
-        </div>
-        <div style="border-radius: 40px 10px" class="workshop-example-border-radius">
-            border-radius: 40px 10px;
-        </div>
-        <div style="border-radius: 10em/1em;" class="workshop-example-border-radius">
-            border-radius: 13em/3em;
-        </div>
-        <div style="border-radius: 13em 0.5em/1em 0.5em;" class="workshop-example-border-radius">
-            border-radius: 13em 0.5em/1em 0.5em;
-        </div>
-        <div style="border-radius: 8px;" class="workshop-example-border-radius">
-            border-radius: 8px;
-        </div>
-    </div>
-</section>
-<section>
-    <h2>text-overflow</h2>
-
-    <div class="grid">
-        <div class="col-6-12">
-                <pre><code>
-<style>
-    .ellipses {
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-    }
-</style>
-<p class="ellipsis">One line text
-    that should be cut</p>
-                </code></pre>
-        </div>
-        <div class="col-6-12"><p
-                style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
-            One line text that should be cut</p></div>
-    </div>
-</section>
-<section>
-    <h2>columns</h2>
-
-    <div class="grid">
-        <div class="col-6-12">
-                <pre><code data-trim class="html">
-<style>
-    .columns {
-        column-count: 3;
-        column-gap: 40px;
-    }
-</style>
-<p class="columns">Some long text
-    here...</p>
-                </code></pre>
-        </div>
-        <div class="col-6-12"><p class="workshop-example-columns">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
-            to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets
-            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including
-            versions of Lorem Ipsum.</p></div>
-    </div>
+    <h2>CssComb</h2>
+    <p>Makes your code beautiful</p>
+    <a href="http://csscomb.com/">http://csscomb.com/</a>
 </section>
 </div>
 </div>

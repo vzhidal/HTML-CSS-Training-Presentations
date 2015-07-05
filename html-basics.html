@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Html Basics</title>
+
+    <!--<meta name="description" content="A framework for easily creating beautiful presentations using HTML">-->
+    <!--<meta name="author" content="Hakim El Hattab">-->
+
+    <!--<meta name="apple-mobile-web-app-capable" content="yes" />-->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />-->
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+    <section>
+        <h1>HTML</h1>
+
+        <p>
+            <small>Created by <a href="#">Vladimir Zhydal</a></small>
+        </p>
+    </section>
+    <section>
+        <h2>HTML Page Structure</h2>
+            <pre><code data-trim>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en">
+    &lt;head&gt;
+        &lt;meta charset="utf-8"&gt;
+        &lt;title&gt;Hello World&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello World&lt;/h1&gt;
+        &lt;p&lt;This is a website.&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+    </section>
+    <section>
+        <h2>DOCTYPE</h2>
+        <h5>HTML4.1</h5>
+        <pre><code style="font-size: 15px">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</code></pre>
+        <h5>HTML5</h5>
+        <pre><code>&lt;!DOCTYPE html&gt;</code></pre>
+    </section>
+    <section>
+        <h2>Meta tags</h2>
+        <ul>
+            <li><p>Provide metadata about the HTML document.</p></li>
+            <li><p>Can be used by browsers, search engines, or other web services.</p></li>
+        </ul>
+    </section>
+    <section>
+        <h2>Meta tag attributes</h2>
+        <dl>
+            <dt>charset</dt>
+            <dd>declares the character encoding used of the page</dd>
+
+            <dt>content</dt>
+            <dd>gives the value associated with the http-equiv or name attribute, depending of the context</dd>
+
+            <dt>http-equiv</dt>
+            <dd>defines the pragma that can alter servers and user-agents behavior.</dd>
+
+            <dt>name</dt>
+            <dd>defines the name of a document-level metadata.</dd>
+        </dl>
+    </section>
+    <section>
+        <h2>Title</h2>
+        <pre><code>&lt;title&gt;HTML-CSS Workshop&lt;/title&gt;</code></pre>
+        <ul>
+            <li>defines a title in the browser toolbar
+
+            </li>
+            <li>provides a title for the page when it is added to favorites
+            </li>
+            <li>displays a title for the page in search-engine results</li>
+        </ul>
+    </section>
+    <section>
+        <h2>favicon</h2>
+            <pre><code data-trim class="html">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16"/>
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32"/>
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96"/>
+            </code></pre>
+    </section>
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    //    var secondLevelSections = document.getElementsByClassName('second-level-section');
+    //    var slidesContainer = document.getElementsByClassName('slides')[0];
+    //
+    //    if(secondLevelSections && slidesContainer) {
+    //        while(secondLevelSections.length){
+    //            slidesContainer.removeChild(secondLevelSections[0]);
+    //        }
+    //    }
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/marked.js', condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function() {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, condition: function() {
+                return !!document.querySelector('pre code');
+            }, callback: function() {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+
+
+//    var revealContainer = document.getElementsByClassName('reveal')[0];
+//    var slidesContainer = document.getElementsByClassName('slides')[0];
+//    revealContainer.appendChild(slidesContainer);
+
+</script>
+
+</body>
+</html>

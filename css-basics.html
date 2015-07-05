@@ -1692,6 +1692,274 @@ p {
     </ul>
 </section>
 <section>
+    <h2>Box Properties</h2>
+
+    <p>width (min/max), height (min/max), margin, padding, border, outline</p>
+</section>
+<section>
+    <h2>Layout Properties</h2>
+
+    <p>display, position, float, clear, visibility, top, right, bottom, left, z-index, overflow, clip</p>
+</section>
+<section>
+    <h2>List Properties</h2>
+
+    <p>list-style-type, list-style-position, list-style-image</p>
+</section>
+<section>
+    <h2>Table Properties</h2>
+
+    <p>table-layout, border-collapse, border-spacing, empty-cells, caption-side</p>
+</section>
+<section>
+    <h2>Color and Background Properties</h2>
+
+    <p>color, background-color, background-image, background-repeat, background-position, background-attachment</p>
+</section>
+<section>
+    <h2>Typographical Properties</h2>
+
+    <p>font-family, font-size, font-weight, font-style, font-variant, letter-spacing, word-spacing, line-height,
+        text-align, text-decoration, text-indent, text-transform, text-shadow, vertical-align, white-space,
+        direction</p>
+</section>
+<section>
+    <h2>Generated Content Properties</h2>
+
+    <p>content, counter-increment, counter-reset, quotes</p>
+</section>
+<section>
+    <h2>User Interface Properties</h2>
+
+    <p>cursor</p>
+</section>
+<section>
+    <h2>font</h2>
+    <img src="images/workshop/serif-sansserif.gif"/>
+    <pre><code data-trim class="css" style="font-size: 15px">font: [font-style||font-variant||font-weight] font-size [/line-height] font-family | inherit</code></pre>
+    <div class="grid">
+        <div class="col-8-12">
+            <pre><code data-trim style="font-size: 14px">
+<style>
+    .font {
+        font: italic small-caps bold 50px/140% Helvetica, sans-serif;
+    }
+</style>
+<p class="font">Font</p>
+        </code></pre>
+        </div>
+        <div class="col-4-12">
+            <p style="font: italic small-caps bold 50px/140% Helvetica, sans-serif;">Font</p>
+        </div>
+    </div>
+
+</section>
+<section>
+    <section>
+        <h2>background</h2>
+
+        <div class="grid">
+            <div class="col-6-12">
+                <h5>CSS 2.1</h5>
+                <ul>
+                    <li>background-color</li>
+                    <li>background-image</li>
+                    <li>background-repeat</li>
+                    <li>background-attachment</li>
+                    <li>background-position</li>
+                </ul>
+            </div>
+            <div class="col-6-12">
+                <h5>CSS 3</h5>
+                <ul>
+                    <li>extends existing properties</li>
+                    <li>adds new properties:
+                        <ul>
+                            <li>background-origin</li>
+                            <li>background-clip</li>
+                            <li>background-size</li>
+                        </ul>
+                    </li>
+                    <li>multiple-backgrounds</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>background</h2>
+
+        <div class="grid">
+            <div class="col-7-12">
+                        <pre><code data-trim style="font-size: 15px">
+<style>
+    .background {
+        width: 500px;
+        height: 250px;
+        background-image: url('images/workshop/sheep.png'),
+        url('images/workshop/betweengrassandsky.png');
+        background-position: center bottom, left top;
+        background-repeat: no-repeat;
+    }
+</style>
+<div class="background"></div>
+        </code></pre>
+            </div>
+            <div class="col-5-12">
+                <div style="margin-top:30px; width: 500px;height: 250px;background-image: url('images/workshop/sheep.png'), url('images/workshop/betweengrassandsky.png');background-position: center bottom, left top;background-repeat: no-repeat;"></div>
+            </div>
+        </div>
+    </section>
+</section>
+<section>
+    <section>
+        <h2>gradient</h2>
+
+        <p>Displays smooth transitions between two or more specified colors.</p>
+    </section>
+    <section data-background-iframe="http://jsbin.com/yemehi/embed?html,css,output"></section>
+</section>
+<section>
+    <section>
+        <h2>transition</h2>
+
+        <p>Allow you to change property values smoothly over a given duration.</p>
+    </section>
+    <section data-background-iframe="http://jsbin.com/hojumu/embed?html,css,output"></section>
+</section>
+<section>
+    <section>
+        <h2>animation</h2>
+
+        <p>Allows animation of most HTML elements without using JavaScript or Flash</p>
+    </section>
+    <section data-background-iframe="http://jsbin.com/bikuso/embed?html,css,output">
+
+    </section>
+
+
+</section>
+<section>
+    <section>
+        <h2>transform</h2>
+        <ul>
+            <li>translate</li>
+            <li>scale</li>
+            <li>rotate</li>
+            <li>skew</li>
+            <li>perspective</li>
+            <li>matrix</li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://mrdoob.github.io/three.js/examples/css3d_periodictable.html"></section>
+</section>
+
+<section>
+    <section>
+        <h2>box-shadow</h2>
+        <pre><code class="css" style="font-size:15px">box-shadow: none|h-shadow v-shadow blur spread color |inset|initial|inherit;</code></pre>
+    </section>
+    <section data-background-iframe="http://jsbin.com/poquna/embed?html,css,output"></section>
+</section>
+<section>
+    <h2>text-shadow</h2>
+
+    <div class="grid">
+        <div class="col-8-12">
+            <pre><code data-trim>
+<style>
+    .neon {
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
+    }
+
+    .fire {
+        text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
+    }
+</style>
+<p class="text-shadow">Text Shadow</p>
+            </code></pre>
+        </div>
+        <div class="col-4-12">
+            <p class="workshop-example-text-shadow workshop-example-text-shadow-neon">Neon</p>
+
+            <p class="workshop-example-text-shadow workshop-example-text-shadow-fire">Fire</p>
+        </div>
+    </div>
+
+
+</section>
+<section>
+    <h2>border-radius</h2>
+
+    <div style="color: white;">
+        <div style="border-radius: 50px 0 0 50px;/* height: 100px; *//* width: 100px; *//* border-color: red; *//* border: solid 1px red; */"
+             class="workshop-example-border-radius">
+            border-radius: 50px 0 0 50px;
+        </div>
+        <div style="border-radius: 40px 10px" class="workshop-example-border-radius">
+            border-radius: 40px 10px;
+        </div>
+        <div style="border-radius: 10em/1em;" class="workshop-example-border-radius">
+            border-radius: 13em/3em;
+        </div>
+        <div style="border-radius: 13em 0.5em/1em 0.5em;" class="workshop-example-border-radius">
+            border-radius: 13em 0.5em/1em 0.5em;
+        </div>
+        <div style="border-radius: 8px;" class="workshop-example-border-radius">
+            border-radius: 8px;
+        </div>
+    </div>
+</section>
+<section>
+    <h2>text-overflow</h2>
+
+    <div class="grid">
+        <div class="col-6-12">
+                <pre><code>
+<style>
+    .ellipses {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+</style>
+<p class="ellipsis">One line text
+    that should be cut</p>
+                </code></pre>
+        </div>
+        <div class="col-6-12"><p
+                style="overflow: hidden;white-space: nowrap;text-overflow: ellipsis;">
+            One line text that should be cut</p></div>
+    </div>
+</section>
+<section>
+    <h2>columns</h2>
+
+    <div class="grid">
+        <div class="col-6-12">
+                <pre><code data-trim class="html">
+<style>
+    .columns {
+        column-count: 3;
+        column-gap: 40px;
+    }
+</style>
+<p class="columns">Some long text
+    here...</p>
+                </code></pre>
+        </div>
+        <div class="col-6-12"><p class="workshop-example-columns">Lorem Ipsum is simply dummy text of the printing and
+            typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it
+            to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
+            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
+            sheets
+            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
+            including
+            versions of Lorem Ipsum.</p></div>
+    </div>
+</section>
+<section>
     <h2>Vendor-specific Properties</h2>
 
     <p>'-' + vendor specific identifier + '-' + meaningful name</p>
@@ -2036,9 +2304,9 @@ div {
     });
 
 
-//    var revealContainer = document.getElementsByClassName('reveal')[0];
-//    var slidesContainer = document.getElementsByClassName('slides')[0];
-//    revealContainer.appendChild(slidesContainer);
+    //    var revealContainer = document.getElementsByClassName('reveal')[0];
+    //    var slidesContainer = document.getElementsByClassName('slides')[0];
+    //    revealContainer.appendChild(slidesContainer);
 
 </script>
 
