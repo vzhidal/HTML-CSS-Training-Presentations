@@ -83,9 +83,36 @@
         <dd>CSS level 1 was published as a W3C Recommendation</dd>
         <dt class="highlighted-text">1998</dt>
         <dd>CSS level 2 was published as a W3C Recommendation</dd>
+        <dt class="highlighted-text">2011</dt>
+        <dd>CSS level 2.1 was published as a W3C Recommendation</dd>
     </dl>
     <aside class="notes">
         https://en.wikipedia.org/wiki/Cascading_Style_Sheets
+        <p>
+            В начале 1990-х различные браузеры имели свои стили для отображения веб страниц. HTML развивался очень
+            быстро и был способен удовлетворить все существовавшие на тот момент потребности по оформлению информации,
+            поэтому CSS не получил тогда широкого признания.
+        </p>
+
+        <p>
+            Термин «каскадные таблицы стилей» был предложен Хокон Виум Ли в 1994 году. В это время уже существовало
+            большое разнообразие языков стилизации. Однако из-за концепций, на которых основан css, именно он
+            набрал наибольшую популярность.
+        </p>
+
+        <p>17 декабря 1996 года css level 1 получил статус рекомендации. Что же представлял из себя css 1? Параметры
+            шрифтов. Цвета. Атрибуты текста. Свойства блоков.</p>
+
+        <p>
+            css level 2 Рекомендация принята 12 мая 1998 года. Блочная вёрстка. Расширенный механизм селекторов.
+            Генерируемое содержимое.
+        </p>
+
+        <p>Уровень 2, ревизия 1 принята 7 июня 2011 года. CSS2.1 основана на CSS2. Исправлены ошибки, некоторые модули
+            удалены.</p>
+
+        <p>CSS level 3 представляет из себя группу модулей объеденённых под одним названием. Разрабатываются и релизятся
+            отдельно. Каждый модуль может получать новый уровень независимо от других.</p>
     </aside>
 </section>
 
@@ -1006,7 +1033,7 @@ p {
         https://developer.mozilla.org/en-US/docs/Web/CSS/writing-mode
     </aside>
 </section>
-<section class="second-level-section">
+<section>
     <h2>Collapsing restrictions</h2>
     <ul>
         <li>Only margins of <span class="highlighted-text">block-level boxes</span> can collapse.</li>
@@ -1056,8 +1083,8 @@ p {
     <h2>Box Types</h2>
 
     <ul>
-        <li>affects how the visual formatting is done</li>
-        <li>depends of the value of the display CSS property</li>
+        <li>affect how the visual formatting is done</li>
+        <li>depend of the value of the display CSS property</li>
     </ul>
 </section>
 <section>
@@ -2284,18 +2311,18 @@ div {
 
         // Optional reveal.js plugins
         dependencies: [
-            { src: 'lib/js/classList.js', condition: function() {
+            { src: 'lib/js/classList.js', condition: function () {
                 return !document.body.classList;
             } },
-            { src: 'plugin/markdown/marked.js', condition: function() {
+            { src: 'plugin/markdown/marked.js', condition: function () {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src: 'plugin/markdown/markdown.js', condition: function() {
+            { src: 'plugin/markdown/markdown.js', condition: function () {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src: 'plugin/highlight/highlight.js', async: true, condition: function() {
+            { src: 'plugin/highlight/highlight.js', async: true, condition: function () {
                 return !!document.querySelector('pre code');
-            }, callback: function() {
+            }, callback: function () {
                 hljs.initHighlightingOnLoad();
             } },
             { src: 'plugin/zoom-js/zoom.js', async: true },
