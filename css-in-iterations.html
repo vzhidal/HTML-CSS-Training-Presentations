@@ -67,9 +67,9 @@
         <section>
             <h2>Results</h2>
             <ul>
-                <li>Impossible to maintain</li>
-                <li>Impossible to make themes</li>
-                <li>Widespread duplication of code</li>
+                <li>Almost impossible to maintain.</li>
+                <li>Almost impossible to make themes.</li>
+                <li>Widespread duplication of code.</li>
             </ul>
         </section>
         <section>
@@ -95,9 +95,9 @@
         <section>
             <h2>Results</h2>
             <ul>
-                <li>There is no so many copy-paste</li>
-                <li>Impossible to maintain</li>
-                <li>Impossible to make themes</li>
+                <li>There is no so many copy-paste.</li>
+                <li>Super hard to maintain.</li>
+                <li>Super hard to make themes.</li>
             </ul>
         </section>
         <section>
@@ -116,8 +116,8 @@
         <section>
             <h2>First steps of separation</h2>
             <ul>
-                <li>Let’s use separate files for styles and html</li>
-                <li>Let’s use ids (just because they are fast)</li>
+                <li>Let’s use separate files for styles and html.</li>
+                <li>Let’s use ids (just because they are fast).</li>
             </ul>
         </section>
         <section>
@@ -142,11 +142,11 @@ div {
 #red-container{
     background: red;
 }
-#red-container{
-    background: red;
+#green-container{
+    background: green;
 }
-#red-container{
-    background: red;
+#blue-container{
+    background: blue;
 }
             </code></pre>
 
@@ -156,12 +156,13 @@ div {
         <section>
             <h2>Results</h2>
             <ul>
-                <li>Possible to make themes</li>
-                <li>Still hard to maintain
+                <li>Possible to make themes.
                 </li>
-                <li>Strong connectivity
+                <li>Still hard to maintain.
                 </li>
-                <li>A lot of side effects
+                <li>High coupling.
+                </li>
+                <li>A lot of side effects.
                 </li>
             </ul>
         </section>
@@ -169,13 +170,13 @@ div {
             <h2>Impulse</h2>
 
             <ul>
-                <li>Id => class (because ids cannot be reused through the html code)
+                <li>Id => class (because ids cannot be reused through the html code).
                 </li>
                 <li>
-                    Think about structuration
+                    Think about structure.
                 </li>
                 <li>
-                    Think about symantic in naming
+                    Think about semantics in naming.
                 </li>
             </ul>
         </section>
@@ -208,7 +209,7 @@ div {
         <section>
             <h2>Results</h2>
             <ul>
-                <li>A bit easier to maintain, just because it’s easier to find some logical parts
+                <li>A bit easier to maintain (just because it’s easier to find some logical parts).
                 </li>
                 <li>
                     There is a big chance to place a style to a wrong group.
@@ -219,37 +220,61 @@ div {
             <h2>Impulse</h2>
 
             <ul>
-                <li>Place logical parts of your styles in a separate files
+                <li>Place logical parts of your styles in separate files.
                 </li>
                 <li>
-                    Performance optimizations shouldn’t affect a project structure
+                    Performance optimizations shouldn't affect project structure.
                 </li>
                 <li>
-                    It’s possible to use automatic build tools instead of developing in one file
+                    It’s possible to use build tools instead of developing in one file.
                 </li>
             </ul>
         </section>
         <section>
-            <h2>Deep nesting for avoiding side effects</h2>
-            <h5>(One line styles)</h5>
+            <h2>Deep nesting</h2>
+            <h5>css coupled to dom</h5>
                 <pre><code class="css">
-.container div {margin: 10px;}
-.container div .container ul {margin: 25px; padding: 10px;}
-.container div .container ul li a span {margin: 20px; padding: 10px;}
+.container div {
+    color: red;
+}
+.container div .container ul {
+    color: green;
+}
+.container div .container ul li a span {
+    color: blue;
+}
             </code></pre>
         </section>
         <section>
             <h2>Results</h2>
             <ul>
-                <li>Big problems with VCS</li>
-                <li>Hard to maintain</li>
+                <li>Hard to maintain.</li>
+                <li>Hard to read and modify.</li>
+                <li>Hard to override.</li>
+            </ul>
+        </section>
+        <section>
+            <h2>One line styles</h2>
+                <pre><code class="css">
+.container div {color: red;}
+.container div .container ul {color: green;}
+.container div .container ul li a span {color: blue;}
+            </code></pre>
+        </section>
+        <section>
+            <h2>Results</h2>
+            <ul>
+                <li>Big problems with VCS.</li>
+                <li>Hard to maintain.</li>
+                <li>Super hard to read and modify.</li>
+                <li>Hard to override.</li>
             </ul>
         </section>
     <section>
         <h2>Impulse</h2>
         <ul>
-            <li>I can make my project more structural and maintainable with some modules.</li>
-            <li>Naming and semantic is really important.</li>
+            <li>I can make my project more structured and maintainable with some modules.</li>
+            <li>Naming and semantic are really important.</li>
         </ul>
     </section>
     <section>
