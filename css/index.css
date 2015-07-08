@@ -19,14 +19,6 @@
     height: 100% !important;
 }
 
-.reveal .slides {
-    z-index: auto;
-}
-
-.reveal .slide-background.present {
-    z-index: 2;
-}
-
 .table-code-examples {
     width: 70%;
 }
@@ -85,4 +77,20 @@
     column-count: 3;
     -webkit-column-gap: 40px;
     column-gap: 40px;
+}
+
+
+.reveal .slides {
+    z-index: auto;
+}
+
+.reveal .slide-background.present {
+    z-index: 2;
+}
+
+.reveal.content-priority .slides{
+    z-index: 2;
+}
+.reveal .slide-background.present {
+    z-index: 1;
 }
