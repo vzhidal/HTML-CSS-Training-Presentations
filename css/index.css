@@ -79,7 +79,6 @@
     column-gap: 40px;
 }
 
-
 .reveal .slides {
     z-index: auto;
 }
@@ -88,9 +87,41 @@
     z-index: 2;
 }
 
-.reveal.content-priority .slides{
+.reveal.content-priority .slides {
     z-index: 2;
 }
+
 .reveal .slide-background.present {
     z-index: 1;
+}
+
+.workshop-example-box-shadow-container {
+    padding: 20px !important;
+}
+
+.reveal .workshop-example-box-outer-shadow {
+    height: 200px;
+
+    background: red;
+
+    box-shadow: 10px 10px 20px 5px rgba(0, 0, 0, 0.6);
+}
+
+.reveal .workshop-example-box-inner-shadow {
+    height: 200px;
+
+    background: red;
+
+    box-shadow: inset 10px 10px 20px 5px rgba(0, 0, 0, 0.6);
+
+}
+
+.workshop-example-gradient{
+    height: 200px;
+
+    background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* For Fx 3.6 to 15 */
+
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Standard syntax (must be last) */
 }

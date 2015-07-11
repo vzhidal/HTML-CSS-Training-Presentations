@@ -75,7 +75,7 @@
         <li><span class="highlighted-text">Cleaner</span> code.</li>
         <li><span class="highlighted-text">Easier</span> to manage style changes.</li>
     </ul>
-    <aside>
+    <aside class="notes">
         отделение представления от разметки. более чистый код, который проще сопровождать и расширять.
     </aside>
 </section>
@@ -84,13 +84,13 @@
     <h2>History</h2>
     <dl>
         <dt class="highlighted-text">1994</dt>
-        <dd>CSS was first proposed by Håkon Wium Lie</dd>
+        <dd>CSS was first proposed by Håkon Wium Lie.</dd>
         <dt class="highlighted-text">1996</dt>
-        <dd>CSS level 1 was published as a W3C Recommendation</dd>
+        <dd>CSS level 1 was published as a W3C Recommendation.</dd>
         <dt class="highlighted-text">1998</dt>
-        <dd>CSS level 2 was published as a W3C Recommendation</dd>
+        <dd>CSS level 2 was published as a W3C Recommendation.</dd>
         <dt class="highlighted-text">2011</dt>
-        <dd>CSS level 2.1 was published as a W3C Recommendation</dd>
+        <dd>CSS level 2.1 was published as a W3C Recommendation.</dd>
     </dl>
     <aside class="notes">
         https://en.wikipedia.org/wiki/Cascading_Style_Sheets
@@ -125,11 +125,13 @@
 <section class="second-level-section">
     <h2>CSS3</h2>
 
-    <p>Unlike CSS 2, which is a large single specification defining various features, CSS 3 is divided into several
-        separate documents called "modules".</p>
+    <ul>
+        <li>CSS 3 is <span class="highlighted-text">divided</span> into several separate documents called "<span
+                class="highlighted-text">modules</span>".
+        </li>
+        <li>Each module adds functionality and/or replaces part of the CSS2.1 specification.</li>
+    </ul>
 
-    <p>Each module adds
-        functionality and/or replaces part of the CSS2.1 specification.</p>
     <aside class="notes">
         https://wiki.csswg.org/spec/levels
         http://css-live.ru/articles-css/zhizn-posle-css3-chto-novogo-v-css-1.html
@@ -150,7 +152,7 @@
     <h2>CSS4</h2>
     <h6>(The Great Renaming)</h6>
 
-    <p>There is no such thing as CSS4</p>
+    <p>There is no such thing as CSS4.</p>
     <aside class="notes">
         http://www.xanthir.com/b4Ko0
     </aside>
@@ -769,13 +771,13 @@ p {
         <h2>Explicit Defaulting</h2>
         <ul>
             <li>
-                Resetting a Property: the <span class="highlighted-text">initial</span> keyword
+                Resetting a Property: the <span class="highlighted-text">initial</span> keyword.
             </li>
             <li>
-                Explicit Inheritance: the <span class="highlighted-text">inherit</span> keyword
+                Explicit Inheritance: the <span class="highlighted-text">inherit</span> keyword.
             </li>
             <li>
-                Erasing All Declarations: the <span class="highlighted-text">unset</span> keyword
+                Erasing All Declarations: the <span class="highlighted-text">unset</span> keyword.
             </li>
         </ul>
     </section>
@@ -809,7 +811,7 @@ p {
     <h2>Author Styles Sheets</h2>
 
     <p>
-        Web authors can apply one or more style sheets to an HTML document
+        Web authors can apply one or more style sheets to an HTML document.
     </p>
     <img src="images/css/author-style-sheets.png">
 </section>
@@ -912,19 +914,19 @@ p {
 <section>
     <h2>From lowest to highest priority</h2>
     <ul>
-        <li><span class="highlighted-text">Browser</span> styles
+        <li><span class="highlighted-text">Browser</span> styles.
         </li>
         <li><span class="highlighted-text">Normal</span> declarations in <span class="highlighted-text">user</span>
-            style sheet
+            style sheet.
         </li>
         <li><span class="highlighted-text">Normal</span> declarations in <span class="highlighted-text">author</span>
-            style sheet
+            style sheet.
         </li>
         <li><span class="highlighted-text">!important</span> declarations in <span
-                class="highlighted-text">author</span> style sheet
+                class="highlighted-text">author</span> style sheet.
         </li>
         <li><span class="highlighted-text">!important</span> declaration in <span class="highlighted-text">user</span>
-            style sheet
+            style sheet.
         </li>
     </ul>
 </section>
@@ -933,7 +935,7 @@ p {
 
     <p>
         If declarations have the same origin or importance then the <span class="highlighted-text">declaration’s selectors</span>
-        need to be scored, to see which declaration will “win”
+        need to be scored, to see which declaration will “win”.
     </p>
     <aside class="notes">
         Если объявления имеют одинаковое происхождение и уровень важности, то браузер вычисляет специфичночть
@@ -946,15 +948,15 @@ p {
     <div class="grid">
         <div class="col-6-12">
             <ol>
-                <li><span class="highlighted-text">Inline</span> style
+                <li><span class="highlighted-text">Inline</span> style.
                 </li>
-                <li>Count the number of <span class="highlighted-text">IDs</span>
+                <li>Count the number of <span class="highlighted-text">ID</span>s.
                 </li>
                 <li>Count the number of <span class="highlighted-text">classes</span>, <span class="highlighted-text">attributes</span>
-                    and <span class="highlighted-text">pseudo-classes</span>
+                    and <span class="highlighted-text">pseudo-classes</span>.
                 </li>
                 <li>Count the number of <span class="highlighted-text">element names</span> or <span
-                        class="highlighted-text">pseudo-elements</span>
+                        class="highlighted-text">pseudo-elements</span>.
                 </li>
             </ol>
         </div>
@@ -977,7 +979,7 @@ p {
 
     <p>
         If two declarations have the same importance, origin and specify, the <span class="highlighted-text">later specified</span>
-        declaration wins
+        declaration wins.
     </p>
     <aside class="notes">
         Если объявления имеют одинаковое происхождение, уровень важности и специфичность, то последнее объявление будет
@@ -1063,11 +1065,11 @@ p {
         <h4>(basic cases)</h4>
 
         <ul>
-            <li> Adjacent <span class="highlighted-text">siblings</span>
+            <li> Adjacent <span class="highlighted-text">siblings</span>.
             </li>
-            <li><span class="highlighted-text">Parent</span> and first/last <span class="highlighted-text">child</span>
+            <li><span class="highlighted-text">Parent</span> and first/last <span class="highlighted-text">child</span>.
             </li>
-            <li><span class="highlighted-text">Empty</span> blocks
+            <li><span class="highlighted-text">Empty</span> blocks.
             </li>
         </ul>
     </section>
@@ -1136,16 +1138,16 @@ p {
     <h2>Box Generation</h2>
 
     <ul>
-        <li>the part of the CSS visual formatting model</li>
-        <li>creates boxes from the document's elements</li>
+        <li>The part of the CSS visual formatting model.</li>
+        <li>Creates boxes from the document's elements.</li>
     </ul>
 </section>
 <section>
     <h2>Box Types</h2>
 
     <ul>
-        <li>affect how the visual formatting is done</li>
-        <li>depend of the value of the display CSS property</li>
+        <li>Affect how the visual formatting is done.</li>
+        <li>Depend of the value of the display CSS property.</li>
     </ul>
     <aside class="notes">
         <p>Типы боксов влияют на поведение алгоритма визуального форматирования.</p>
@@ -1157,10 +1159,11 @@ p {
     <h2>Block-level elements and block boxes</h2>
 
     <ul>
-        <li>visually formatted as a block</li>
-        <li>intended to be vertically stacked</li>
+        <li>Visually formatted as a block.</li>
+        <li>Intended to be vertically stacked.</li>
         <li>display: <span class="highlighted-text">block</span>, <span class="highlighted-text">list-item</span>, <span
-                class="highlighted-text">table</span></li>
+                class="highlighted-text">table</span>.
+        </li>
     </ul>
     <aside class="notes">
         <p>Визуально представляются ввиде блоков, расположенных друг за другом вертикально.</p>
@@ -1169,8 +1172,8 @@ p {
 <section class="second-level-section">
     <h2>Block-level elements</h2>
     <ul>
-        <li>participates in a <span class="highlighted-text">block formatting context</span></li>
-        <li>generates at least one block-level box (<span class="highlighted-text">principal block-level box</span>)
+        <li>Participates in a <span class="highlighted-text">block formatting context</span>.</li>
+        <li>Generates at least one block-level box (<span class="highlighted-text">principal block-level box</span>).
         </li>
     </ul>
 </section>
@@ -1178,9 +1181,8 @@ p {
     <h2>Block container box</h2>
 
     <ul>
-        <li><p>is a box that contains only other <span class="highlighted-text">block-level boxes</span>, or creates an <span
-                class="highlighted-text">inline
-        formatting context</span></p></li>
+        <li><p>Is a box that contains only other <span class="highlighted-text">block-level boxes</span>, or creates an <span
+                class="highlighted-text">inline formatting context</span>.</p></li>
         <li><p>A block-level box may also be a block container box.</p></li>
     </ul>
 
@@ -1195,7 +1197,7 @@ p {
                 block-level box
             </h5>
 
-            <p>describes how the box will <span class="highlighted-text">behave</span> with its parents and sibling
+            <p>how the box will <span class="highlighted-text">behave</span> with its parents and sibling
             </p>
         </div>
         <div class="col-6-12">
@@ -1223,18 +1225,18 @@ p {
     <ul>
         <li>
             <p>
-                supplementary boxes
+                Supplementary boxes.
             </p>
         </li>
         <li>
             <p>
-                cannot be styled using CSS selectors
+                Cannot be styled using CSS selectors.
             </p>
         </li>
         <li>
             <p>
-                use the <span class="highlighted-text">inherit value</span> or the <span class="highlighted-text">initial value</span>
-                of css properties
+                Use the <span class="highlighted-text">inherit value</span> or the <span class="highlighted-text">initial value</span>
+                of css properties.
             </p>
         </li>
     </ul>
@@ -1249,9 +1251,9 @@ p {
 <section>
     <h2>Inline-level elements and inline boxes</h2>
     <ul>
-        <li><p>distributed in lines with other inline-level content</p></li>
+        <li><p>Distributed in lines with other inline-level content.</p></li>
         <li><p>display: <span class="highlighted-text">inline</span>, <span class="highlighted-text">inline-block</span>,
-            <span class="highlighted-text">inline-table</span></p></li>
+            <span class="highlighted-text">inline-table</span>.</p></li>
     </ul>
     <aside class="notes">
         <p>Распределяются в линию вместе с другими inline-level элементами.</p>
@@ -1260,7 +1262,7 @@ p {
 <section class="second-level-section">
     <h2>Inline-level elements</h2>
     <ul>
-        <li><p>generate inline-level boxes</p></li>
+        <li><p>Generate inline-level boxes.</p></li>
     </ul>
 
 </section>
@@ -1269,7 +1271,7 @@ p {
     <img src="images/css/inline-boxes.png"/>
 
     <p>Inline boxes are both inline-level boxes and boxes that participate in their container's inline formatting
-        context</p>
+        context.</p>
 </section>
 <section>
     <section>
@@ -1277,13 +1279,13 @@ p {
         <h4>Dimensions Calculation</h4>
         <dl>
             <dt class="highlighted-text">width</dt>
-            <dd>doesn't apply</dd>
+            <dd>doesn't apply.</dd>
             <dt class="highlighted-text">height</dt>
-            <dd>doesn't apply, but the height of the box is given by the ‘line-height’ property</dd>
+            <dd>doesn't apply, but the height of the box is given by the ‘line-height’ property.</dd>
             <dt class="highlighted-text">padding</dt>
-            <dd>only left and right padding will have an effect</dd>
+            <dd>only left and right padding will have an effect.</dd>
             <dt class="highlighted-text">margin</dt>
-            <dd>only left and right margin will have an effect</dd>
+            <dd>only left and right margin will have an effect.</dd>
         </dl>
     </section>
     <section data-background-iframe="http://jsbin.com/fumaju/embed?html,css,output"></section>
@@ -1292,13 +1294,13 @@ p {
     <h2>atomic inline-level boxes</h2>
 
     <ul>
-        <li><p>Inline-level boxes that do not participate in an inline formatting context
+        <li><p>Inline-level boxes that do not participate in an inline formatting context.
         </p></li>
-        <li><p>are never split in several boxes
+        <li><p>Are never split in several boxes.
         </p></li>
-        <li><p>generated by: <span class="highlighted-text">replaced</span> inline-level elements, by elements with a
+        <li><p>Generated by: <span class="highlighted-text">replaced</span> inline-level elements, by elements with a
             calculated display value
-            (<span class="highlighted-text">inline-block</span> or <span class="highlighted-text">inline-table</span>)
+            (<span class="highlighted-text">inline-block</span> or <span class="highlighted-text">inline-table</span>).
         </p></li>
     </ul>
 </section>
@@ -1349,32 +1351,30 @@ p {
     </h2>
 
     <ul>
-        <li><p>supplementary boxes
+        <li><p>Any text that is directly contained inside a block container element (not inside an inline element).
         </p></li>
-        <li><p>cannot be styled using CSS selectors
-        </p></li>
-        <li><p>use the <span class="highlighted-text">inherit value</span> or the <span class="highlighted-text">initial value</span>
-            of css properties
+        <li><p>Use the <span class="highlighted-text">inherit value</span> or the <span class="highlighted-text">initial value</span>
+            of css properties.
         </p></li>
     </ul>
 </section>
 <section class="second-level-section">
     <h2>Anonymous inline boxes</h2>
 
-    <p>
-        //TODO: Add an example
-    </p>
+<pre><code class="html" data-trim="">
+<p>Some <em>emphasized</em> text</p>
+</code></pre>
 </section>
 <section class="second-level-section">
     <h2>Other types of boxes</h2>
     <ul>
-        <li>Line boxes
+        <li>Line boxes.
         </li>
         <li>
-            Run-in boxes
+            Run-in boxes.
         </li>
         <li>
-            Model-induced boxes
+            Model-induced boxes.
         </li>
     </ul>
     <aside class="notes">
@@ -1397,17 +1397,17 @@ p {
         Positioning schemes
     </h2>
     <ul>
-        <li>normal flow
+        <li>Normal flow.
         </li>
-        <li>floats</li>
-        <li>absolute positioning</li>
+        <li>Floats.</li>
+        <li>Absolute positioning.</li>
     </ul>
 </section>
 <section>
     <h2>normal flow</h2>
 
     <p>
-        boxes are laid out one after the other <br/>(vertically or horizontally)
+        Boxes are laid out one after the other <br/>(vertically or horizontally).
     </p>
     <aside class="notes">
         боксы располагаются один за другим (вертикально или горизонтально)
@@ -1443,7 +1443,7 @@ p {
                 </h5>
 
                 <p>
-                    the boxes are drawn at the exact position defined by the normal flow layout.
+                    The boxes are drawn at the exact position defined by the normal flow layout.
                 </p>
             </div>
             <div class="col-6-12">
@@ -1451,7 +1451,7 @@ p {
                 </h5>
 
                 <p>
-                    the boxes are drawn with an offset defined by the <span class="highlighted-text">top</span>, <span
+                    The boxes are drawn with an offset defined by the <span class="highlighted-text">top</span>, <span
                         class="highlighted-text">bottom</span>, <span class="highlighted-text">left</span> and <span
                         class="highlighted-text">right</span> CSS properties.
                 </p>
@@ -1464,10 +1464,10 @@ p {
     <h2>Floats</h2>
 
     <ul>
-        <li><p>floating boxes are positioned at the beginning or end of the current line
+        <li><p>Floating boxes are positioned at the beginning or end of the current line.
         </p></li>
         <li><p>
-            anything within the normal flow flows along the edge of the floating boxes
+            Anything within the normal flow flows along the edge of the floating boxes.
         </p></li>
     </ul>
 
@@ -1505,13 +1505,13 @@ p {
         <ul>
             <li>
                 <p>
-                    specifies whether an element can be next to floating elements that precede it or must be moved down
-                    (cleared) below them
+                    Specifies whether an element can be next to floating elements that precede it or must be moved down
+                    (cleared) below them.
                 </p>
             </li>
             <li>
                 <p>
-                    applies to both floating and non-floating elements
+                    Applies to both floating and non-floating elements.
                 </p>
             </li>
         </ul>
@@ -1525,11 +1525,11 @@ p {
 <section class="second-level-section">
     <h2>Block formatting context</h2>
     <ul>
-        <li>the region in which
+        <li>The region in which:
             <ul>
-                <li>the layout of block boxes occurs
+                <li>the layout of block boxes occurs;
                 </li>
-                <li>floats interact with each other
+                <li>floats interact with each other.
                 </li>
             </ul>
         </li>
@@ -1539,21 +1539,21 @@ p {
     <section>
         <h2>Block formatting context</h2>
         <ul>
-            <li>created by:
+            <li>Created by:
                 <ul>
-                    <li>the root element
+                    <li>the root element;
                     </li>
-                    <li>floats
+                    <li>floats;
                     </li>
-                    <li>absolutely positioned elements
+                    <li>absolutely positioned elements;
                     </li>
-                    <li>inline-blocks
+                    <li>inline-blocks;
                     </li>
-                    <li>table cells and table captions
+                    <li>table cells and table captions;
                     </li>
-                    <li>elements where overflow has a value other than visible
+                    <li>elements where overflow has a value other than visible;
                     </li>
-                    <li>flex boxes
+                    <li>flex boxes.
                     </li>
                 </ul>
             </li>
@@ -1569,13 +1569,13 @@ p {
         Absolute positioning
     </h2>
     <ul>
-        <li>boxes are entirely <span class="highlighted-text">removed</span> from the flow
+        <li>Boxes are entirely <span class="highlighted-text">removed</span> from the flow.
 
         </li>
-        <li>boxes <span class="highlighted-text">don't interact</span> with the flow at all
+        <li>Boxes <span class="highlighted-text">don't interact</span> with the flow at all.
 
         </li>
-        <li>boxes positioned <span class="highlighted-text">relative</span> to their containing block
+        <li>Boxes positioned <span class="highlighted-text">relative</span> to their containing block.
 
         </li>
     </ul>
@@ -1628,13 +1628,13 @@ p {
         <h2>containing block</h2>
         <h4>position: absolute</h4>
         <ul>
-            <li>the containing block is the nearest positioned ancestor (the nearest ancestor whose position property
+            <li>The containing block is the nearest positioned ancestor (the nearest ancestor whose position property
                 has one of the values <span class="highlighted-text">absolute</span>, <span
-                        class="highlighted-text">fixed</span>, or <span class="highlighted-text">relative</span>)
+                        class="highlighted-text">fixed</span>, or <span class="highlighted-text">relative</span>).
             </li>
             <li>
-                the containing block is formed by the <span class="highlighted-text">padding edge</span> of that
-                ancestor
+                The containing block is formed by the <span class="highlighted-text">padding edge</span> of that
+                ancestor.
             </li>
         </ul>
         <aside class="notes">
@@ -1649,7 +1649,7 @@ p {
         <h2>containing block</h2>
         <h4>position: fixed</h4>
         <ul>
-            <li>the containing block is the <span class="highlighted-text">viewport</span> (for continuous media) or the
+            <li>The containing block is the <span class="highlighted-text">viewport</span> (for continuous media) or the
                 <span class="highlighted-text">page box</span> (for paged media).
             </li>
         </ul>
@@ -1701,18 +1701,18 @@ p {
     <section>
         <h2>Forming of a stacking context</h2>
         <ul>
-            <li>the <span class="highlighted-text">root</span> element (HTML)</li>
-            <li><span class="highlighted-text">positioned</span> (absolutely or relatively) with a <span
-                    class="highlighted-text">z-index</span> value other than "auto"
+            <li>The <span class="highlighted-text">root</span> element (HTML).</li>
+            <li><span class="highlighted-text">Positioned</span> (absolutely or relatively) with a <span
+                    class="highlighted-text">z-index</span> value other than "auto".
             </li>
-            <li>a <span class="highlighted-text">flex</span> item with a <span class="highlighted-text">z-index</span>
-                value other than "auto"
+            <li>A <span class="highlighted-text">flex</span> item with a <span class="highlighted-text">z-index</span>
+                value other than "auto".
             </li>
-            <li>elements with an <span class="highlighted-text">opacity</span> value less than 1</li>
-            <li>elements with a <span class="highlighted-text">transform</span> value other than "none"</li>
-            <li>elements with a <span class="highlighted-text">mix-blend-mode</span> value other than "normal"</li>
-            <li>elements with a <span class="highlighted-text">filter</span> value other than "none"</li>
-            <li>elements with <span class="highlighted-text">isolation</span> set to "isolate"</li>
+            <li>Elements with an <span class="highlighted-text">opacity</span> value less than 1.</li>
+            <li>Elements with a <span class="highlighted-text">transform</span> value other than "none".</li>
+            <li>Elements with a <span class="highlighted-text">mix-blend-mode</span> value other than "normal".</li>
+            <li>Elements with a <span class="highlighted-text">filter</span> value other than "none".</li>
+            <li>Elements with <span class="highlighted-text">isolation</span> set to "isolate".</li>
         </ul>
         <aside class="notes">
             Browser specific and newest issues:
@@ -1728,22 +1728,22 @@ p {
     <section>
         <h2>Stacking context layers</h2>
         <ul>
-            <li>the <span class="highlighted-text">background</span> and <span class="highlighted-text">borders</span>
-                of the element that establishes the stacking context
+            <li>The <span class="highlighted-text">background</span> and <span class="highlighted-text">borders</span>
+                of the element that establishes the stacking context.
             </li>
-            <li>the stacking contexts of descendants with <span class="highlighted-text">negative stack levels</span>
+            <li>The stacking contexts of descendants with <span class="highlighted-text">negative stack levels</span>.
             </li>
-            <li><span class="highlighted-text">block-level</span> descendants in the <span class="highlighted-text">normal flow</span>
+            <li><span class="highlighted-text">Block-level</span> descendants in the <span class="highlighted-text">normal flow</span>.
             </li>
-            <li><span class="highlighted-text">floated</span> descendants and their contents
+            <li><span class="highlighted-text">Floated</span> descendants and their contents.
             </li>
-            <li><span class="highlighted-text">inline-level</span> descendants in the normal <span
-                    class="highlighted-text">flow</span>
+            <li><span class="highlighted-text">Inline-level</span> descendants in the normal <span
+                    class="highlighted-text">flow</span>.
             </li>
-            <li><span class="highlighted-text">positioned</span> descendants whose z-index is <span
-                    class="highlighted-text">auto</span> or <span class="highlighted-text">0</span>
+            <li><span class="highlighted-text">Positioned</span> descendants whose z-index is <span
+                    class="highlighted-text">auto</span> or <span class="highlighted-text">0</span>.
             </li>
-            <li>the stacking contexts of descendants with <span class="highlighted-text">positive stack levels</span>
+            <li>The stacking contexts of descendants with <span class="highlighted-text">positive stack levels</span>.
             </li>
         </ul>
     </section>
@@ -1954,7 +1954,7 @@ p {
         </code></pre>
             </div>
             <div class="col-5-12">
-                <div style="margin-top:30px; width: 500px;height: 250px;background-image: url('images/workshop/sheep.png'), url('images/workshop/betweengrassandsky.png');background-position: center bottom, left top;background-repeat: no-repeat;"></div>
+                <div style="margin-top:30px; width: 100%;height: 250px;background-image: url('images/workshop/sheep.png'), url('images/workshop/betweengrassandsky.png');background-position: center bottom, left top;background-repeat: no-repeat;"></div>
             </div>
         </div>
     </section>
@@ -1964,6 +1964,7 @@ p {
         <h2>gradient</h2>
 
         <p>Displays smooth transitions between two or more specified colors.</p>
+        <div class="workshop-example-gradient"></div>
     </section>
     <section data-background-iframe="http://jsbin.com/yemehi/embed?html,css,output"></section>
 </section>
@@ -1971,7 +1972,7 @@ p {
     <section>
         <h2>transition</h2>
 
-        <p>Allow you to change property values smoothly over a given duration.</p>
+        <p>Allows you to change property values smoothly over a given duration.</p>
     </section>
     <section data-background-iframe="http://jsbin.com/hojumu/embed?html,css,output"></section>
 </section>
@@ -2006,6 +2007,19 @@ p {
     <section>
         <h2>box-shadow</h2>
         <pre><code class="css" style="font-size:15px">box-shadow: none|h-shadow v-shadow blur spread color |inset|initial|inherit;</code></pre>
+        <div class="grid">
+            <div class="col-6-12">
+                <div class="workshop-example-box-shadow-container">
+                    <div class="workshop-example-box-inner-shadow"></div>
+                </div>
+            </div>
+            <div class="col-6-12">
+                <div class="workshop-example-box-shadow-container">
+                    <div class="workshop-example-box-outer-shadow"></div>
+                </div>
+            </div>
+        </div>
+
     </section>
     <section data-background-iframe="http://jsbin.com/poquna/embed?html,css,output"></section>
 </section>
@@ -2014,24 +2028,30 @@ p {
 
     <div class="grid">
         <div class="col-8-12">
-            <pre><code data-trim>
-<style>
-    .neon {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
-    }
-
-    .fire {
-        text-shadow: 0 0 20px #fefcc9, 10px -10px 30px #feec85, -20px -20px 40px #ffae34, 20px -40px 50px #ec760c, -20px -60px 60px #cd4606, 0 -80px 70px #973716, 10px -90px 80px #451b0e;
-    }
-</style>
-<p class="text-shadow">Text Shadow</p>
+            <pre><code data-trim class="css" style="font-size: 15px">
+.neon {
+    text-shadow:
+        0 0 10px #fff, 0 0 20px #fff,
+        0 0 30px #fff, 0 0 40px #ff00de,
+        0 0 70px #ff00de, 0 0 80px #ff00de,
+        0 0 100px #ff00de, 0 0 150px #ff00de;
+}
+.fire {
+    text-shadow:
+        0 0 20px #fefcc9, 10px -10px 30px #feec85,
+        -20px -20px 40px #ffae34, 20px -40px 50px #ec760c,
+        -20px -60px 60px #cd4606, 0 -80px 70px #973716,
+        10px -90px 80px #451b0e;
+}
             </code></pre>
         </div>
-        <div class="col-4-12">
-            <p class="workshop-example-text-shadow workshop-example-text-shadow-neon">Neon</p>
+        <div class="col-4-12 ">
+            <img src="images/workshop/text-shadow.png"/>
+            <p class="hidden workshop-example-text-shadow workshop-example-text-shadow-neon">Neon</p>
 
-            <p class="workshop-example-text-shadow workshop-example-text-shadow-fire">Fire</p>
+            <p class="hidden workshop-example-text-shadow workshop-example-text-shadow-fire">Fire</p>
         </div>
+
     </div>
 
 
@@ -2080,34 +2100,34 @@ p {
             One line text that should be cut</p></div>
     </div>
 </section>
-<section>
-    <h2>columns</h2>
+<!--<section>-->
+<!--<h2>columns</h2>-->
 
-    <div class="grid">
-        <div class="col-6-12">
-                <pre><code data-trim class="html">
-<style>
-    .columns {
-        column-count: 3;
-        column-gap: 40px;
-    }
-</style>
-<p class="columns">Some long text
-    here...</p>
-                </code></pre>
-        </div>
-        <div class="col-6-12"><p class="workshop-example-columns">Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-            scrambled it
-            to make a type specimen book. It has survived not only five centuries, but also the leap into electronic
-            typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset
-            sheets
-            containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker
-            including
-            versions of Lorem Ipsum.</p></div>
-    </div>
-</section>
+<!--<div class="grid">-->
+<!--<div class="col-6-12">-->
+<!--<pre><code data-trim class="html">-->
+<!--<style>-->
+<!--.columns {-->
+<!--column-count: 3;-->
+<!--column-gap: 40px;-->
+<!--}-->
+<!--</style>-->
+<!--<p class="columns">Some long text-->
+<!--here...</p>-->
+<!--</code></pre>-->
+<!--</div>-->
+<!--<div class="col-6-12"><p class="workshop-example-columns">Lorem Ipsum is simply dummy text of the printing and-->
+<!--typesetting industry. Lorem Ipsum has been the-->
+<!--industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and-->
+<!--scrambled it-->
+<!--to make a type specimen book. It has survived not only five centuries, but also the leap into electronic-->
+<!--typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset-->
+<!--sheets-->
+<!--containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker-->
+<!--including-->
+<!--versions of Lorem Ipsum.</p></div>-->
+<!--</div>-->
+<!--</section>-->
 <section>
     <h2>Vendor-specific Properties</h2>
 
@@ -2162,7 +2182,7 @@ div {
     <h2>Shorthand Properties</h2>
     <h5>(Edge Cases)</h5>
 
-    <p>A value which is not specified is set to its initial value. (it overrides previously set values)</p>
+    <p>A value which is not specified is set to its initial value. (it overrides previously set values).</p>
     <pre><code data-trim class="css">
 div {
     background-color: red;
@@ -2176,9 +2196,12 @@ div {
 <section class="second-level-section">
     <h2>Shorthand Properties</h2>
     <h5>(Edge Cases)</h5>
+<ul>
+    <li><p>Only the individual properties values can inherit.</p></li>
+    <li><p>The keyword <em class="highlighted-text">inherit</em> can be applied to a
+        property, but only as a whole, not as a keyword for one value or another.</p></li>
+</ul>
 
-    <p>Only the individual properties values can inherit. (The keyword <em>inherit</em> can be applied to a
-        property, but only as a whole, not as a keyword for one value or another.)</p>
     <pre><code data-trim class="css">
 .parent {
   background: red;
@@ -2188,7 +2211,8 @@ div {
 }
     </code></pre>
     <aside class="notes">
-        только отдельные css свойства могут наследоваться. ключевое слово inherit может быть применено только к свойству целиком.
+        только отдельные css свойства могут наследоваться. ключевое слово inherit может быть применено только к свойству
+        целиком.
     </aside>
 </section>
 <section class="second-level-section">
