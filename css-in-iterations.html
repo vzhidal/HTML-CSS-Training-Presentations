@@ -312,14 +312,14 @@ div {
 
 <script>
 
-    //    var secondLevelSections = document.getElementsByClassName('second-level-section');
-    //    var slidesContainer = document.getElementsByClassName('slides')[0];
-    //
-    //    if(secondLevelSections && slidesContainer) {
-    //        while(secondLevelSections.length){
-    //            slidesContainer.removeChild(secondLevelSections[0]);
-    //        }
-    //    }
+    var secondLevelSections = document.getElementsByClassName('second-level-section');
+    var slidesContainer = document.getElementsByClassName('slides')[0];
+
+    if (secondLevelSections && slidesContainer) {
+        while (secondLevelSections.length) {
+            slidesContainer.removeChild(secondLevelSections[0]);
+        }
+    }
 
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
