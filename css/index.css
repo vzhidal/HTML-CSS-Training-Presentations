@@ -116,7 +116,7 @@
 
 }
 
-.workshop-example-gradient{
+.workshop-example-gradient {
     height: 200px;
 
     background: -webkit-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* For Safari 5.1 to 6.0 */
@@ -124,4 +124,10 @@
     background: -moz-linear-gradient(left, red, orange, yellow, green, blue, indigo, violet); /* For Fx 3.6 to 15 */
 
     background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet); /* Standard syntax (must be last) */
+}
+
+.reveal .not-highlighted-image {
+    background: none;
+    box-shadow: none;
+    border: 0;
 }
