@@ -541,6 +541,279 @@ if (widthQuery.matches) {
         </li>
     </ul>
 </section>
+<section>
+    <h1>Flexible images and media</h1>
+</section>
+<section>
+    <section>
+        <h2>Flexible Images</h2>
+        <pre><code data-trim class="css">
+img {
+    max-width: 100%;
+}
+        </code></pre>
+    </section>
+    <section data-background-iframe="http://jsbin.com/gelulo/1/embed?html,css,output"></section>
+</section>
+<section>
+    <section>
+        <h2>Flexible Video</h2>
+        <pre><code data-trim class="css">
+video {
+    max-width: 100%;
+}
+        </code></pre>
+    </section>
+    <section data-background-iframe="http://jsbin.com/pijado/1/embed?html,css,output"></section>
+</section>
+<section>
+    <section>
+        <h2>Flexible Audio</h2>
+        <pre><code data-trim class="css">
+audio {
+    width: 100%;
+}
+        </code></pre>
+    </section>
+    <section data-background-iframe="http://jsbin.com/tajeki/1/embed?html,css,output"></section>
+</section>
+<section>
+    <section>
+        <h2>Flexible SVG</h2>
+        <pre><code data-trim class="css">
+//TODO
+        </code></pre>
+    </section>
+    <section data-background-iframe="http://jsbin.com/doqiho/2/embed?html,css,output"></section>
+</section>
+<section>
+    <section>
+        <h2>Flexible Canvas</h2>
+        <pre><code data-trim class="css">
+//TODO
+        </code></pre>
+    </section>
+    <section data-background-iframe="http://jsbin.com/keduta/5/embed?html,css,output"></section>
+</section>
+<section>
+    <h1>Adaptive Images</h1>
+</section>
+<section>
+    <h2>Picture</h2>
+    <pre><code data-trim class="html">
+<picture alt="description of image">
+    <!-- low-res, default -->
+    <source src="small.jpg">
+    <!-- med-res -->
+    <source src="medium.jpg" media="(min-width: 400px)">
+    <!-- high-res -->
+    <source src="large.jpg" media="(min-width: 800px)">
+    <!-- Fallback content -->
+    <img src="small.jpg" alt="description of image">
+</picture>
+    </code></pre>
+</section>
+<section>
+    <h2>Picture</h2>
+
+    <div clas="grid">
+        <div class="col-6-12">
+            <h5>Advantages</h5>
+            <ul>
+                <li>Mimics other media syntax like &lt;video&gt; and &lt;audio&gt;.
+                </li>
+                <li> The fallback makes it backwards-compatible with browsers that don't support it.
+                </li>
+                <li>Gives the control to show exactly what we want under situations we specify.</li>
+            </ul>
+        </div>
+        <div class="col-6-12">
+            <h5>Disadvantages</h5>
+            <ul>
+                <li>It's a whole lot more complicated than &lt;img&gt;.
+                </li>
+                <li>Bringing the media query syntax into HTML.</li>
+                <li>
+                    Similar issues to why inline styles are bad. Makes future updates more difficult. Not a reusable
+                    abstraction.
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>srcN</h2>
+</section>
+<section>
+    <h2>srcset</h2>
+</section>
+<section>
+    <h1>Grids</h1>
+</section>
+<section>
+    <h2>CSS Grids</h2>
+    <img src="images/rwd/css-grids-statistic.png">
+</section>
+<section>
+    <h2>Grids Libraries</h2>
+    <ul>
+        <li>Skeleton</li>
+        <li>Neat</li>
+        <li>Simple Grid</li>
+        <li>csswizardry-grids</li>
+        <li>Profound Grid</li>
+        <li>Griddle</li>
+        <li>Extra Strength Responsive Grids</li>
+        <li>Proportional Grids</li>
+        <li>Dead Simple Grid</li>
+        <li>Responsive Grid System</li>
+        <li>...</li>
+        <li>Most of CSS frameworks contain their own grid systems</li>
+    </ul>
+</section>
+<section>
+    <h2>Grids Libraries Basics</h2>
+</section>
+<section>
+    <h2>Responsive Grids</h2>
+</section>
+<section>
+    <h1>Flexbox</h1>
+</section>
+<section>
+    <h2>Flexbox Basics</h2>
+    //TODO:
+</section>
+<section>
+    <h1>Responsive Tables</h1>
+</section>
+<section>
+    <h2>Scale</h2>
+
+    <div class="grid">
+        <div class="col-6-12">
+            <h5>Desktop</h5>
+            <img src="images/rwd/responsive-tables-scale-desktop.png"/>
+        </div>
+        <div class="col-6-12">
+            <h5>Mobile</h5>
+            <img src="images/rwd/responsive-tables-scale-mobile.png"/>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>Scroll to the right</h2>
+
+    <div class="grid">
+        <div class="col-6-12">
+            <h5>Desktop</h5>
+            <img src="images/rwd/responsive-tables-scroll-desktop.png"/>
+        </div>
+        <div class="col-6-12">
+            <h5>Mobile</h5>
+            <img src="images/rwd/responsive-tables-scroll-mobile.png"/>
+        </div>
+    </div>
+</section>
+<section>
+    <h2>content: attr(data-content)</h2>
+
+    <div class="grid">
+        <div class="col-6-12">
+            <h5>Desktop</h5>
+            <img src="images/rwd/responsive-tables-data-content-desktop.png"/>
+        </div>
+        <div class="col-6-12">
+            <h5>Mobile</h5>
+            <img src="images/rwd/responsive-tables-data-content-mobile.png"/>
+        </div>
+    </div>
+</section>
+<section>
+    <h1>Advices</h1>
+</section>
+<section>
+    <h2>Use relative units</h2>
+
+    <p>A key concept behind responsive design is fluidity and proportionality as opposed to fixed width layouts.
+    </p>
+</section>
+<section>
+    <h2>Don’t use relative units</h2>
+
+    <p>Don’t use relative units everywhere. Ask yourself a question:</p>
+    <blockquote>Is this property depending on the viewport width?</blockquote>
+</section>
+<section>
+    <h2>Choose correct breakpoints</h2>
+    <ul>
+        <li>Defining breakpoints based on specific devices, products, brand names, or operating systems that are in use
+            today can result in a maintenance nightmare. 
+        </li>
+        <li>The content itself should determine how the layout adjusts to its container.
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>‘Mobile’ first</h2>
+
+    <p>Use the simplest layout as a start point.</p>
+    <ul>
+        <li>
+            Forces You to Focus on Core Content and Functionality.
+        </li>
+        <li>
+            In most cases this approach will get less css styles overrides.
+        </li>
+    </ul>
+</section>
+<section>
+    <h2>Don’t use min-device-width</h2>
+
+    <p>
+        creating queries based on *-device-width; is strongly discouraged.
+    </p>
+</section>
+<section>
+    <h2>Don’t use absolute values for defining viewport</h2>
+</section>
+<section>
+    <h2>Use CSS preprocessors</h2>
+
+    <p>Use CSS preprocessors to define bundles
+    </p>
+    <pre><code data-trim class="css">@phone = ~’320px’</code></pre>
+</section>
+<section>
+    <h1>PREVIEWING & TESTING</h1>
+</section>
+<section>
+    <h2>External resources</h2>
+    <dl>
+        <dt>Responsinator.com</dt>
+        <dd>displays as numerous devices</dd>
+        <dt>iOS Simulator</dt>
+        <dd>if you have a Mac. (After launching Xcode, go into the Xcode menu and chooseOpen Developer Tool > iOS Simulator)
+        </dd>
+        <dt>Browserstack</dt>
+        <dd>for cross browser and device testing.
+        </dd>
+    </dl>
+</section>
+<section>
+    <h2>BROWSER DEVTOOLS</h2>
+    Chrome: DevTools Device Mode
+    Firefox: Responsive Design View
+    Article on DevTools Emulation in Chrome, Firefox, and IE
+</section>
+<section>
+    <h2>TEST ON REAL DEVICES</h2>
+    <ul>
+        <li>Nothing beats holding a device and touching a site.</li>
+        <li>How far do you need to reach to tap something?</li>
+        <li>How well does the device respond?</li>
+    </ul>
+</section>
 </div>
 </div>
 
