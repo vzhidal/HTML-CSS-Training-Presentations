@@ -116,9 +116,6 @@
 
         <p>Уровень 2, ревизия 1 принята 7 июня 2011 года. CSS2.1 основана на CSS2. Исправлены ошибки, некоторые модули
             удалены.</p>
-
-        <p>CSS level 3 представляет из себя группу модулей объеденённых под одним названием. Разрабатываются и релизятся
-            отдельно. Каждый модуль может получать новый уровень независимо от других.</p>
     </aside>
 </section>
 
@@ -133,19 +130,12 @@
     </ul>
 
     <aside class="notes">
+        <p>CSS level 3 представляет из себя группу модулей объеденённых под одним названием. Разрабатываются и релизятся
+            отдельно. Каждый модуль может получать новый уровень независимо от других. (Selectors Level 4, Flexible
+            Boxes Level 1)</p>
+
         https://wiki.csswg.org/spec/levels
         http://css-live.ru/articles-css/zhizn-posle-css3-chto-novogo-v-css-1.html
-
-        CSS Level 3
-
-        This section is non-normative.
-        CSS Level 3 builds on CSS Level 2 module by module, using the CSS2.1 specification as its core. Each module adds
-        functionality and/or replaces part of the CSS2.1 specification. The CSS Working Group intends that the new CSS
-        modules will not contradict the CSS2.1 specification: only that they will add functionality and refine
-        definitions. As each module is completed, it will be plugged in to the existing system of CSS2.1 plus
-        previously-completed modules.
-        From this level on modules are levelled independently: for example Selectors Level 4 may well be defined before
-        CSS Line Module Level 3.
     </aside>
 </section>
 <section class="second-level-section">
@@ -224,30 +214,68 @@ h3 {
         </div>
         <div class="col-6-12">
      <pre><code data-trim>
- h1, h2, h3 {
-     color: red;
-     font-weight: bold;
- }
+h1, h2, h3 {
+    color: red;
+    font-weight: bold;
+}
      </code></pre>
         </div>
     </div>
 </section>
 <section>
     <h2>Comments</h2>
-    <pre><code data-trim>
+    <pre><code data-trim class="css">
 /* Comment here */
 p {
-         margin: 1em; /* Comment here */
-         padding: 2em; 
-         /* color: white; */
-         background-color: blue;
- }
- /*multi-line
- comment here*/
+    margin: 1em; /* Comment here */
+    padding: 2em; 
+    /* color: white; */
+    background-color: blue;
+}
+/*multi-line
+comment here*/
 
      </code></pre>
 </section>
+<section>
+    <h1>Applying CSS</h1>
+</section>
+<section>
+    <h2>Three ways to attach</h2>
+    <ul>
+        <li>Inline style</li>
+        <li>Embedded</li>
+        <li>Linked</li>
+    </ul>
+</section>
+<section>
+    <h2>Inline</h2>
 
+    <pre><code>
+<h2 style="color: red;"></h2>
+    </code></pre>
+
+</section>
+<section>
+    <h2>Embedded</h2>
+
+    <pre><code>
+<style>
+    h2 {
+        color: red;
+    }
+</style>
+    </code></pre>
+
+</section>
+<section>
+    <h2>Linked</h2>
+
+    <pre><code>
+<link rel="stylesheet" href="example.css" type="text/css">
+    </code></pre>
+
+</section>
 <section>
     <h1>Selectors</h1>
 </section>
@@ -354,8 +382,7 @@ p {
             <tr>
                 <td><span class="highlighted-text">E[foo|="en"]</span></td>
                 <td>an E element whose "foo" attribute has a hyphen-separated list of values beginning (from the left)
-                    with
-                    "en"
+                    with "en"
                 </td>
                 <td>2</td>
             </tr>
@@ -628,7 +655,8 @@ p {
 <section class="second-level-section">
     <h2>The <em class="highlighted-text">key</em> selector</h2>
 
-    <p>The key selector is the right-most part of a larger CSS selector. This is what the browser looks for first.</p>
+    <p>The key selector is the right-most part of a larger CSS selector. This is what the user agent looks for
+        first.</p>
 </section>
 <section class="second-level-section">
     <h2>Selector Matching</h2>
@@ -659,6 +687,73 @@ p {
             environment.
         </li>
     </ul>
+    <aside class="notes">
+        <p>
+            Каждое свойство примененное к элементу становится <strong>declared value</strong>
+            <br>
+            При помощи каскадирования браузер получает "wining value"
+        </p>
+
+        <p>
+            <strong>cascaded value</strong> представляет из себя результат каскадирования. (declared value которое
+            выйграло каскадирование)
+            <br>
+            Если результатом каскадирования является пустой список, то не существует cascaded value.
+        </p>
+
+        <p>
+            <strong>specified value</strong> является рзультатом пропускания cascaded value через процесс выставления
+            значения по умолчанию. Этот процесс позволяет убедиться, что каждое свойство, каждого элемента будет иметь
+            своё значение.
+            <br>
+            Во многих случаях specified value является cascaded value. Только в случаях, когда cascaded value не
+            существует оно будет заменено значением по умолчанию.
+        </p>
+
+        <p>
+            <strong>computed value</strong> является результатом обработки specified value. Для каждого свойства и
+            значения существует алгоритм вычисления computed value.Восновном все алгоритмы сводятся к преобразованию
+            значения свойства в абсолютное значение и подготовки его к наследованию. Является значением, наследуемым от
+            предка к потомку.
+
+
+            values with relative units must be made absolute by multiplying with the appropriate reference size
+        </p>
+        <ul>
+            <li>значения в относительных единицах (em, ex, vh, vw)должны быть преобразованы в абсолютные</li>
+            <li>определённые ключевые слова(smaller, bolder) должны быть заменены значениями</li>
+            <li>процентные значения некоторых свойств</li>
+            <li>относительные url должны быть преобразованы в абсолютные</li>
+        </ul>
+        <p>
+            computed value вычисляется из specified value по мере возможности без формирования документа или обработки
+            других сложно-вычисляемых операций (таких как получения значений самого элемента или его родителя, или
+            обработка сетевых запросов)
+            <br>
+            computed value существует даже если css свойство не применимо к текущему элементу, т.к. другие свойства
+            могут вычисляться на их основе.
+        </p>
+
+        <p>
+            <strong>used value</strong> является результатом окончательных вычислений, которые были отложены на этапе
+            вычисления computed value. Является абсолютным значением свойства, теоретически используемым в отображении
+            документа. Если свойство не применимо к элементу, то элемент не будет иметь used value для данного свойства.
+            <br>
+            Например, width: auto не может быть вычисленно без информации о расположении предков элемента. Поэтому
+            computed value - auto, а used value абсолютное значение, такое как 100px
+            <br>
+            (if a property does not apply to an element, it has no used value; so, for example, the flex property has
+            no used value on elements that aren’t flex items.)
+        </p>
+
+        <p>
+            used value теоретически может быть использовано, но не всегда user agent может отобразить его на текущем
+            оборудовании (only be able to render borders with integer pixel widths). Поэтому должны быть вычислены
+            приблизительные значения.
+            <strong>actual value</strong> является тем значением, которое будет использовано после вычисления всех
+            приближений.
+        </p>
+    </aside>
 </section>
 
 <section class="second-level-section">
@@ -721,73 +816,57 @@ p {
     </table>
 
 </section>
-
 <section>
-    <h1>Defaulting</h1>
+    <h1>Filtering</h1>
 </section>
 <section>
-    <h2>Defaulting</h2>
+    <h2>Filtering</h2>
+
+    <p>In order to find the <span class="highlighted-text">declared values</span>, user agents must first identify
+        all declarations that apply to each element.</p>
+    <aside class="notes">
+        <p>
+            Чтобы найти все declared values юзер агент должен идентифицировать все объявления связанные с этим элементом
+        </p>
+    </aside>
+</section>
+<section>
+    <h2>Filtering</h2>
     <ul>
         <li>
-            <p>When the cascade does not result in a value, the specified value must be found some other way: 
-            </p>
+            <p>A declaration applies to an element if:</p>
             <ul>
-                <li>
-                    <span class="highlighted-text">Inherited</span> properties draw their defaults from their <span
-                        class="highlighted-text">parent</span> element through <span class="highlighted-text">inheritance</span>.
-                </li>
-                <li>
-                    <span class="highlighted-text">Other</span> properties take their <span class="highlighted-text">initial</span>
-                    value.
+                <li>It belongs to a <span class="highlighted-text">style sheet</span> that currently applies to this document.</li>
+                <li>It is not qualified by a <span class="highlighted-text">conditional rule</span> with a false condition.</li>
+                <li>It belongs to a style rule whose <span class="highlighted-text">selector</span> matches the element.</li>
+                <li>It is syntactically <span class="highlighted-text">valid</span>: the declaration’s property is a known property name, and the
+                    declaration’s value matches the syntax for that property.
                 </li>
             </ul>
         </li>
     </ul>
     <aside class="notes">
-        Если веб браузеру не удалось найти значение для какого либо свойства, значение должно быть найдено при помощи
-        наследования или проинициализировано дефолтным.
+        <ul>
+            <li>Он пренадлежит к таблице стилей применённой к документу</li>
+            <li>Он объявлен в условном правиле, имеющем положительное состояние</li>
+            <li>Он принадлежит правилу, имеющему селектор, совпадающий с элементом.</li>
+            <li>Он синтаксически правильный.</li>
+        </ul>
     </aside>
+
+</section>
+<section class="second-level-section">
+    <h1>Cascading</h1>
 </section>
 <section>
-    <section>
-        <h2>Inheritance</h2>
-        <img src="images/css/inheritance.png">
-        <aside class="notes">
-            <p>
-                html - иерархическая структура. Дочерние элементы наследуют некоторые стилевые свойства своих родителей.
-            </p>
+    <h2>Cascading</h2>
 
-            <p>
-                Наследование позволяет задавать значения некоторых свойств единожды, определяя их для родителей верхнего
-                уровня.
-            </p>
-
-        </aside>
-    </section>
-    <section data-background-iframe="http://jsbin.com/yogidu/embed?html,css,output"></section>
+    <p>The <span class="highlighted-text">cascade</span> takes a unordered list of <span class="highlighted-text">declared values</span>
+        for a given property on a given element, sorts them by their declaration’s precedence, and outputs a single
+        <span class="highlighted-text">cascaded value</span>.</p>
 </section>
 <section class="second-level-section">
-    <section>
-        <h2>Explicit Defaulting</h2>
-        <ul>
-            <li>
-                Resetting a Property: the <span class="highlighted-text">initial</span> keyword.
-            </li>
-            <li>
-                Explicit Inheritance: the <span class="highlighted-text">inherit</span> keyword.
-            </li>
-            <li>
-                Erasing All Declarations: the <span class="highlighted-text">unset</span> keyword.
-            </li>
-        </ul>
-    </section>
-    <section data-background-iframe="http://jsbin.com/lugufa/2/embed?html,css,output"></section>
-</section>
-<section class="second-level-section">
-    <h1>Style sheets origins</h1>
-</section>
-<section class="second-level-section">
-    <h2>Style sheet origins</h2>
+    <h2>Cascading origins</h2>
     <ul>
         <li>Author</li>
         <li>User</li>
@@ -797,13 +876,14 @@ p {
 <section class="second-level-section">
     <h2>User agent Style Sheet</h2>
 
-    <p>Browser apply style sheets to all web documents. These are referred to as a “default” browser style sheet.</p>
+    <p>User agent applies style sheets to all web documents. These are referred to as a “default” user agent style
+        sheet.</p>
     <img src="images/css/user-agent-stylesheet.png">
 </section>
 <section class="second-level-section">
     <h2>User Style Sheets</h2>
 
-    <p>Most browsers allow user to apply their own style sheets within the browser.
+    <p>Most user agents allow user to apply their own style sheets within the user agent.
     </p>
     <img src="images/css/mozila-user-stylesheet.png">
 </section>
@@ -816,50 +896,8 @@ p {
     <img src="images/css/author-style-sheets.png">
 </section>
 <section>
-    <h1>Applying CSS</h1>
-</section>
-<section>
-    <h2>Three ways to attach</h2>
-    <ul>
-        <li>Inline style</li>
-        <li>Embedded</li>
-        <li>Linked</li>
-    </ul>
-</section>
-<section>
-    <h2>Inline</h2>
-
-    <pre><code>
-<h2 style="color: red;"></h2>
-    </code></pre>
-
-</section>
-<section>
-    <h2>Embedded</h2>
-
-    <pre><code>
-<style>
-    h2 {
-        color: red;
-    }
-</style>
-    </code></pre>
-
-</section>
-<section>
-    <h2>Linked</h2>
-
-    <pre><code>
-<link rel="stylesheet" href="example.css" type="text/css">
-    </code></pre>
-
-</section>
-<section>
-    <h1>CSS Rule Overload</h1>
-    <h5>(Cascading order)</h5>
-</section>
-<section>
-    <h2>Which CSS rules “win”?</h2>
+    <h2>Cascading order</h2>
+    <h5>Which CSS rules “win”?</h5>
 
     <p>
         There are <span class="highlighted-text">four steps</span> to determine which CSS rules will “win”.
@@ -893,7 +931,7 @@ p {
             <ul>
                 <li>origin
                     <ul>
-                        <li>browser</li>
+                        <li>user agent</li>
                         <li>author</li>
                         <li>user</li>
                     </ul>
@@ -914,7 +952,9 @@ p {
 <section>
     <h2>From lowest to highest priority</h2>
     <ul>
-        <li><span class="highlighted-text">Browser</span> styles.
+        <li><span class="highlighted-text">Normal</span> declarations in <span
+                class="highlighted-text">user agent</span>
+            style sheet.
         </li>
         <li><span class="highlighted-text">Normal</span> declarations in <span class="highlighted-text">user</span>
             style sheet.
@@ -926,6 +966,10 @@ p {
                 class="highlighted-text">author</span> style sheet.
         </li>
         <li><span class="highlighted-text">!important</span> declaration in <span class="highlighted-text">user</span>
+            style sheet.
+        </li>
+        <li><span class="highlighted-text">!important</span> declaration in <span
+                class="highlighted-text">user agent</span>
             style sheet.
         </li>
     </ul>
@@ -985,6 +1029,75 @@ p {
         Если объявления имеют одинаковое происхождение, уровень важности и специфичность, то последнее объявление будет
         приоритетным.
     </aside>
+</section>
+<section>
+    <h1>Defaulting</h1>
+</section>
+<section>
+    <h2>Defaulting</h2>
+    <ul>
+        <li>
+            <p>When the cascade does not result in a value, the specified value must be found some other way: 
+            </p>
+            <ul>
+                <li>
+                    <span class="highlighted-text">Inherited</span> properties draw their defaults from their <span
+                        class="highlighted-text">parent</span> element through <span class="highlighted-text">inheritance</span>.
+                </li>
+                <li>
+                    <span class="highlighted-text">Other</span> properties take their <span class="highlighted-text">initial</span>
+                    value.
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <aside class="notes">
+        Если веб браузеру не удалось найти значение для какого либо свойства, значение должно быть найдено при помощи
+        наследования или проинициализировано дефолтным.
+    </aside>
+</section>
+<section>
+    <section>
+        <h2>Inheritance</h2>
+
+        <p><span class="highlighted-text">Inheritance</span> propagates property values from parent elements to their
+            children.</p>
+        <img src="images/css/inheritance.png">
+        <aside class="notes">
+            <p>
+                html - иерархическая структура. Дочерние элементы наследуют некоторые стилевые свойства своих родителей.
+            </p>
+
+            <p>
+                Наследование позволяет задавать значения некоторых свойств единожды, определяя их для родителей верхнего
+                уровня.
+            </p>
+
+            <p>inherited value свойства элемента, является computed value свойствай его родителя. Для корневого элемента
+                inherited value это initial
+                value.
+            </p>
+
+        </aside>
+    </section>
+    <section data-background-iframe="http://jsbin.com/yogidu/embed?html,css,output"></section>
+</section>
+<section class="second-level-section">
+    <section>
+        <h2>Explicit Defaulting</h2>
+        <ul>
+            <li>
+                Resetting a Property: the <span class="highlighted-text">initial</span> keyword.
+            </li>
+            <li>
+                Explicit Inheritance: the <span class="highlighted-text">inherit</span> keyword.
+            </li>
+            <li>
+                Erasing All Declarations: the <span class="highlighted-text">unset</span> keyword.
+            </li>
+        </ul>
+    </section>
+    <section data-background-iframe="http://jsbin.com/lugufa/2/embed?html,css,output"></section>
 </section>
 <section>
     <h1>Box Model</h1>
@@ -1964,6 +2077,7 @@ p {
         <h2>gradient</h2>
 
         <p>Displays smooth transitions between two or more specified colors.</p>
+
         <div class="workshop-example-gradient"></div>
     </section>
     <section data-background-iframe="http://jsbin.com/yemehi/embed?html,css,output"></section>
@@ -2047,6 +2161,7 @@ p {
         </div>
         <div class="col-4-12 ">
             <img src="images/workshop/text-shadow.png"/>
+
             <p class="hidden workshop-example-text-shadow workshop-example-text-shadow-neon">Neon</p>
 
             <p class="hidden workshop-example-text-shadow workshop-example-text-shadow-fire">Fire</p>
@@ -2196,11 +2311,11 @@ div {
 <section class="second-level-section">
     <h2>Shorthand Properties</h2>
     <h5>(Edge Cases)</h5>
-<ul>
-    <li><p>Only the individual properties values can inherit.</p></li>
-    <li><p>The keyword <em class="highlighted-text">inherit</em> can be applied to a
-        property, but only as a whole, not as a keyword for one value or another.</p></li>
-</ul>
+    <ul>
+        <li><p>Only the individual properties values can inherit.</p></li>
+        <li><p>The keyword <em class="highlighted-text">inherit</em> can be applied to a
+            property, but only as a whole, not as a keyword for one value or another.</p></li>
+    </ul>
 
     <pre><code data-trim class="css">
 .parent {
@@ -2447,14 +2562,14 @@ div {
 
 <script>
 
-//    var secondLevelSections = document.getElementsByClassName('second-level-section');
-//    var slidesContainer = document.getElementsByClassName('slides')[0];
-//
-//    if (secondLevelSections && slidesContainer) {
-//        while (secondLevelSections.length) {
-//            slidesContainer.removeChild(secondLevelSections[0]);
-//        }
-//    }
+    //    var secondLevelSections = document.getElementsByClassName('second-level-section');
+    //    var slidesContainer = document.getElementsByClassName('slides')[0];
+    //
+    //    if (secondLevelSections && slidesContainer) {
+    //        while (secondLevelSections.length) {
+    //            slidesContainer.removeChild(secondLevelSections[0]);
+    //        }
+    //    }
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
     Reveal.initialize({
