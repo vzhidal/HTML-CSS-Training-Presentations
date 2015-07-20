@@ -130,9 +130,11 @@
     </ul>
 
     <aside class="notes">
-        <p>CSS level 3 представляет из себя группу модулей объеденённых под одним названием. Разрабатываются и релизятся
-            отдельно. Каждый модуль может получать новый уровень независимо от других. (Selectors Level 4, Flexible
-            Boxes Level 1)</p>
+        <p>Термин CSS3 относится ко всему, что было опубликовано после css 2.1. CSS3 не является стандартом и
+            представляет из себя группу модулей объеденённых под одним названием. Разрабатываются и релизятся отдельно.
+            Каждый модуль может получать новый уровень независимо от других. Самостоятельной спецификации «CSS3» нет и
+            никогда не будет. Долгие годы название «CSS3» было символом прогресса и светлого будущего веб-технологий.
+            Что же нас ждёт дальше?</p>
 
         https://wiki.csswg.org/spec/levels
         http://css-live.ru/articles-css/zhizn-posle-css3-chto-novogo-v-css-1.html
@@ -145,6 +147,26 @@
     <p>There is no such thing as CSS4.</p>
     <aside class="notes">
         http://www.xanthir.com/b4Ko0
+
+        <p>Относительно недавно участники Рабочей группы CSS в W3C пересмотрели свои наработки и внезапно обнаружили,
+            что многое из того, что раньше считалось «развитием и надстройкой», на самом деле — очень даже абсолютно
+            новая функциональность. И по-хорошему, этим модулям тоже надо бы быть на первом уровне, а не на третьем.
+            Таких модулей набралось больше дюжины. Да и вообще стоило уйти от надоевшего слова «CSS3» и связанной с ним
+            путаницы. И в W3C затеяли Великое Переименование модулей.</p>
+
+        <p>Так что сейчас многие спецификации CSS открываются сразу по двум адресам — старому, вида css3-что-то, и
+            «стильно-модно-молодежному», вида css-что-то-1.</p>
+
+        <p>Маленькая сенсация: в числе таких «переехавших» модулей — CSS-трансформации и… флексбоксы! Да, даже эти,
+            казалось бы, бесспорные и давно полюбившиеся нам «хиты CSS3» избавились от уже немодной «тройки» в названии
+            и перешли в стан модных «первопроходцев». CSS-переходы, анимации и CSS-колонки тоже в планах на переезд, но
+            на момент написания статьи по новому адресу еще не доступны (переименование — процесс долгий, а W3C не зря
+            славится своей неторопливостью). В «первый класс» перешли и многие перспективные новинки — например, CSS
+            Grid Layout и CSS-регионы.</p>
+
+        <p>
+            (Selectors Level 4, Flexible Boxes Level 1)
+        </p>
     </aside>
 </section>
 
@@ -836,10 +858,16 @@ comment here*/
         <li>
             <p>A declaration applies to an element if:</p>
             <ul>
-                <li>It belongs to a <span class="highlighted-text">style sheet</span> that currently applies to this document.</li>
-                <li>It is not qualified by a <span class="highlighted-text">conditional rule</span> with a false condition.</li>
-                <li>It belongs to a style rule whose <span class="highlighted-text">selector</span> matches the element.</li>
-                <li>It is syntactically <span class="highlighted-text">valid</span>: the declaration’s property is a known property name, and the
+                <li>It belongs to a <span class="highlighted-text">style sheet</span> that currently applies to this
+                    document.
+                </li>
+                <li>It is not qualified by a <span class="highlighted-text">conditional rule</span> with a false
+                    condition.
+                </li>
+                <li>It belongs to a style rule whose <span class="highlighted-text">selector</span> matches the element.
+                </li>
+                <li>It is syntactically <span class="highlighted-text">valid</span>: the declaration’s property is a
+                    known property name, and the
                     declaration’s value matches the syntax for that property.
                 </li>
             </ul>
@@ -906,6 +934,7 @@ comment here*/
         <p>
             Существует 4 шага для определения какое css свойство будет применено к элементу.
         </p>
+        <a href="http://jsbin.com/toreze/edit?html,css">question</a>
     </aside>
 </section>
 <section>
