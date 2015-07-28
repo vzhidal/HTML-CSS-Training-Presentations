@@ -1147,6 +1147,9 @@ comment here*/
         <h2>Box Dimensions</h2>
 
         <img style="background-color: white;" src="images/css/box-dimensions.png"/>
+        <aside class="notes">
+            <p>Box model состоит из контента, падинга, бордера и маржина.</p>
+        </aside>
     </section>
     <section data-background-iframe="http://jsbin.com/domaga/embed?html,css,output">
 
@@ -1165,6 +1168,9 @@ comment here*/
         <li><span class="highlighted-text">margin edge</span> or outer edge
         </li>
     </ul>
+    <aside class="notes">
+        <p>Границы бокса. Каждая обасть бокса имеет свою границу.</p>
+    </aside>
 </section>
 <section>
     <section>
@@ -1178,8 +1184,16 @@ comment here*/
             <li>border-box
             </li>
         </ul>
+        <aside class="notes">
+            Применяется для изменения алгоритма расчета ширины и высоты элемента.
+            <br>
+            Согласно спецификации CSS ширина блока складывается из ширины контента (width), значений отступов (margin),
+            полей (padding) и границ (border). Аналогично обстоит и с высотой блока. Свойство box-sizing позволяет
+            изменить этот алгоритм, чтобы свойства width и height задавали размеры не контента, а размеры блока.
+        </aside>
     </section>
     <section data-background-iframe="http://jsbin.com/warevu/embed?html,css,output"></section>
+    <section data-background-iframe="http://jsbin.com/nuwimi/embed?html,css,output"></section>
 </section>
 <section>
     <h2>Collapsing Margins</h2>
@@ -1196,9 +1210,11 @@ comment here*/
         </li>
     </ul>
     <aside class="notes">
-        <p>Смежные отступы двух элементов могут комбинироваться. (Пример)</p>
+        <p>Смежные отступы двух элементов могут комбинироваться.</p>
 
-        <p>Такое поведение называется схлопыванием.</p>
+        <p>Такое поведение называется схлопыванием. При схлопывании размер результирующего маржина будет равен
+            наибольшему из схлопывающихся маржинов. Если один из маржинов отрицательный, результирующий маржин будет
+            равен суммуе наибольшего положительного и наименьшего отрицательного.</p>
     </aside>
 </section>
 <section>
@@ -1214,6 +1230,10 @@ comment here*/
             <li><span class="highlighted-text">Empty</span> blocks.
             </li>
         </ul>
+        <aside class="notes">
+            Три основных случая, при которых комбинируются маржины. Другие варианты схлопывания возникают при
+            комбинировании.
+        </aside>
     </section>
     <section data-background-iframe="http://jsbin.com/wuxavu/embed?html,css,output"></section>
 </section>
@@ -1256,7 +1276,6 @@ comment here*/
     <aside class="notes">
         <p>Модель визуального форматирования это алгоритм, которым пользуется браузер для обработки документа и его
             отображения.</p>
-        http://stackoverflow.com/questions/16936297/when-does-a-box-establish-an-inline-formatting-context
     </aside>
 </section>
 <section>
@@ -1272,7 +1291,8 @@ comment here*/
         <li>other external information</li>
     </ul>
     <aside class="notes">
-        <p>Концепции, которые входят в этот алгоритм и участвуют в формировании боксов.</p>
+        <p>Концепции, которые входят в этот алгоритм и участвуют в формировании боксов. Каждый сформированный бокс будет
+            расположен в соответствии с этими концепуиями.</p>
     </aside>
 </section>
 
@@ -1283,6 +1303,10 @@ comment here*/
         <li>The part of the CSS visual formatting model.</li>
         <li>Creates boxes from the document's elements.</li>
     </ul>
+
+    <aside class="notes">
+        Является частью модели визуального форматирования, которая создаёт боксы из элементов документа.
+    </aside>
 </section>
 <section>
     <h2>Box Types</h2>
@@ -1292,7 +1316,8 @@ comment here*/
         <li>Depend of the value of the display CSS property.</li>
     </ul>
     <aside class="notes">
-        <p>Типы боксов влияют на поведение алгоритма визуального форматирования.</p>
+        <p>Сгенерированные боксы имеют разные типы, которые влияют на поведение алгоритма визуального
+            форматирования.</p>
 
         <p>Тип бокса зависит от css свойства display.</p>
     </aside>
@@ -1318,6 +1343,14 @@ comment here*/
         <li>Generates at least one block-level box (<span class="highlighted-text">principal block-level box</span>).
         </li>
     </ul>
+    <aside class="notes">
+        <p>Участвуют в блочном котексте форматирования.</p>
+
+        <p>Создают как минимум один блочный бокс, называющийся principal block-level box.</p>
+
+        <p>Некоторые элементы (например элементы списка) генерируют дополнительные боксы для оформления типографии. НО
+            большинство элементов генерирует только один бокс.</p>
+    </aside>
 </section>
 <section class="second-level-section">
     <h2>Block container box</h2>
@@ -1352,6 +1385,11 @@ comment here*/
             </p>
         </div>
     </div>
+
+    <aside class="notes">
+        <p>Понятия block-level box и block container разделены между собой. Первый описывает взаимодействие с предками и
+            соседями. Второй описывает взаимодействие с вложенными боксами</p>
+    </aside>
 </section>
 <section class="second-level-section">
     <h2>Block Boxes</h2>
@@ -1359,6 +1397,10 @@ comment here*/
 
     <p>Block-level boxes that also are block container boxes are called block boxes.
     </p>
+
+    <aside class="notes">
+        block container - non-replaced inline blocks and non-replaced table cells
+    </aside>
 </section>
 <section class="second-level-section">
     <h2>
@@ -1382,6 +1424,10 @@ comment here*/
             </p>
         </li>
     </ul>
+    <aside class="notes">
+        <p>Вспомогательные боксы, которые не могут быть выбраны с помощью селекторов и используют унаследованные или
+            дефолтные стили.</p>
+    </aside>
 </section>
 <section class="second-level-section">
     <h2>Anonymous block boxes</h2>
@@ -1399,6 +1445,7 @@ comment here*/
     </ul>
     <aside class="notes">
         <p>Распределяются в линию вместе с другими inline-level элементами.</p>
+        http://stackoverflow.com/questions/16936297/when-does-a-box-establish-an-inline-formatting-context
     </aside>
 </section>
 <section class="second-level-section">
@@ -1499,6 +1546,11 @@ comment here*/
             of css properties.
         </p></li>
     </ul>
+    <aside class="notes">
+        <p>Любой текст, который находится непосредственно в block container элементе, является анонимным инлайн боксом.
+            Как и анонимные блочный бокс не может быть выбран селектором и использует унаследованные и дефолтные
+            стили.</p>
+    </aside>
 </section>
 <section class="second-level-section">
     <h2>Anonymous inline boxes</h2>
@@ -1520,6 +1572,16 @@ comment here*/
         </li>
     </ul>
     <aside class="notes">
+        <p>Line boxes are a type of box that is generated in inline formatting context to represent a line
+            of text. Inside a block box, a line box extends from one border of the box to the other. When there are
+            floats, the line box starts at the rightmost border of the left floats and ends at the leftmost border of
+            the right floats.</p>
+
+        <p>
+            Run-in boxes, defined using display:run-in, are boxes that are either block boxes or inline boxes depending
+            of the type of the following box. They can be used to create a title that runs inside its first paragraph
+            when possible.
+        </p>
         <ul>
             <li>
                 The table content model may create a table wrapper box and a table box, but also specific boxes
@@ -1615,7 +1677,7 @@ comment here*/
 
     <aside class="notes">
         боксы располагаются в начале или в конце текущей строки. Все элементы использующие нормальную схему
-        позиционирования будут оптекать их.
+        позиционирования будут обтекать их.
     </aside>
 </section>
 <section>
@@ -1676,6 +1738,19 @@ comment here*/
             </ul>
         </li>
     </ul>
+    <aside class="notes">
+        <p>
+            Внутри него происходит формирование блочных боксов и взаимодействие floats. Блочный контекст
+            форматирования распространяется на всё содержимое элемента создающего его, за исключением вложенных
+            элементов,
+            создающих собственные контексты.
+        </p>
+
+        <p>
+            Правила позиционирования и очистки флоэтов применяются только внутри блочного контекста форматирования.
+            Флоэты не взаимодействуют с элементами в других блочных контекстах форматирования.
+        </p>
+    </aside>
 </section>
 <section>
     <section>
@@ -1700,9 +1775,6 @@ comment here*/
                 </ul>
             </li>
         </ul>
-        <aside class="notes">
-            Внутри него происходит формирование блочных боксов и взаимодействие floats
-        </aside>
     </section>
     <section data-background-iframe="http://jsbin.com/macajo/embed?html,css,output"></section>
 </section>
