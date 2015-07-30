@@ -131,3 +131,10 @@
     box-shadow: none;
     border: 0;
 }
+
+
+@media print{
+    .reveal .slides section[data-background-iframe]{
+        display: none !important;
+    }
+}
