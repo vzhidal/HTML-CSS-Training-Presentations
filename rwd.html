@@ -78,7 +78,22 @@
 </section>
 <section>
     <h2>History</h2>
-    //TODO: https://en.wikipedia.org/wiki/Responsive_web_design
+    <dl>
+        <dt>2004</dt>
+        <dd>A site layout example that adapts to browser viewport width was first demonstrated by Cameron Adams.</dd>
+
+        <dt>2009</dt>
+        <dd>CSS3 media queries were almost ready for prime time.</dd>
+
+        <dt>2010</dt>
+        <dd>Ethan Marcotte coined the term responsive web design.</dd>
+
+        <dt>2012</dt>
+        <dd>Responsive design was listed as #2 in Top Web Design Trends.</dd>
+    </dl>
+    <aside class="notes">
+        //TODO: https://en.wikipedia.org/wiki/Responsive_web_design
+    </aside>
 </section>
 <section>
     <h2>How can we do responsive?</h2>
@@ -580,8 +595,23 @@ audio {
 <section>
     <section>
         <h2>Flexible SVG</h2>
+
+        <p>Modern browsers make svg flexible from the box. For old browsers a padding 'workaround' can be used.</p>
         <pre><code data-trim class="css">
-//TODO
+.svg-container {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  padding-bottom: 100%;
+  vertical-align: middle;
+  overflow: hidden;
+}
+.svg-content {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
         </code></pre>
     </section>
     <section data-background-iframe="http://jsbin.com/doqiho/2/embed?html,css,output"></section>
@@ -589,63 +619,187 @@ audio {
 <section>
     <section>
         <h2>Flexible Canvas</h2>
-        <pre><code data-trim class="css">
-//TODO
+
+        <p>If you resize the canvas, the drawn content is always erased. You can either redraw the content after
+            resizing.</p>
+        <pre><code data-trim class="javascript">
+var previousWidth = window.innerWidth;
+var resizeCanvas = function(context){
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  scale = window.innerWidth/previousWidth;
+
+  context.scale(scale, scale);
+
+  drawRectangle(context);
+};
+
+window.addEventListener('resize',
+    resizeCanvas.bind(null, context),
+    false);
         </code></pre>
     </section>
     <section data-background-iframe="http://jsbin.com/keduta/5/embed?html,css,output"></section>
 </section>
 <section>
     <h1>Adaptive Images</h1>
+    <aside class="notes">
+        http://alistapart.com/article/responsive-images-in-practice
+    </aside>
+</section>
+<section>
+    <h2>srcset</h2>
+    <ul>
+        <li>A list of one or more strings separated by commas indicating a set of possible image sources for the user
+            agent to use.
+        </li>
+        <li>Getting images to scale efficiently across varying viewport widths and screen resolutions.</li>
+    </ul>
+
+</section>
+<section>
+    <h2>srcset</h2>
+
+    <div class="grid">
+        <div class="col-6-12">
+            <h5>width descriptor</h5>
+                <pre><code class="html" data-trim>
+&lt;img
+srcset="
+    imgs/large.jpg 1920w,
+    imgs/medium.jpg 960w,
+    imgs/small.jpg 480w"
+src="imgs/medium.jpg"
+alt="Details."/&gt;
+    </code></pre>
+        </div>
+        <div class="col-6-12">
+            <h5>pixel density descriptor</h5>
+            <pre><code class="html" data-trim>
+&lt;img
+srcset="
+    imgs/large.jpg 1x,
+    imgs/medium.jpg 2x,
+    imgs/small.jpg 3x"
+src="imgs/medium.jpg"
+alt="Details."/&gt;
+            </code></pre>
+        </div>
+    </div>
+    <aside class="notes">the spec allows you to supply ratios directly and that sources without a descriptor get
+        assigned a default ratio of 1x. That’s a nice, compact way to supply hi-DPI imagery. But! It only works for
+        fixed-width images. All of the images on our crazy-quilts page are fluid, so this is the last we’ll hear about x
+        descriptors.
+    </aside>
+</section>
+<section>
+    <h2>sizes</h2>
+    <ul>
+        <li>A list of one or more strings separated by commas indicating a set of source sizes.</li>
+        <li>Source size values specify the intended display size of the image.</li>
+    </ul>
+    <aside class="notes">
+        There is, however, a catch: picking a sensible source requires knowing the image’s layout size. But we can’t ask
+        browsers to delay choosing until the page’s HTML, CSS, and JavaScript have all been loaded and parsed. So we
+        need to give browsers an estimate of the image’s display width using another new attribute: sizes.
+    </aside>
+</section>
+<section>
+    <h2>sizes</h2>
+    <pre><code class="html" data-trim>
+&lt;img
+srcset="
+    imgs/large.jpg 1920w,
+    imgs/medium.jpg 960w,
+    imgs/small.jpg 480w"
+sizes="(min-width: 33em) 33em, 100vw"
+src="imgs/medium.jpg"
+alt="Details."/&gt;
+    </code></pre>
+    <p>That says: is the viewport wider than 33em? This image will be 33em wide. Otherwise, it’ll be 100vw.</p>
+</section>
+<section>
+    <h2>Picture and art direction</h2>
+    <blockquote>
+        <p>srcset if you’re lazy, picture if you’re crazy.
+        </p>
+
+        <p>Mat Marquis</p>
+    </blockquote>
+</section>
+<section>
+    <h2>art direction</h2>
+    <ul>
+        <li>Tailoring image content to fit specific environments.
+            <ul>
+                <li>Sometimes this means cropping an image.
+                </li>
+                <li>
+                    Other times, it can mean a different image altogether that may have different proportions or may be
+                    changed in other ways to communicate more effectively in a layout.
+                </li>
+            </ul>
+        </li>
+    </ul>
 </section>
 <section>
     <h2>Picture</h2>
     <pre><code data-trim class="html">
-<picture alt="description of image">
-    <!-- low-res, default -->
-    <source src="small.jpg">
-    <!-- med-res -->
-    <source src="medium.jpg" media="(min-width: 400px)">
-    <!-- high-res -->
-    <source src="large.jpg" media="(min-width: 800px)">
-    <!-- Fallback content -->
-    <img src="small.jpg" alt="description of image">
-</picture>
+&lt;picture>
+    &lt;source media="(orientation: landscape)" srcset="landscape.jpg" /&gt;
+    &lt;img src="portrait.jpg" alt="A rad wolf." /&gt;
+&lt;/picture&gt;
     </code></pre>
+
+    <aside class="notes">
+        On landscape-oriented viewports, landscape.jpg is fed to the img. When we’re in portrait (or if the browser
+        doesn’t support picture) the img is left untouched, and portrait.jpg loads.
+        <p>Another way to frame it: the img isn’t a fallback. We’re progressively enhancing the img by wrapping it in a
+            picture.
+
+            In practice, this means that any styles that we want to apply to our rendered image need to be set on the
+            img, not on the picture. picture { width: 100% } does nothing. picture > img { width: 100% } does what you
+            want.
+
+        </p>
+    </aside>
 </section>
 <section>
     <h2>Picture</h2>
+    <pre><code data-trim class="html">
+&lt;picture&gt;
+    <!-- 16:9 crop -->
+    &lt;source
+            media="(min-width: 36em)"
+            srcset="imgs/large.jpg  1920w,
+                    imgs/medium.jpg  960w,
+                    imgs/small.jpg   480w" /&gt;
+    <!-- square crop -->
+    &lt;source
+            srcset="imgs/large-square.jpg  822w,
+                    imgs/medium-square.jpg 640w,
+                    imgs/small-square.jpg  320w" /&gt;
+    &lt;img
+            src="imgs/medium.jpg"
+            alt="Details." /&gt;
+&lt;/picture&gt;
+    </code></pre>
 
-    <div clas="grid">
-        <div class="col-6-12">
-            <h5>Advantages</h5>
-            <ul>
-                <li>Mimics other media syntax like &lt;video&gt; and &lt;audio&gt;.
-                </li>
-                <li> The fallback makes it backwards-compatible with browsers that don't support it.
-                </li>
-                <li>Gives the control to show exactly what we want under situations we specify.</li>
-            </ul>
-        </div>
-        <div class="col-6-12">
-            <h5>Disadvantages</h5>
-            <ul>
-                <li>It's a whole lot more complicated than &lt;img&gt;.
-                </li>
-                <li>Bringing the media query syntax into HTML.</li>
-                <li>
-                    Similar issues to why inline styles are bad. Makes future updates more difficult. Not a reusable
-                    abstraction.
-                </li>
-            </ul>
-        </div>
-    </div>
+    <aside class="notes">
+
+    </aside>
 </section>
 <section>
-    <h2>srcN</h2>
-</section>
-<section>
-    <h2>srcset</h2>
+    <h2>source type</h2>
+        <pre><code data-trim class="html">
+&lt;picture&gt;
+    &lt;source type="image/svg+xml" srcset="logo.svg" /&gt;
+    &lt;source type="image/webp" srcset="logo.webp" /&gt;
+    &lt;img src="logo.png" alt="RadWolf, Inc." /&gt;
+&lt;/picture&gt;
+    </code></pre>
+    <p>If the browser supports a source’s type, it will send that source’s srcset to the img.</p>
 </section>
 <section>
     <h1>Grids</h1>
@@ -793,7 +947,8 @@ audio {
         <dt>Responsinator.com</dt>
         <dd>displays as numerous devices</dd>
         <dt>iOS Simulator</dt>
-        <dd>if you have a Mac. (After launching Xcode, go into the Xcode menu and chooseOpen Developer Tool > iOS Simulator)
+        <dd>if you have a Mac. (After launching Xcode, go into the Xcode menu and chooseOpen Developer Tool > iOS
+            Simulator)
         </dd>
         <dt>Browserstack</dt>
         <dd>for cross browser and device testing.
@@ -812,6 +967,24 @@ audio {
         <li>Nothing beats holding a device and touching a site.</li>
         <li>How far do you need to reach to tap something?</li>
         <li>How well does the device respond?</li>
+    </ul>
+</section>
+<section>
+    <h2>Resources</h2>
+    <ul>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web_Development/Mobile/Responsive_design">https://developer.mozilla.org/en-US/docs/Web_Development/Mobile/Responsive_design</a>
+        </li>
+        <li><a href="http://alistapart.com/article/responsive-images-in-practice">http://alistapart.com/article/responsive-images-in-practice</a>
+        </li>
+        <li><a href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-picture-source-media">https://html.spec.whatwg.org/multipage/embedded-content.html#attr-picture-source-media</a>
+        </li>
+        <li>
+            <a href="http://www.quirksmode.org/mobile/viewports.html">http://www.quirksmode.org/mobile/viewports.html</a>
+        </li>
+        <li><a href="https://developers.google.com/web/fundamentals/layouts/index?hl=en">https://developers.google.com/web/fundamentals/layouts/index?hl=en</a>
+        </li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag</a>
+        </li>
     </ul>
 </section>
 </div>
@@ -844,18 +1017,18 @@ audio {
 
         // Optional reveal.js plugins
         dependencies: [
-            { src: 'lib/js/classList.js', condition: function () {
+            { src: 'lib/js/classList.js', condition: function() {
                 return !document.body.classList;
             } },
-            { src: 'plugin/markdown/marked.js', condition: function () {
+            { src: 'plugin/markdown/marked.js', condition: function() {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src: 'plugin/markdown/markdown.js', condition: function () {
+            { src: 'plugin/markdown/markdown.js', condition: function() {
                 return !!document.querySelector('[data-markdown]');
             } },
-            { src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+            { src: 'plugin/highlight/highlight.js', async: true, condition: function() {
                 return !!document.querySelector('pre code');
-            }, callback: function () {
+            }, callback: function() {
                 hljs.initHighlightingOnLoad();
             } },
             { src: 'plugin/zoom-js/zoom.js', async: true },
