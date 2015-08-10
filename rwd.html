@@ -79,16 +79,16 @@
 <section>
     <h2>History</h2>
     <dl>
-        <dt>2004</dt>
+        <dt class="highlighted-text">2004</dt>
         <dd>A site layout example that adapts to browser viewport width was first demonstrated by Cameron Adams.</dd>
 
-        <dt>2009</dt>
+        <dt class="highlighted-text">2009</dt>
         <dd>CSS3 media queries were almost ready for prime time.</dd>
 
-        <dt>2010</dt>
+        <dt class="highlighted-text">2010</dt>
         <dd>Ethan Marcotte coined the term responsive web design.</dd>
 
-        <dt>2012</dt>
+        <dt class="highlighted-text">2012</dt>
         <dd>Responsive design was listed as #2 in Top Web Design Trends.</dd>
     </dl>
     <aside class="notes">
@@ -122,7 +122,8 @@
 <section>
     <h2>Viewport meta tag</h2>
 
-    <p>A meta viewport tag gives instructions on how to control the page's dimensions and scaling.
+    <p>A meta <span class="highlighted-text">viewport</span> tag gives instructions on how to control the page's <span
+            class="highlighted-text">dimensions</span> and <span class="highlighted-text">scaling</span>.
     </p>
     <aside class="notes">
         <p>
@@ -182,19 +183,19 @@
                 <th>Description</th>
             </tr>
             <tr>
-                <td>width</td>
+                <td><span class="highlighted-text">width</span></td>
                 <td>Width of the viewport in pixels (or device-width). If width isn’t set, it defaults to a
                     desktop size (980px on mobile Safari).
                 </td>
             </tr>
             <tr>
-                <td>height</td>
+                <td><span class="highlighted-text">height</span></td>
                 <td>Height of the viewport in pixels (or device-height). Generally you don’t need to worry about
                     setting this property.
                 </td>
             </tr>
             <tr>
-                <td>initial-scale</td>
+                <td><span class="highlighted-text">initial-scale</span></td>
                 <td>(0 to 10.0) Multiplier that sets the scale of the page after its initial display. Safe bet:
                     if you need to set it, set it to 1.0. Larger values = zoomed in, smaller values = zoomed out
                 </td>
@@ -210,19 +211,19 @@
                 <th>Description</th>
             </tr>
             <tr>
-                <td>minimum-scale</td>
+                <td><span class="highlighted-text">minimum-scale</span></td>
                 <td>(0 to 10.0) The minimum multiplier the user can “zoom out” to. Defaults to 0.25 on mobile
                     Safari.
                 </td>
             </tr>
             <tr>
-                <td>maximum-scale</td>
+                <td><span class="highlighted-text">maximum-scale</span></td>
                 <td>(0 to 10.0) The minimum multiplier the user can “zoom in” to. Defaults to 1.6 on mobile
                     Safari.
                 </td>
             </tr>
             <tr>
-                <td>user-scalable</td>
+                <td><span class="highlighted-text">user-scalable</span></td>
                 <td>(yes/no) Whether to allow a user from scaling in/out (zooming in/out). Default to “yes” on
                     mobile Safari.
                 </td>
@@ -254,21 +255,21 @@
                 <th>Description</th>
             </tr>
             <tr>
-                <td>width</td>
+                <td><span class="highlighted-text">width</span></td>
                 <td>Sets both max and min-width. It's a shorthand descriptor.<br/>auto | device-width | length |
                     percentage
                 </td>
             </tr>
             <tr>
-                <td>max-width</td>
+                <td><span class="highlighted-text">max-width</span></td>
                 <td>auto | device-width | length | percentage</td>
             </tr>
             <tr>
-                <td>min-width</td>
+                <td><span class="highlighted-text">min-width</span></td>
                 <td>auto | device-width | length | percentage</td>
             </tr>
             <tr>
-                <td>orientation</td>
+                <td><span class="highlighted-text">orientation</span></td>
                 <td>Lock orientation or leave to auto.<br/>auto; // auto | portrait | landscape</td>
             </tr>
         </table>
@@ -281,19 +282,19 @@
                 <th>Description</th>
             </tr>
             <tr>
-                <td>zoom</td>
+                <td><span class="highlighted-text">zoom</span></td>
                 <td>'zoom' equates to 'initial-scale' in meta tag.<br/>auto | number | percentage</td>
             </tr>
             <tr>
-                <td>max-zoom</td>
+                <td><span class="highlighted-text">max-zoom</span></td>
                 <td>Largest allowed zoom factor.</td>
             </tr>
             <tr>
-                <td>min-zoom</td>
+                <td><span class="highlighted-text">min-zoom</span></td>
                 <td>Smallest allowed zoom factor.</td>
             </tr>
             <tr>
-                <td>user-zoom</td>
+                <td><span class="highlighted-text">user-zoom</span></td>
                 <td>Equates to 'user-scalable' in meta tag.<br/>fixed | zoom</td>
             </tr>
         </table>
@@ -302,13 +303,16 @@
 <section>
     <h2>Summary</h2>
     <ul>
-        <li>Use a meta viewport tag to control the width and scaling of the browsers viewport.</li>
-        <li>Include width=device-width to match the screen's width in device independent pixels.
+        <li>Use a meta viewport tag to control the <span class="highlighted-text">width</span> and <span
+                class="highlighted-text">scaling</span> of the browsers viewport.
         </li>
-        <li>Include initial-scale=1 to establish a 1:1 relationship between CSS pixels and device independent
-            pixels.
+        <li>Include <span class="highlighted-text">width=device-width</span> to match the screen's width in device
+            independent pixels.
         </li>
-        <li>Ensure your page is accessible by not disabling user scaling.
+        <li>Include <span class="highlighted-text">initial-scale=1</span> to establish a 1:1 relationship between CSS
+            pixels and device independent pixels.
+        </li>
+        <li>Ensure your page is accessible by <span class="highlighted-text">not disabling user scaling</span>.
         </li>
     </ul>
 </section>
@@ -329,8 +333,8 @@
 <section>
     <h2>Syntax</h2>
 
-    <p>A media query consists of a media type and zero or more expressions that check for the conditions of
-        particular media features
+    <p>A media query consists of a <span class="highlighted-text">media type</span> and zero or more <span
+            class="highlighted-text">expressions</span> that check for the conditions of particular media features
     </p>
     <pre><code class="html" data-trim>
 <link rel="stylesheet" media="screen and (color)" href="ex.css"/>
@@ -373,23 +377,23 @@
                 <th>Description</th>
             </tr>
             <tr>
-                <td>all</td>
+                <td><span class="highlighted-text">all</span></td>
                 <td>Suitable for all devices.</td>
             </tr>
             <tr>
-                <td>braille</td>
+                <td><span class="highlighted-text">braille</span></td>
                 <td>Intended for braille tactile feedback devices.</td>
             </tr>
             <tr>
-                <td>embossed</td>
+                <td><span class="highlighted-text">embossed</span></td>
                 <td>Intended for paged braille printers.</td>
             </tr>
             <tr>
-                <td>handheld</td>
+                <td><span class="highlighted-text">handheld</span></td>
                 <td>Intended for handheld devices (typically small screen, limited bandwidth).</td>
             </tr>
             <tr>
-                <td>print</td>
+                <td><span class="highlighted-text">print</span></td>
                 <td>Intended for paged material and for documents viewed on screen in print preview mode.</td>
             </tr>
         </table>
@@ -402,25 +406,25 @@
                 <th>Description</th>
             </tr>
             <tr>
-                <td>projection</td>
+                <td><span class="highlighted-text">projection</span></td>
                 <td>Intended for projected presentations, for example projectors.</td>
             </tr>
             <tr>
-                <td>screen</td>
+                <td><span class="highlighted-text">screen</span></td>
                 <td>Intended primarily for color computer screens.</td>
             </tr>
             <tr>
-                <td>speech</td>
+                <td><span class="highlighted-text">speech</span></td>
                 <td>Intended for speech synthesizers.</td>
             </tr>
             <tr>
-                <td>tty</td>
+                <td><span class="highlighted-text">tty</span></td>
                 <td>Intended for media using a fixed-pitch character grid (such as teletypes, terminals, or portable
                     devices with limited display capabilities). 
                 </td>
             </tr>
             <tr>
-                <td>tv</td>
+                <td><span class="highlighted-text">tv</span></td>
                 <td>Intended for television-type devices (low resolution, color, limited-scrollability screens, sound
                     available).
                 </td>
@@ -437,21 +441,21 @@
                 <th>Description</th>
             </tr>
             <tr>
-                <td>aspect-ratio</td>
+                <td><span class="highlighted-text">aspect-ratio</span></td>
                 <td>is defined as the ratio of the value of the ‘width’ media feature to the value of the ‘height’ media
                     feature.
                 </td>
             </tr>
             <tr>
-                <td>color</td>
+                <td><span class="highlighted-text">color</span></td>
                 <td>describes the number of bits per color component of the output device.</td>
             </tr>
             <tr>
-                <td>color-index</td>
+                <td><span class="highlighted-text">color-index</span></td>
                 <td>describes the number of entries in the color lookup table of the output device.</td>
             </tr>
             <tr>
-                <td>device-aspect-ratio</td>
+                <td><span class="highlighted-text">device-aspect-ratio</span></td>
                 <td>is defined as the ratio of the value of the ‘device-width’ media feature to the value of the
                     ‘device-height’ media feature.
                 </td>
@@ -466,19 +470,19 @@
                 <th>Description</th>
             </tr>
             <tr>
-                <td>device-height</td>
+                <td><span class="highlighted-text">device-height</span></td>
                 <td>describes the height of the rendering surface of the output device.</td>
             </tr>
             <tr>
-                <td>device-width</td>
+                <td><span class="highlighted-text">device-width</span></td>
                 <td>describes the width of the rendering surface of the output device.</td>
             </tr>
             <tr>
-                <td>grid</td>
+                <td><span class="highlighted-text">grid</span></td>
                 <td>is used to query whether the output device is grid or bitmap.</td>
             </tr>
             <tr>
-                <td>height</td>
+                <td><span class="highlighted-text">height</span></td>
                 <td>describes the height of the targeted display area of the output device.</td>
             </tr>
         </table>
@@ -491,25 +495,25 @@
                 <th>Description</th>
             </tr>
             <tr>
-                <td>monochrome</td>
+                <td><span class="highlighted-text">monochrome</span></td>
                 <td>describes the number of bits per pixel in a monochrome frame buffer.</td>
             </tr>
             <tr>
-                <td>orientation</td>
+                <td><span class="highlighted-text">orientation</span></td>
                 <td>is ‘portrait’ when the value of the ‘height’ media feature is greater than or equal to the value of
                     the ‘width’ media feature.
                 </td>
             </tr>
             <tr>
-                <td>resolution</td>
+                <td><span class="highlighted-text">resolution</span></td>
                 <td>describes the resolution of the output device, i.e. the density of the pixels.</td>
             </tr>
             <tr>
-                <td>scan</td>
+                <td><span class="highlighted-text">scan</span></td>
                 <td>describes the scanning process of "tv" output devices.</td>
             </tr>
             <tr>
-                <td>width</td>
+                <td><span class="highlighted-text">width</span></td>
                 <td>describes the width of the targeted display area of the output device.</td>
             </tr>
         </table>
@@ -531,15 +535,15 @@ if (widthQuery.matches) {
     <section>
         <h2>JS API: MediaQueryList</h2>
         <dl>
-            <dt>matches</dt>
+            <dt><span class="highlighted-text">matches</span></dt>
             <dd>Boolean whether the query matched or not.</dd>
-            <dt>media</dt>
+            <dt><span class="highlighted-text">media</span></dt>
             <dd>Serialized media query list.</dd>
-            <dt>addListener</dt>
+            <dt><span class="highlighted-text">addListener</span></dt>
             <dd>Adding event listener to a media query. Listener is invoked when the media query's evaluated result
                 changes.
             </dd>
-            <dt>removeListener</dt>
+            <dt><span class="highlighted-text">removeListener</span></dt>
             <dd>Removing event listener from a media query.</dd>
         </dl>
     </section>
@@ -549,7 +553,8 @@ if (widthQuery.matches) {
     <h2>Summary</h2>
     <ul>
         <li>
-            Media queries can be used to apply styles based on device characteristics.
+            Media queries can be used to apply <span
+                class="highlighted-text">styles based on device characteristics</span>.
         </li>
         <li>
             Use min-width over min-device-width to ensure the broadest experience.
@@ -651,8 +656,8 @@ window.addEventListener('resize',
 <section>
     <h2>srcset</h2>
     <ul>
-        <li>A list of one or more strings separated by commas indicating a set of possible image sources for the user
-            agent to use.
+        <li>A list of one or more strings separated by commas indicating a <span class="highlighted-text">set of possible image sources</span>
+            for the user agent to use.
         </li>
         <li>Getting images to scale efficiently across varying viewport widths and screen resolutions.</li>
     </ul>
@@ -696,7 +701,8 @@ alt="Details."/&gt;
 <section>
     <h2>sizes</h2>
     <ul>
-        <li>A list of one or more strings separated by commas indicating a set of source sizes.</li>
+        <li>A list of one or more strings separated by commas indicating a <span class="highlighted-text">set of source sizes</span>.
+        </li>
         <li>Source size values specify the intended display size of the image.</li>
     </ul>
     <aside class="notes">
@@ -803,10 +809,6 @@ alt="Details."/&gt;
 </section>
 <section>
     <h1>Grids</h1>
-</section>
-<section>
-    <h2>CSS Grids</h2>
-    <img src="images/rwd/css-grids-statistic.png">
 </section>
 <section>
     <h2>Grids Libraries</h2>
@@ -926,8 +928,75 @@ alt="Details."/&gt;
     <h1>Flexbox</h1>
 </section>
 <section>
+    <h2>Flexbox Terminology</h2>
+    <img src="images/rwd/flexbox.png"/>
+
+    <aside class="notes">
+        <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">a-guide-to-flexbox</a>
+    </aside>
+</section>
+<section>
     <h2>Flexbox Basics</h2>
-    //TODO:
+    <ul>
+        <li>Flex container</li>
+        <li>Flex items</li>
+    </ul>
+</section>
+<section>
+    <section>
+        <h2>Flexbox Basics</h2>
+        <h5>Flex container</h5>
+        <dl>
+            <dt>display</dt>
+            <dd>defines a flex container.</dd>
+            <dt>flex-direction</dt>
+            <dd>establishes the main-axis.</dd>
+            <dt>flex-wrap</dt>
+            <dd>allows the items to wrap.</dd>
+            <dt>flex-flow</dt>
+            <dd>is a shorthand flex-direction and flex-wrap properties.</dd>
+        </dl>
+    </section>
+    <section>
+        <h2>Flexbox Basics</h2>
+        <h5>Flex container</h5>
+        <dl>
+            <dt>justify-content</dt>
+            <dd>defines the alignment along the main axis.</dd>
+            <dt>align-items</dt>
+            <dd>defines the default behaviour for how flex items are laid out along the cross axis on the current
+                line.
+            </dd>
+            <dt>align-content</dt>
+            <dd>aligns a flex container's lines within when there is extra space in the cross-axis.</dd>
+        </dl>
+    </section>
+</section>
+<section>
+    <section>
+        <h2>Flexbox Basics</h2>
+        <h5>Flex items</h5>
+        <dl>
+            <dt>order</dt>
+            <dd>controls the order in which flex items appear in the flex container.</dd>
+            <dt>flex-grow</dt>
+            <dd>defines the ability for a flex item to grow if necessary.</dd>
+            <dt>flex-shrink</dt>
+            <dd>defines the ability for a flex item to shrink if necessary.</dd>
+        </dl>
+    </section>
+    <section>
+        <h2>Flexbox Basics</h2>
+        <h5>Flex items</h5>
+        <dl>
+            <dt>flex-basis</dt>
+            <dd>defines the default size of an element before the remaining space is distributed.</dd>
+            <dt>flex</dt>
+            <dd>is the shorthand for flex-grow, flex-shrink and flex-basis combined.</dd>
+            <dt>align-self</dt>
+            <dd>allows the default alignment to be overridden for individual flex items.</dd>
+        </dl>
+    </section>
 </section>
 <section>
     <h1>Responsive Tables</h1>
@@ -1004,14 +1073,14 @@ alt="Details."/&gt;
         <li>Defining breakpoints based on specific devices, products, brand names, or operating systems that are in use
             today can result in a maintenance nightmare. 
         </li>
-        <li>The content itself should determine how the layout adjusts to its container.
+        <li>The <span class="highlighted-text">content itself should determine how the layout adjusts</span> to its container.
         </li>
     </ul>
 </section>
 <section>
     <h2>‘Mobile’ first</h2>
 
-    <p>Use the simplest layout as a start point.</p>
+    <p><span class="highlighted-text">Use the simplest layout</span> as a start point.</p>
     <ul>
         <li>
             Forces You to Focus on Core Content and Functionality.
@@ -1057,9 +1126,12 @@ alt="Details."/&gt;
 </section>
 <section>
     <h2>BROWSER DEVTOOLS</h2>
-    Chrome: DevTools Device Mode
-    Firefox: Responsive Design View
-    Article on DevTools Emulation in Chrome, Firefox, and IE
+    <dl>
+        <dt>Chrome</dt>
+        <dd>DevTools Device Mode</dd>
+        <dt>Firefox</dt>
+        <dd>Responsive Design View</dd>        
+    </dl>
 </section>
 <section>
     <h2>TEST ON REAL DEVICES</h2>
@@ -1084,6 +1156,8 @@ alt="Details."/&gt;
         <li><a href="https://developers.google.com/web/fundamentals/layouts/index?hl=en">https://developers.google.com/web/fundamentals/layouts/index?hl=en</a>
         </li>
         <li><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag">https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag</a>
+        </li>
+        <li><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">https://css-tricks.com/snippets/css/a-guide-to-flexbox</a>
         </li>
     </ul>
 </section>
