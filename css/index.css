@@ -137,4 +137,8 @@
     .reveal .slides section[data-background-iframe]{
         display: none !important;
     }
+
+    .reveal pre code{
+        font-weight: bold;
+    }
 }
