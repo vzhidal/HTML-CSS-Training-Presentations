@@ -116,8 +116,45 @@
 </section>
 <section>
     <h2>Viewport Basics</h2>
-    //TODO: http://www.quirksmode.org/mobile/viewports.html
-    //TODO: http://www.quirksmode.org/mobile/viewports2.html
+    <h5>device pixels and CSS pixels</h5>
+    <ul>
+        <li><span class="highlighted-text">Device pixels</span> give the formal resolution of whichever device you’re working on.</li>
+        <li>At zoom level 100% one <span class="highlighted-text">CSS pixel</span> is exactly equal to one device pixel.</li>
+        <li>Zooming to 200% makes one CSS pixel grow to four times the size of one device pixels.</li>
+    </ul>
+    <aside class="notes">
+        //TODO: http://www.quirksmode.org/mobile/viewports.html
+        //TODO: http://www.quirksmode.org/mobile/viewports2.html
+    </aside>
+</section>
+<section>
+    <h2>Viewport Basics</h2>
+    <h5>the desktop viewport</h5>
+    <ul>
+        <li>The function of the viewport is to constrain the &lt;html&gt; element, which is the uppermost containing
+            block of your site.
+        </li>
+        <li>The &lt;html&gt; element takes 100% of the width of that viewport.</li>
+        <li>The viewport has the width and height of the browser window — on desktop.</li>
+    </ul>
+</section>
+<section>
+    <h2>Viewport Basics</h2>
+    <h5>the mobile viewports</h5>
+    <div class="grid">
+        <div class="col-8-12">
+            <ul>
+                <li>The <span class="highlighted-text">visual viewport</span> is the part of the page that’s currently shown
+                    on-screen.
+                </li>
+                <li>The CSS layout, especially percentual widths, are calculated relative to the <span class="highlighted-text">layout viewport</span>.
+                </li>
+            </ul>
+        </div>
+        <div class="col-4-12">
+            <img src="images/rwd/mobile_visualviewport.jpg">
+        </div>
+    </div>
 </section>
 <section>
     <h2>Viewport meta tag</h2>
@@ -947,13 +984,13 @@ alt="Details."/&gt;
         <h2>Flexbox Basics</h2>
         <h5>Flex container</h5>
         <dl>
-            <dt>display</dt>
+            <dt class="highlighted-text">display</dt>
             <dd>defines a flex container.</dd>
-            <dt>flex-direction</dt>
+            <dt class="highlighted-text">flex-direction</dt>
             <dd>establishes the main-axis.</dd>
-            <dt>flex-wrap</dt>
+            <dt class="highlighted-text">flex-wrap</dt>
             <dd>allows the items to wrap.</dd>
-            <dt>flex-flow</dt>
+            <dt class="highlighted-text">flex-flow</dt>
             <dd>is a shorthand flex-direction and flex-wrap properties.</dd>
         </dl>
     </section>
@@ -961,13 +998,13 @@ alt="Details."/&gt;
         <h2>Flexbox Basics</h2>
         <h5>Flex container</h5>
         <dl>
-            <dt>justify-content</dt>
+            <dt class="highlighted-text">justify-content</dt>
             <dd>defines the alignment along the main axis.</dd>
-            <dt>align-items</dt>
+            <dt class="highlighted-text">align-items</dt>
             <dd>defines the default behaviour for how flex items are laid out along the cross axis on the current
                 line.
             </dd>
-            <dt>align-content</dt>
+            <dt class="highlighted-text">align-content</dt>
             <dd>aligns a flex container's lines within when there is extra space in the cross-axis.</dd>
         </dl>
     </section>
@@ -977,11 +1014,11 @@ alt="Details."/&gt;
         <h2>Flexbox Basics</h2>
         <h5>Flex items</h5>
         <dl>
-            <dt>order</dt>
+            <dt class="highlighted-text">order</dt>
             <dd>controls the order in which flex items appear in the flex container.</dd>
-            <dt>flex-grow</dt>
+            <dt class="highlighted-text">flex-grow</dt>
             <dd>defines the ability for a flex item to grow if necessary.</dd>
-            <dt>flex-shrink</dt>
+            <dt class="highlighted-text">flex-shrink</dt>
             <dd>defines the ability for a flex item to shrink if necessary.</dd>
         </dl>
     </section>
@@ -989,11 +1026,11 @@ alt="Details."/&gt;
         <h2>Flexbox Basics</h2>
         <h5>Flex items</h5>
         <dl>
-            <dt>flex-basis</dt>
+            <dt class="highlighted-text">flex-basis</dt>
             <dd>defines the default size of an element before the remaining space is distributed.</dd>
-            <dt>flex</dt>
+            <dt class="highlighted-text">flex</dt>
             <dd>is the shorthand for flex-grow, flex-shrink and flex-basis combined.</dd>
-            <dt>align-self</dt>
+            <dt class="highlighted-text">align-self</dt>
             <dd>allows the default alignment to be overridden for individual flex items.</dd>
         </dl>
     </section>
@@ -1073,7 +1110,8 @@ alt="Details."/&gt;
         <li>Defining breakpoints based on specific devices, products, brand names, or operating systems that are in use
             today can result in a maintenance nightmare. 
         </li>
-        <li>The <span class="highlighted-text">content itself should determine how the layout adjusts</span> to its container.
+        <li>The <span class="highlighted-text">content itself should determine how the layout adjusts</span> to its
+            container.
         </li>
     </ul>
 </section>
@@ -1130,7 +1168,7 @@ alt="Details."/&gt;
         <dt>Chrome</dt>
         <dd>DevTools Device Mode</dd>
         <dt>Firefox</dt>
-        <dd>Responsive Design View</dd>        
+        <dd>Responsive Design View</dd>
     </dl>
 </section>
 <section>
