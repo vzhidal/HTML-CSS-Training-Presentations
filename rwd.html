@@ -56,6 +56,10 @@
         to web design aimed at crafting sites to provide an optimal
         viewing experience across a wide range of devices.
     </p>
+    <aside class="notes">
+        Респонсив веб дизайн это подход к разработке сайтов, направленный на достижение оптимального просмотра и
+        взаимодействия пользоватля со страницей в широком диапазоне устройств отображения.
+    </aside>
 </section>
 <section>
     <h2>One site for every screen</h2>
@@ -71,6 +75,11 @@
 
         <p>Jeffrey Veen</p>
     </blockquote>
+    <aside class="notes">
+        День ото дня разноообразие устройств, платформ и браузеров, на которых должен отображаться ваш сайт
+        увеличивается. Отзывчивый веб-дизайн представляет из себя то, как мы будем создавать
+        веб-сайты ближайшие 10 лет. (Adobe, Google lead the UX team)
+    </aside>
 </section>
 <section>
     <h2>WEB Statistics</h2>
@@ -93,6 +102,11 @@
     </dl>
     <aside class="notes">
         //TODO: https://en.wikipedia.org/wiki/Responsive_web_design
+
+        2004 Cameron Adams продемонстрировал один из первых дизайнов адаптируемых к размеру viewport.
+        2009 media query готовы к использованию
+        2010 Ethan Marcotte предлагает термин RWD
+        20112 RWD номер 2 в списке Top Web Design Trends
     </aside>
 </section>
 <section>
@@ -118,13 +132,17 @@
     <h2>Viewport Basics</h2>
     <h5>device pixels and CSS pixels</h5>
     <ul>
-        <li><span class="highlighted-text">Device pixels</span> give the formal resolution of whichever device you’re working on.</li>
-        <li>At zoom level 100% one <span class="highlighted-text">CSS pixel</span> is exactly equal to one device pixel.</li>
+        <li><span class="highlighted-text">Device pixels</span> give the formal resolution of whichever device you’re
+            working on.
+        </li>
+        <li>At zoom level 100% one <span class="highlighted-text">CSS pixel</span> is exactly equal to one device pixel.
+        </li>
         <li>Zooming to 200% makes one CSS pixel grow to four times the size of one device pixels.</li>
     </ul>
     <aside class="notes">
         //TODO: http://www.quirksmode.org/mobile/viewports.html
         //TODO: http://www.quirksmode.org/mobile/viewports2.html
+
     </aside>
 </section>
 <section>
@@ -137,17 +155,24 @@
         <li>The &lt;html&gt; element takes 100% of the width of that viewport.</li>
         <li>The viewport has the width and height of the browser window — on desktop.</li>
     </ul>
+
+    <aside class="notes">
+        Основной функцией вьюпорта является ограничение размеров html лемента. html элемент занимает 100% ширины
+        viewport. viewport в свою очередб занимает ширину и высоту браузерного окна.
+    </aside>
 </section>
 <section>
     <h2>Viewport Basics</h2>
     <h5>the mobile viewports</h5>
+
     <div class="grid">
         <div class="col-8-12">
             <ul>
-                <li>The <span class="highlighted-text">visual viewport</span> is the part of the page that’s currently shown
-                    on-screen.
+                <li>The <span class="highlighted-text">visual viewport</span> is the part of the page that’s currently
+                    shown on-screen.
                 </li>
-                <li>The CSS layout, especially percentual widths, are calculated relative to the <span class="highlighted-text">layout viewport</span>.
+                <li>The CSS layout, especially percentual widths, are calculated relative to the <span
+                        class="highlighted-text">layout viewport</span>.
                 </li>
             </ul>
         </div>
@@ -155,6 +180,10 @@
             <img src="images/rwd/mobile_visualviewport.jpg">
         </div>
     </div>
+    <aside class="notes">
+        В мире мобильных устройств существует 2 viewport. Визуальный вьюпорт предствавляет из себя часть страницы,
+        отображённой на экране. В лэйаут вьюпорт помещается вся страница и все размеры высчитываются относительно него.
+    </aside>
 </section>
 <section>
     <h2>Viewport meta tag</h2>
@@ -164,11 +193,10 @@
     </p>
     <aside class="notes">
         <p>
-            In order to attempt to provide the best experience, mobile browsers will render the page at a
-            desktop screen width (usually about 980px, though this varies across devices), and then try to make
-            the content look better by increasing font sizes and scaling the content to fit the screen. For
-            users, this means that font sizes may appear inconsistently and they have to double-tap or
-            pinch-to-zoom in order to be able to see and interact with the content.
+            Большинство сайтов разрабатывалось для десктопа, из-за чего они имеют большие размеры не подходящие для
+            мобильных уствройств. ПО умолчанию многие мобильные устройства используют 980px для размера лэйут вьюпорта.
+            Viewport meta tag даёт браузеру инструкции, как контролировать размеры страницы и её
+            масштабирование.
         </p>
     </aside>
 </section>
@@ -200,9 +228,9 @@
         </div>
     </div>
     <aside class="notes">
-        <p>Using the meta viewport value width=device-width instructs the page to match the screen’s width in
-            device independent pixels. This allows the page to reflow content to match different screen sizes,
-            whether rendered on a small mobile phone or a large desktop monitor.
+        <p>Используя width=device-width вы можете задать ширину лэйут вьюпорта равную ширине экрана в device
+            independent pixels.
+
 
             <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -361,9 +389,13 @@
         <h2>Media Queries</h2>
 
         <p>Media queries let the presentation of content be tailored to a specific range of output devices without
-            having to
-            change the content itself.
+            having to change the content itself.
         </p>
+        <aside class="notes">
+            Условные блоки в каскадных таблицах стилей. ПОзволяют выборочно применять css на основании условий,
+            привязанных к параметрам устройства. Позволяют подстраивать стилизацию контента к устройству отображения без
+            изменения самого контента.
+        </aside>
     </section>
     <section data-background-iframe="http://jsbin.com/kowupu/1/embed?html,css,output"></section>
 </section>
@@ -382,6 +414,9 @@
     <pre><code class="css" data-trim>
 @media (min-width:500px) { … }
     </code></pre>
+    <aside class="notes">
+        Состоит из медиа типа и выражений, служащих для проверки свойств устройства отображения.
+    </aside>
 </section>
 <section>
     <h2>Logical Operators</h2>
@@ -698,7 +733,9 @@ window.addEventListener('resize',
         </li>
         <li>Getting images to scale efficiently across varying viewport widths and screen resolutions.</li>
     </ul>
-
+    <aside class="notes">srcset представляет из себя список сторк (разделённый запятыми), представляющий из себя список
+        возможных изображений. ПОзволяет использовать картинки с необходимого размера на разных устройствах отображения.
+    </aside>
 </section>
 <section>
     <h2>srcset</h2>
@@ -729,10 +766,8 @@ alt="Details."/&gt;
             </code></pre>
         </div>
     </div>
-    <aside class="notes">the spec allows you to supply ratios directly and that sources without a descriptor get
-        assigned a default ratio of 1x. That’s a nice, compact way to supply hi-DPI imagery. But! It only works for
-        fixed-width images. All of the images on our crazy-quilts page are fluid, so this is the last we’ll hear about x
-        descriptors.
+    <aside class="notes">x дескриптор может быть использован только для фиксированных картинок. он не может
+        использоваться вместе с атрибутом sizes.
     </aside>
 </section>
 <section>
@@ -743,9 +778,7 @@ alt="Details."/&gt;
         <li>Source size values specify the intended display size of the image.</li>
     </ul>
     <aside class="notes">
-        There is, however, a catch: picking a sensible source requires knowing the image’s layout size. But we can’t ask
-        browsers to delay choosing until the page’s HTML, CSS, and JavaScript have all been loaded and parsed. So we
-        need to give browsers an estimate of the image’s display width using another new attribute: sizes.
+        Предоставляет браузеру информацию об размере картинки до загрузки css и js.
     </aside>
 </section>
 <section>
@@ -785,6 +818,9 @@ alt="Details."/&gt;
             </ul>
         </li>
     </ul>
+    <aside class="notes">Иногда нам не достаточно иметь одну и ту же картинку с разным разрешением. Возникают случаи,
+        когда на разных устройствах отображения нам нужно показывать картинки с разным соотношением сторон.
+    </aside>
 </section>
 <section>
     <h2>Picture</h2>
