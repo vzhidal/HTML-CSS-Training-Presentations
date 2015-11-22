@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>CSS Demo</title>
+
+    <!--<meta name="description" content="A framework for easily creating beautiful presentations using HTML">-->
+    <!--<meta name="author" content="Hakim El Hattab">-->
+
+    <!--<meta name="apple-mobile-web-app-capable" content="yes" />-->
+    <!--<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />-->
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="dependencies/icomoon/style.css">
+    <link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+    <!-- Code syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal content-priority">
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+<section>
+    <h1>CSS in iterations</h1>
+
+    <p>
+        <small>Created by <a href="#">Vladimir Zhydal</a></small>
+    </p>
+
+    <aside class="notes">
+        <ul>
+            <li>Не будем разбирать сложные концепции (visual formating model)</li>
+            <li>Поговорим о плохом и хорошем коде (структуризация, именование)</li>
+        </ul>
+    </aside>
+
+</section>
+<section>
+    <h1 class="hidden">CSS</h1>
+
+    <img src="images/css-demo/css.gif"/>
+</section>
+<section>
+    <h2>Level 1</h2>
+
+    <p>“Html/Css are for html coders only”</p>
+
+    <aside class="notes">
+        <ul>
+            <li>Рассмотрим на примере абстрактного разработчика.</li>
+            <li>Большинство разработчиков приходит из других технологий.</li>
+            <li>html/css важен. SPA красивый js код но плохой html/css</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h2>Example</h2>
+
+            <pre><code>
+<div style="background: red; margin: 10px; padding: 10px;">
+    <b>bold text</b> text
+</div>
+<div style="background: green; margin: 10px; padding: 10px;">
+    <i>italic text</i> text
+</div>
+<div style="background: blue; margin: 10px; padding: 10px;">
+    text
+</div>
+            </code></pre>
+
+    <aside class="notes">
+        <ul>
+            <li>Обычно всё начинается с инлайн стилей</li>
+            <li>Наш разработчик не знает как структурировать проект</li>
+            <li>не знает зачем было введено разделение html и css</li>
+            <li>история html/css</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h2>Results</h2>
+    <ul>
+        <li>Almost impossible to maintain.</li>
+        <li>Almost impossible to make themes.</li>
+        <li>Widespread duplication of code.</li>
+    </ul>
+
+    <aside class="notes">
+        <ul>
+            <li>дубликация кода заботит его больше всего</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h2>Impulse</h2>
+
+    <p>I can separate content and styles.</p>
+
+    <aside class="notes">
+        <ul>
+            <li>Первое, что осознаёт наш разработчик, это что есть необходимость разделения css и html.</li>
+            <li>Style и тэги стилизации это плохо.</li>
+            <li>Первостепенную важность имеет контент. Cтилизация сайта вторична.</li>
+            <li>Нужна возможность изменения стилизации без изменения контента.</li>
+            <li>Нужно разделить css и html</li>
+        </ul>
+    </aside>
+
+</section>
+<section>
+    <h1>Level Up</h1>
+
+    <aside class="notes">
+        <ul>
+            <li>Происходит level up</li>
+            <li>Осознание первопричины появления css (разделение контента и стилизации) переводит нашего разработчика на
+                новый уровень
+            </li>
+            <li>После перехода на новый уровень, больше никогда не будет использовать inline styles</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h2>Level 2</h2>
+
+    <p>“Let’s see how html coders do that”</p>
+
+    <aside class="notes">
+        <ul>
+            <li>Идея возникающая на втором уровне: "У меня есть знакомый верстальщик, нужно посмотреть как делает он"
+            </li>
+            <li>не хочу обидеть верстальщиков. они делают так как описано во второй главе. Наверняка, многие из них
+                пишут замечательный структурированный css, но мне на своём жизненном пути не повезло.
+            </li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h2>Example</h2>
+
+    <div class="grid">
+        <div class="col-6-12">
+                   <pre><code class="html">
+<div id="red-container"></div>
+<div id="green-container"></div>
+<div id="blue-container"></div>
+            </code></pre>
+        </div>
+        <div class="col-6-12">
+                                <pre><code class="css">
+div {
+    margin: 10px;
+    padding: 10px;
+}
+#red-container{
+    background: red;
+}
+#green-container{
+    background: green;
+}
+#blue-container{
+    background: blue;
+}
+            </code></pre>
+
+        </div>
+    </div>
+    <aside class="notes">
+        <ul>
+            <li>что получилось
+            </li>
+            <li>разберём что плохого (id (не быстрее, невозможны модули), не семантические названия (пример кнопки,
+                пример расширения css рула))
+            </li>
+        </ul>
+    </aside>
+
+</section>
+<section>
+    <h2>Results</h2>
+    <ul>
+        <li>Possible to make themes.
+        </li>
+        <li>Still hard to maintain.
+        </li>
+        <li>High coupling.
+        </li>
+        <li>A lot of side effects.
+        </li>
+    </ul>
+    <aside class="notes">
+        <ul>
+            <li>наконец возможно создавать темы, потому что мы разделили контент и стилизацию
+            </li>
+            <li>перечислить проблемы
+            </li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h2>Impulse</h2>
+    <ul>
+        <li>I can make my project more structured and maintainable with some modules.</li>
+        <li>Naming and semantic are really important.</li>
+    </ul>
+    <aside class="notes">
+        <ul>
+            <li>Приходит понимание, что разделения на облости не достаточно.</li>
+            <li>В большом проекте груп не хватает и всё превращается в кучу.</li>
+            <li>Есть необходимость в дополнительной структуризации и жёстком именовании</li>
+        </ul>
+    </aside>
+</section>
+<section>
+    <h1>Level Up</h1>
+</section>
+<section>
+    <h2>Level 3</h2>
+
+    <p>“I’m not an html coder, but I’m a programmer. I can do better!”
+    </p>
+</section>
+<section>
+    <h2>Think in modules</h2>
+    <ul>
+        <li>After getting a mockup try to split it to modules.</li>
+        <li>Make it possible to reuse your modules.</li>
+        <li>Write container independent CSS.</li>
+        <li>Use strong naming conventions.</li>
+    </ul>
+    <aside class="notes">
+        <ul>
+            <li>Думайте в модулях, даже если сейчас ваш модуль не переиспользуется, он может быть переиспользован позже. Каждая логическая часть должна быть вынесена в отдельный модуль.</li>
+            <li>Пишите переиспользуемы модули с возможностью расширения. Н е вносите в сои модули специфику, которая позже не позволит переиспользовать ваш модуль</li>
+            <li>Контейнер независимы css. Рассказать про концепцию контейнера и контента. Не смешивать стили. Пример с float и margin</li>
+            <li>Строгое именование как единственное средство разделения на сегодняшний день. пример .text. Решает проблему Overspecifity</li>
+
+
+        </ul>
+        <p>в сумме всё это позволяет вносить изменения в свой css на поздних этапах разработки без боязни всё разрушить. </p>
+        <p>Нарисовать график уровня сложности</p>
+        <p>Показать пример с воркшопа</p>
+    </aside>
+</section>
+<section>
+    <h1>Charts</h1>
+</section>
+<section>
+    <h1>Questions?</h1>
+</section>
+</div>
+</div>
+
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    //    var secondLevelSections = document.getElementsByClassName('second-level-section');
+    //    var slidesContainer = document.getElementsByClassName('slides')[0];
+    //
+    //    if (secondLevelSections && slidesContainer) {
+    //        while (secondLevelSections.length) {
+    //            slidesContainer.removeChild(secondLevelSections[0]);
+    //        }
+    //    }
+
+    // Full list of configuration options available at:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        slideNumber: true,
+        mouseWheel: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/marked.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, condition: function () {
+                return !!document.querySelector('pre code');
+            }, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+
+
+    //    var revealContainer = document.getElementsByClassName('reveal')[0];
+    //    var slidesContainer = document.getElementsByClassName('slides')[0];
+    //    revealContainer.appendChild(slidesContainer);
+
+</script>
+
+</body>
+</html>
